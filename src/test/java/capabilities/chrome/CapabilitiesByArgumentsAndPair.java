@@ -11,7 +11,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class CapabilitiesByArgumentsAndPair {
+public class  CapabilitiesByArgumentsAndPair {
 
     private WebDriver driver;
     private WebDriverWait wait;
@@ -22,7 +22,7 @@ public class CapabilitiesByArgumentsAndPair {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("start-fullscreen"); // добавление аргументов для запуска браузера
         DesiredCapabilities caps = new DesiredCapabilities();
-        caps.setCapability ("unexpectedAlertBehaviour", "dismiss");
+        caps.setCapability ("unexpectedAlertBehaviour", "dismiss"); // добавление пары Capabilities
         caps.setCapability (ChromeOptions.CAPABILITY, options);
 
         driver = new ChromeDriver(caps);

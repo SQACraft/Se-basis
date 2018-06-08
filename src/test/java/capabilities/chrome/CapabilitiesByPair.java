@@ -10,7 +10,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class CapabilitiesByPair {
+public class    CapabilitiesByPair {
 
     private WebDriver driver;
     private WebDriverWait wait;

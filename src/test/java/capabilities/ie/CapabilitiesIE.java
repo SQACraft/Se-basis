@@ -39,7 +39,7 @@ public class CapabilitiesIE {
     }
 
     @Test
-    public void  search()  {
+    public void  search() throws InterruptedException {
         driver.get ("https://bash.im/");
         driver.findElement(By.name("text")).sendKeys("котик");
         driver.findElement(By.xpath(".//*[@id='search']/button")).click();
