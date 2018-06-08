@@ -1,13 +1,11 @@
 package capabilities.firefox;
 
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.HasCapabilities;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxBinary;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
-import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -23,20 +21,18 @@ public class CapabilitiesForNewVersions {
     @BeforeTest
     public void start() {
 
-
-        FirefoxBinary bin = new FirefoxBinary(new File("c:\\Program Files\\Firefox Nightly\\firefox.exe"));
-        FirefoxOptions options = new FirefoxOptions().setBinary(bin)  ;    //.setLegacy(true); - с легаси не работает, закомментировано
-
+        FirefoxBinary bin = new FirefoxBinary(new File("c:\\Program Files\\Firefox Nightly\\firefox.exe")); // прописали путь к бинарнику FF Nightly
+        FirefoxOptions options = new FirefoxOptions().setBinary(bin);                                                             //.setLegacy(true); - с легаси не работает, закомментировано
+        options.setCapability("acceptInsecureCerts", true);                                              // устанавливаем нужные Capabilities
         driver = new FirefoxDriver(options);
 
-
-        System.out.println(((HasCapabilities) driver).getCapabilities());
-        wait = new WebDriverWait (driver, 10);
+        System.out.println(((HasCapabilities) driver).getCapabilities());                                                           // список всех Capabilities
+        wait = new WebDriverWait(driver, 10);
     }
 
     @Test
-    public void  search()  {
-        driver.get ("https://bash.im/");
+    public void search() {
+        driver.get("https://bash.im/");
         driver.findElement(By.name("text")).sendKeys("котик");
         driver.findElement(By.xpath(".//*[@id='search']/button")).click();
     }
