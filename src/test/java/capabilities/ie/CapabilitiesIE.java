@@ -30,12 +30,7 @@ public class CapabilitiesIE {
         System.out.println(((HasCapabilities) driver).getCapabilities()); // вывод всех capabilities после запуска браузера
         wait = new WebDriverWait(driver, 1);
 
-        // Cookies
-        driver.manage().addCookie(new Cookie("test", "test"));
-        Cookie testCookie = driver.manage().getCookieNamed("test");
-        Set<Cookie> cookies = driver.manage().getCookies();
-        driver.manage().deleteCookieNamed("test");
-        driver.manage().deleteAllCookies();
+
     }
 
     @Test

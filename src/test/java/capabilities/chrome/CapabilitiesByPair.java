@@ -10,7 +10,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class    CapabilitiesByPair {
+public class CapabilitiesByPair {
 
     private WebDriver driver;
     private WebDriverWait wait;
@@ -23,12 +23,12 @@ public class    CapabilitiesByPair {
 
         driver = new ChromeDriver(caps);
         System.out.println(((HasCapabilities) driver).getCapabilities()); // вывод всех capabilities после запуска браузера
-        wait = new WebDriverWait (driver, 10);
+        wait = new WebDriverWait(driver, 10);
     }
 
     @Test
-    public void  search()  {
-        driver.get ("https://bash.im/");
+    public void search() {
+        driver.get("https://bash.im/");
         driver.findElement(By.name("text")).sendKeys("котик");
         driver.findElement(By.xpath(".//*[@id='search']/button")).click();
     }
