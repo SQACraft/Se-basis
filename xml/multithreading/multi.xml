@@ -1,13 +1,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name ="Multithreading" parallel ="methods" thread-count="10">
+<suite name ="Multithreading" parallel ="methods" thread-count="4"    >
     <test name = "Multithreading test">
-        <!--<groups>-->
-            <!--<run>-->
-                <!--<include name = "orgCreateForUser"/>-->
-                <!--<include name = "orgModifyByUser"/>-->
-                <!--<include name = "orgDeleteAfterUser"/>-->
-            <!--</run>-->
-        <!--</groups>-->
+
         <packages>
             <package name = "multithreading"/>
 

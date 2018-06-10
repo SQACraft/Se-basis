@@ -7,24 +7,18 @@ import org.testng.annotations.Test;
 public class FirstTest extends TestBase{
 
     @Test
-    public void  myFirstTest()  {
-        driver.get ("https://bash.im/");
-        driver.findElement(By.name("text")).sendKeys("КОТИК");
-        driver.findElement(By.xpath(".//*[@id='search']/button")).click();
+    public void  test11()  {
+       search("КОШКА");
     }
 
     @Test
-    public void  mySecondTest()  {
-        driver.get ("https://bash.im/");
-        driver.findElement(By.name("text")).sendKeys("CОБАКА");
-        driver.findElement(By.xpath(".//*[@id='search']/button")).click();
+    public void  test12()  {
+        search("СОБАКА");
     }
 
     @Test
-    public void  myThirdTest()  {
-        driver.get ("https://bash.im/");
-        driver.findElement(By.name("text")).sendKeys("КОНЬ");
-        driver.findElement(By.xpath(".//*[@id='search']/button")).click();
+    public void test13()  {
+        search("ЛИСА");
     }
 
 
