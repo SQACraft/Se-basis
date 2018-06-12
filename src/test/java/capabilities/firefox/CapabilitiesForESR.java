@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 
 public class CapabilitiesForESR {
 
-    private WebDriver driver;
+    private WebDriver wd;
     private WebDriverWait wait;
 
     @BeforeTest
@@ -21,23 +21,23 @@ public class CapabilitiesForESR {
         DesiredCapabilities caps = new DesiredCapabilities();
         caps.setCapability(FirefoxDriver.MARIONETTE, false); // старая схема работы с FF
 
-        driver = new FirefoxDriver(caps);
-        System.out.println(((HasCapabilities) driver).getCapabilities());
-        wait = new WebDriverWait (driver, 10);
+        wd = new FirefoxDriver(caps);
+        System.out.println(((HasCapabilities) wd).getCapabilities());
+        wait = new WebDriverWait (wd, 10);
 
     }
 
     @Test
     public void  search()  {
-        driver.get ("https://bash.im/");
-        driver.findElement(By.name("text")).sendKeys("котик");
-        driver.findElement(By.xpath(".//*[@id='search']/button")).click();
+        wd.get ("https://bash.im/");
+        wd.findElement(By.name("text")).sendKeys("котик");
+        wd.findElement(By.xpath(".//*[@id='search']/button")).click();
     }
 
     @AfterTest
     public void stop() {
-        driver.quit();
-        driver = null;
+        wd.quit();
+        wd = null;
     }
 
 

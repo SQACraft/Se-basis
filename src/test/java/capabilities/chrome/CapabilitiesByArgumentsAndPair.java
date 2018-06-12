@@ -13,7 +13,7 @@ import org.testng.annotations.Test;
 
 public class  CapabilitiesByArgumentsAndPair {
 
-    private WebDriver driver;
+    private WebDriver wd;
     private WebDriverWait wait;
 
     @BeforeTest
@@ -25,22 +25,22 @@ public class  CapabilitiesByArgumentsAndPair {
         caps.setCapability ("unexpectedAlertBehaviour", "dismiss"); // добавление пары Capabilities
         caps.setCapability (ChromeOptions.CAPABILITY, options);
 
-        driver = new ChromeDriver(caps);
-        System.out.println(((HasCapabilities) driver).getCapabilities()); // вывод всех capabilities после запуска браузера
-        wait = new WebDriverWait (driver, 10);
+        wd = new ChromeDriver(caps);
+        System.out.println(((HasCapabilities) wd).getCapabilities()); // вывод всех capabilities после запуска браузера
+        wait = new WebDriverWait (wd, 10);
     }
 
     @Test
     public void  search()  {
-        driver.get ("https://bash.im/");
-        driver.findElement(By.name("text")).sendKeys("котик");
-        driver.findElement(By.xpath(".//*[@id='search']/button")).click();
+        wd.get ("https://bash.im/");
+        wd.findElement(By.name("text")).sendKeys("котик");
+        wd.findElement(By.xpath(".//*[@id='search']/button")).click();
     }
 
     @AfterTest
     public void stop() {
-        driver.quit();
-        driver = null;
+        wd.quit();
+        wd = null;
     }
 
 

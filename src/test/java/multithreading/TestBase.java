@@ -10,42 +10,42 @@ import org.testng.annotations.BeforeMethod;
 public class TestBase {
 
     public static ThreadLocal<WebDriver> tlDriver = new ThreadLocal<>();
-    public WebDriver driver;
+    public WebDriver wd;
     public WebDriverWait wait;
 
     @BeforeMethod
     public void start() {
 
         if (tlDriver.get() != null) {
-            driver = tlDriver.get();
-            wait = new WebDriverWait(driver, 10);
+            wd = tlDriver.get();
+            wait = new WebDriverWait(wd, 10);
             return;
         }
 
-        driver = new ChromeDriver();
-        tlDriver.set(driver);
-        wait = new WebDriverWait(driver, 10);
+        wd = new ChromeDriver();
+        tlDriver.set(wd);
+        wait = new WebDriverWait(wd, 10);
 
         Runtime.getRuntime().addShutdownHook(
                 new Thread(() -> {
-                    driver.quit();
-                    driver = null;
+                    wd.quit();
+                    wd = null;
                 }));
     }
 
     @AfterMethod
     void stop() {
-        //    driver.quit();
-        //  driver = null;
+        //    wd.quit();
+        //  wd = null;
     }
 
     protected void search(String animal) {
 
-        driver.get("https://bash.im/");
-       // driver.findElement(By.name("text")).sendKeys(animal);
-       //driver.findElement(By.xpath(".//*[@id='search']/button")).click();
-        driver.findElement(By.cssSelector("div #search #text")).sendKeys(animal);
-        driver.findElement(By.cssSelector("div #search [type=submit]")).click();
+        wd.get("https://bash.im/");
+       // wd.findElement(By.name("text")).sendKeys(animal);
+       //wd.findElement(By.xpath(".//*[@id='search']/button")).click();
+        wd.findElement(By.cssSelector("div #search #text")).sendKeys(animal);
+        wd.findElement(By.cssSelector("div #search [type=submit]")).click();
 
     }
 

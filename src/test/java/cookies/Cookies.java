@@ -12,21 +12,21 @@ import java.util.Set;
 
 public class Cookies {
 
-    private WebDriver driver;
+    private WebDriver wd;
     private WebDriverWait wait;
     private Set<Cookie> allCookies;
 
     @BeforeTest
     public void start() {
 
-        driver = new ChromeDriver();
-        wait = new WebDriverWait(driver, 10);
+        wd = new ChromeDriver();
+        wait = new WebDriverWait(wd, 10);
     }
 
     @Test
     public void cookies() {
 
-        driver.get("https://bash.im/");
+        wd.get("https://bash.im/");
 
         // Вывод всех Cookies после входа на ресурс
         getCookies();
@@ -35,26 +35,26 @@ public class Cookies {
         System.out.println("Очистка cookies:");
 
         // Очистка всех Cookies
-        driver.manage().deleteAllCookies();
+        wd.manage().deleteAllCookies();
         // Повторная очистка вновь созданной куки tmr_detect, если нужно
-        //driver.manage().deleteAllCookies();
+        //wd.manage().deleteAllCookies();
         getCookies();
 
         cookiePresenceMessage();
 
         // Добавляем cookie
-        driver.manage().addCookie(new Cookie("testCookieName", "testCookieValue"));
+        wd.manage().addCookie(new Cookie("testCookieName", "testCookieValue"));
         getCookies();
         System.out.println("Все Cookies c добавленным  testCookieName:");
         System.out.println(allCookies + "\n");
 
         // Выводим добавленную cookie
-        Cookie testCookie = driver.manage().getCookieNamed("testCookieName");
+        Cookie testCookie = wd.manage().getCookieNamed("testCookieName");
         System.out.println("Собственно Cookie  testCookieName:");
         System.out.println(testCookie + "\n");
 
         // Удаляем добавленную cookie
-        driver.manage().deleteCookieNamed("testCookieName");
+        wd.manage().deleteCookieNamed("testCookieName");
         getCookies();
         System.out.println("Все Cookies после удаления  testCookieName:");
         cookiePresenceMessage();
@@ -62,12 +62,12 @@ public class Cookies {
 
     @AfterTest
     public void stop() {
-        driver.quit();
-        driver = null;
+        wd.quit();
+        wd = null;
     }
 
     Set<Cookie> getCookies() {
-        allCookies = driver.manage().getCookies();
+        allCookies = wd.manage().getCookies();
         return this.allCookies;
     }
 

@@ -15,7 +15,7 @@ import java.io.File;
 
 public class CapabilitiesForNewVersions {
 
-    private WebDriver driver;
+    private WebDriver wd;
     private WebDriverWait wait;
 
     @BeforeTest
@@ -24,23 +24,23 @@ public class CapabilitiesForNewVersions {
         FirefoxBinary bin = new FirefoxBinary(new File("c:\\Program Files\\Firefox Nightly\\firefox.exe")); // прописали путь к бинарнику FF Nightly
         FirefoxOptions options = new FirefoxOptions().setBinary(bin);                                                             //.setLegacy(true); - с легаси не работает, закомментировано
         options.setCapability("acceptInsecureCerts", true);                                              // устанавливаем нужные Capabilities
-        driver = new FirefoxDriver(options);
+        wd = new FirefoxDriver(options);
 
-        System.out.println(((HasCapabilities) driver).getCapabilities());                                                           // список всех Capabilities
-        wait = new WebDriverWait(driver, 10);
+        System.out.println(((HasCapabilities) wd).getCapabilities());                                                           // список всех Capabilities
+        wait = new WebDriverWait(wd, 10);
     }
 
     @Test
     public void search() {
-        driver.get("https://bash.im/");
-        driver.findElement(By.name("text")).sendKeys("котик");
-        driver.findElement(By.xpath(".//*[@id='search']/button")).click();
+        wd.get("https://bash.im/");
+        wd.findElement(By.name("text")).sendKeys("котик");
+        wd.findElement(By.xpath(".//*[@id='search']/button")).click();
     }
 
     @AfterTest
     public void stop() {
-        driver.quit();
-        driver = null;
+        wd.quit();
+        wd = null;
     }
 
 

@@ -8,23 +8,23 @@ import org.testng.annotations.BeforeMethod;
 
 public class TestBase {
 
-    public WebDriver driver;
+    public WebDriver wd;
     public WebDriverWait wait;
 
     @BeforeMethod
     public void start() {
 
-        driver = new ChromeDriver();
-        wait = new WebDriverWait(driver, 10);
+        wd = new ChromeDriver();
+        wait = new WebDriverWait(wd, 10);
 
-        driver.get("https://bash.im/");
+        wd.get("https://bash.im/");
     }
 
     @AfterMethod
     void stop() {
 
-     driver.quit();
-     //driver = null;
+     wd.quit();
+
     }
 
 
