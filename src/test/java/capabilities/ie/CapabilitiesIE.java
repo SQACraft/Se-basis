@@ -35,8 +35,8 @@ public class CapabilitiesIE {
 
         wd.get ("https://bash.im/");
         wd.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
-        wd.findElement(By.name("text")).sendKeys("котик");
-        wd.findElement(By.xpath(".//*[@id='search']/button")).click();
+        wd.findElement(By.cssSelector("div #search #text")).sendKeys("Енот");        // ввод в строке поиска
+        wd.findElement(By.cssSelector("div #search [type=submit]")).click();                                // сабмит
 }
 
     @AfterTest

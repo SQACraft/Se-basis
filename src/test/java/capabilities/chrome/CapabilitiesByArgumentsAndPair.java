@@ -33,8 +33,8 @@ public class  CapabilitiesByArgumentsAndPair {
     @Test
     public void  search()  {
         wd.get ("https://bash.im/");
-        wd.findElement(By.name("text")).sendKeys("котик");
-        wd.findElement(By.xpath(".//*[@id='search']/button")).click();
+        wd.findElement(By.cssSelector("div #search #text")).sendKeys("Енот");        // ввод в строке поиска
+        wd.findElement(By.cssSelector("div #search [type=submit]")).click();                                // сабмит
     }
 
     @AfterTest
