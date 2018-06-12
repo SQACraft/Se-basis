@@ -28,8 +28,6 @@ public class CapabilitiesIE {
         wd = new InternetExplorerDriver(caps);
         System.out.println(((HasCapabilities) wd).getCapabilities()); // вывод всех capabilities после запуска браузера
         wait = new WebDriverWait(wd, 1);
-
-
     }
 
     @Test
