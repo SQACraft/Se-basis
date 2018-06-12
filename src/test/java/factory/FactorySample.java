@@ -64,8 +64,8 @@ public class FactorySample {
 
     private void search(String animal) {
         driver.get("https://bash.im/");
-        driver.findElement(By.name("text")).sendKeys(animal);
-        driver.findElement(By.xpath(".//*[@id='search']/button")).click();
+        driver.findElement(By.cssSelector("div #search #text")).sendKeys(animal);
+        driver.findElement(By.cssSelector("div #search [type=submit]")).click();
     }
 
 }
