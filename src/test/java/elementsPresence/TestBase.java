@@ -1,4 +1,4 @@
-package cssSelectors;
+package elementsPresence;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
@@ -22,16 +22,27 @@ public class TestBase {
          wd.get("https://bash.im/");                                     // заходим на главнуюfccc
     }
 
-    @AfterMethod
-
-    void goHome() {
-    wd.findElement(By.cssSelector("#header a")).click(); // после каждого  теста - возврат на главную по клику баннера в хедере
-    }
-
     @AfterSuite
 
     void stop() {        // закрываем сессию браузера
         wd.quit();
+    }
+
+/**
+     Методы для проверки наличия элемента
+*/
+
+    public boolean isElementPresent (By locator) {
+        try {
+            wd.findElement(locator);
+            return true;
+        } catch (NoSuchElementException ex) {
+            return false;
+        }
+    }
+
+    public boolean areElementsPresent (By locator) {
+        return wd.findElements(locator).size() > 0;
     }
 
 }
