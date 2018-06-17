@@ -10,8 +10,8 @@ public class elementsPresenceTests extends TestBase {
     @Test
     public void checkElementPresence() {
 /**
-    Проверка наличия элемента с использованием findElement()  + try-catch
-*/
+ Проверка наличия элемента с использованием findElement()  + try-catch
+ */
         Assert.assertTrue(isElementPresent(By.cssSelector("div #search #text")));
     }
 

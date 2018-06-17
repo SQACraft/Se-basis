@@ -1,13 +1,12 @@
 package elementsPresence;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.InvalidSelectorException;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
+
+import java.util.concurrent.TimeUnit;
 
 public class TestBase {
 
@@ -18,7 +17,10 @@ public class TestBase {
 
     public void start() {
         wd = new ChromeDriver();
-        wait = new WebDriverWait(wd, 10);
+
+        wd.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS); //  неявное (Implicit) ожидание
+        wait = new WebDriverWait(wd, 10);               //  настройка для явного ожидания
+
         wd.get("https://bash.im/");                                     // заходим на главную
     }
 
@@ -33,8 +35,11 @@ public class TestBase {
 
     public boolean isElementPresent(By locator) {
         try {
+            wait.until((WebDriver d) -> d.findElement(locator)); // явное (Explicit) ожидание
             wd.findElement(locator);
             return true;
+        } catch (TimeoutException ex) {  // исключение при  явном ожидании, если не дождались
+            return false;
         } catch (InvalidSelectorException ex) { //подкласс NoSuchElementException, здесь не должен подавляться
             throw ex;
         } catch (NoSuchElementException ex) {
