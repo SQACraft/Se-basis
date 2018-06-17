@@ -40,4 +40,15 @@ public class elementsPresenceTests extends TestBase {
         Assert.assertFalse(areElementsPresent(By.name("XXX")));
     }
 
+    @Test
+    public void checkWrongXPath() {
+
+/**
+ Проверка выброса  InvalidSelectorException  как подкласса NoSuchElementException
+ в случае некоректного формата XPath.
+ Тест должен падать с InvalidSelectorException.
+ */
+        Assert.assertFalse(isElementPresent(By.xpath("div[")));
+    }
+
 }
