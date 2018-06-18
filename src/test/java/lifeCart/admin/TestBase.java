@@ -6,10 +6,13 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
+
 import java.util.concurrent.TimeUnit;
 
 public class TestBase {
+
 
     public WebDriver wd;
     public WebDriverWait wait;
@@ -24,17 +27,23 @@ public class TestBase {
         login();  // авторизация администратором в системе и переход в админку
     }
 
+    @BeforeMethod
+    void goToSquareOne() {                                 //  переход в  корень меню сайдбара
+        click(By.cssSelector("img[title='My Store']"));
+    }
+
     @AfterSuite
     void stop() {        // закрываем сессию браузера
         wd.quit();
     }
 
     /**
-     *  Методы
-     *  TODO: вынести в отдельный класс
+     * Методы
+     * TODO: вынести в отдельный класс
      */
 
     void login() {
+
         wd.get("http://localhost/litecart/admin/login.php");
         wd.findElement(By.cssSelector("[name=username]")).sendKeys(login);
         wd.findElement(By.cssSelector("[name=password]")).sendKeys(password);
@@ -44,10 +53,6 @@ public class TestBase {
 
     boolean areElementsPresent(By locator) {         // Проверка наличия элемента
         return wd.findElements(locator).size() > 0;
-    }
-
-    void goToSquareOne() {                                 //  переход в  корень меню сайдбара
-        click(By.cssSelector("img[title='My Store']"));
     }
 
     void click(By locator) {                                    // клик по элементу
