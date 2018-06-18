@@ -7,7 +7,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
-
 import java.util.concurrent.TimeUnit;
 
 public class TestBase {
@@ -18,7 +17,6 @@ public class TestBase {
     private String password = "admin";
 
     @BeforeSuite
-
     public void start() {
         wd = new ChromeDriver();
         wait = new WebDriverWait(wd, 10);
@@ -27,26 +25,34 @@ public class TestBase {
     }
 
     @AfterSuite
-
     void stop() {        // закрываем сессию браузера
         wd.quit();
     }
+
+    /**
+     *  Методы
+     *  TODO: вынести в отдельный класс
+     */
 
     void login() {
         wd.get("http://localhost/litecart/admin/login.php");
         wd.findElement(By.cssSelector("[name=username]")).sendKeys(login);
         wd.findElement(By.cssSelector("[name=password]")).sendKeys(password);
-        wd.findElement(By.cssSelector("[type=submit]")).click();
-        Assert.assertTrue(areElementsPresent(By.cssSelector(".logotype [href*=admin]"))); // проверка, что логотип - со страницы админки
+        click(By.cssSelector("[type=submit]"));
+        Assert.assertTrue(areElementsPresent(By.cssSelector("[href*=admin]"))); // проверка, что логотип - со страницы админки
     }
 
-        public boolean areElementsPresent(By locator) {
-            return wd.findElements(locator).size() > 0;
-        }
+    boolean areElementsPresent(By locator) {         // Проверка наличия элемента
+        return wd.findElements(locator).size() > 0;
+    }
 
+    void goToSquareOne() {                                 //  переход в  корень меню сайдбара
+        click(By.cssSelector("img[title='My Store']"));
+    }
 
+    void click(By locator) {                                    // клик по элементу
+        wd.findElement(locator).click();
+    }
 
 
 }
-
-

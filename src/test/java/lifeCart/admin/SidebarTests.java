@@ -1,17 +1,41 @@
 package lifeCart.admin;
 
+import org.openqa.selenium.By;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class SidebarTests extends TestBase {
 
     /**
      * Проверки открытия разделов сайдбара:
+     *  -редирект на главную
      * - открытие раздела / подраздела
      * - проверка соответствия заголовка ожидаемому
      */
 
     @Test(priority = 1)
-    public void checkAppearance() {
+    public void openAppearanceSection() {
 
+       goToSquareOne();
+       click(By.cssSelector("[href$=template]"));
+       Assert.assertTrue(areElementsPresent(By.xpath("//h1[contains(text(), 'Template')]")));
+    }
+
+    @Test(priority = 2)
+    public void openTemplateSection() {
+
+        goToSquareOne();
+        click(By.cssSelector("[href$=template]"));
+        click(By.cssSelector("#doc-template a"));
+        Assert.assertTrue(areElementsPresent(By.xpath("//h1[contains(text(), 'Template')]")));
+    }
+
+    @Test(priority = 3)
+    public void OpenLogotypeSection() {
+
+        goToSquareOne();
+        click(By.cssSelector("[href$=template]"));
+        click(By.cssSelector("#doc-logotype  a"));
+        Assert.assertTrue(areElementsPresent(By.xpath("//h1[contains(text(), 'Logotype')]")));
     }
 }
