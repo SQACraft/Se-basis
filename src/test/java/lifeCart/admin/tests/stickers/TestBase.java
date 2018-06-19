@@ -5,7 +5,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 
 import java.util.concurrent.TimeUnit;
@@ -24,12 +23,7 @@ public class TestBase {
         wd.get("http://localhost/litecart");
     }
 
-  //  @BeforeMethod
-/*    void goToSquareOne() {                                 //  переход в  корень меню сайдбара
-        click(By.cssSelector("img[title='My Store']"));
-    }*/
-
-    @AfterSuite
+   @AfterSuite
     void stop() {        // закрываем сессию браузера
         wd.quit();
     }
@@ -38,7 +32,6 @@ public class TestBase {
      * Методы
      * TODO: вынести в отдельный класс
      */
-
 
     public boolean areElementsPresent(By locator) {         // Проверка наличия элемента
         return wd.findElements(locator).size() > 0;
