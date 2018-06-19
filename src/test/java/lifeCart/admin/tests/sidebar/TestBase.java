@@ -1,4 +1,4 @@
-package lifeCart.admin;
+package lifeCart.admin.tests.sidebar;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -8,6 +8,7 @@ import org.testng.Assert;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.BeforeTest;
 
 import java.util.concurrent.TimeUnit;
 
@@ -51,11 +52,11 @@ public class TestBase {
         Assert.assertTrue(areElementsPresent(By.cssSelector("[href*=admin]"))); // проверка, что логотип - со страницы админки
     }
 
-    boolean areElementsPresent(By locator) {         // Проверка наличия элемента
+    public boolean areElementsPresent(By locator) {         // Проверка наличия элемента
         return wd.findElements(locator).size() > 0;
     }
 
-    void click(By locator) {                                    // клик по элементу
+    public void click(By locator) {                                    // клик по элементу
         wd.findElement(locator).click();
     }
 
