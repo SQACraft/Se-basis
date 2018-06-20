@@ -10,7 +10,7 @@ public class Drill extends TestBase {
      * 1. Локатор для поиска  всех блоков (li) с информацией о товарах
      * (каждому товару соответствует свой блок)
      */
-    @Test 
+    @Test
     public void TestOne() {
 
         By locator;
@@ -55,8 +55,12 @@ public class Drill extends TestBase {
         Assert.assertTrue(isOneElementPresent(By.cssSelector(("div #box-latest-products a.link[href*=p-5"))));
     }
 
+    /**
+     * 3. Локатор для поиска  ссылки на Privacy Policy в нижней части страницы
+     */
     @Test
     public void TestThree() {
 
+        click(By.cssSelector("td.information [href$='policy-i-3']"));
     }
 }

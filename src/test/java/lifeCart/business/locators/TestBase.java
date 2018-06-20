@@ -44,7 +44,7 @@ public class TestBase  {
     public int numberOfElementsFound(By locator) {
 
         int size = wd.findElements(locator).size();
-        System.out.println("Найдено элементов: "+size);
+        System.out.println("Найдено элементов: " + size);
         return size;
     }
 
