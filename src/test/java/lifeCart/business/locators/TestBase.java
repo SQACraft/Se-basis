@@ -5,11 +5,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 
 import java.util.concurrent.TimeUnit;
 
-public class TestBase  {
+public class TestBase {
 
 
     public WebDriver wd;
@@ -23,7 +24,12 @@ public class TestBase  {
         wd.get("http://localhost/litecart");
     }
 
-   @AfterSuite
+    @BeforeMethod
+    public void goToSquareOne() {                                 //  переход на главную
+        click(By.cssSelector("img[title='My Store']"));
+    }
+
+    @AfterSuite
     void stop() {        // закрываем сессию браузера
         wd.quit();
     }
@@ -48,13 +54,8 @@ public class TestBase  {
         return size;
     }
 
-
     public void click(By locator) {                                    // клик по элементу
         wd.findElement(locator).click();
-    }
-
-    public void goToSquareOne() {                                 //  переход в  корень меню сайдбара
-        click(By.cssSelector("img[title='My Store']"));
     }
 
 }

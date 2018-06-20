@@ -10,7 +10,7 @@ public class Drill extends TestBase {
      * 1. Локатор для поиска  всех блоков (li) с информацией о товарах
      * (каждому товару соответствует свой блок)
      */
-    @Test
+    @Test (priority = 1)
     public void TestOne() {
 
         By locator;
@@ -18,6 +18,7 @@ public class Drill extends TestBase {
         // Блок Most Popular
         locator = (By.cssSelector(("div #box-most-popular li.product.column")));
         Assert.assertTrue(areElementsPresent(locator));
+        System.out.println("Test One Results: \n*****************");
         numberOfElementsFound(locator);
 
         // Блок Campaigns
@@ -35,7 +36,7 @@ public class Drill extends TestBase {
      * 2. Локатор для поиска  всех ссылок (a) на страницы товаров
      * в основной части страницы  (не считая боковых блоков)
      */
-    @Test
+    @Test (priority = 2)
     public void TestTwo() {
 
         // Блок Most Popular
@@ -58,9 +59,23 @@ public class Drill extends TestBase {
     /**
      * 3. Локатор для поиска  ссылки на Privacy Policy в нижней части страницы
      */
-    @Test
+    @Test (priority = 3)
     public void TestThree() {
 
-        click(By.cssSelector("td.information [href$='policy-i-3']"));
+        click(By.cssSelector("td.information [href$='policy-i-3']"));    // клик по ссылке
+        Assert.assertTrue(isOneElementPresent(By.xpath(
+                "//h1[contains(text(), 'Privacy Policy')]")));               // проверка заголовка
+    }
+
+/**
+      4. Подберите локатор для поиска всех элементов верхнего меню,
+      находящихся на верхнем уровне (без элементов вложенных выпадающих меню)
+*/
+@Test (priority = 4)
+    public void TestFour() {
+
+    click(By.cssSelector("li.category-1 [href$='ducks-c-1/']"));    // клик по ссылке
+    Assert.assertTrue(isOneElementPresent(By.xpath(
+            "//h1[contains(text(), 'Rubber Ducks')]")));               // проверка заголовка
     }
 }
