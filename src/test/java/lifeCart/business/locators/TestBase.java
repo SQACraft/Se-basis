@@ -33,9 +33,21 @@ public class TestBase  {
      * TODO: вынести в отдельный класс
      */
 
-    public boolean isOneElementPresent(By locator) {         // Проверка наличия элемента
+    public boolean isOneElementPresent(By locator) {         // Проверка наличия одного элемента
         return wd.findElements(locator).size() == 1;
     }
+
+    public boolean areElementsPresent(By locator) {         // Проверка наличия   элементов
+        return wd.findElements(locator).size() > 0;
+    }
+
+    public int numberOfElementsFound(By locator) {
+
+        int size = wd.findElements(locator).size();
+        System.out.println("Найдено элементов: "+size);
+        return size;
+    }
+
 
     public void click(By locator) {                                    // клик по элементу
         wd.findElement(locator).click();
