@@ -1,4 +1,4 @@
-package lifeCart.admin.tests.sidebar;
+package lifeCart.admin.sidebar;
 
 import org.openqa.selenium.By;
 import org.testng.Assert;
