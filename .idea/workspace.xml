@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="056db876-f153-4c16-b0c6-be8af49afc25" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/lifeCart/business/locators/Checkout.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/lifeCart/admin/sidebar/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/lifeCart/admin/sidebar/TestBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/lifeCart/business/locators/SaleStickerPresence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/lifeCart/business/locators/SaleStickerPresence.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/lifeCart/business/locators/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/lifeCart/business/locators/TestBase.java" afterDir="false" />
     </list>
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,11 +15,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="TestBase.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TestBase.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/lifeCart/admin/sidebar/TestBase.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="22" column="16" lean-forward="true" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
+            <state relative-caret-position="-374">
+              <caret line="23" column="18" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#893#894#0" expanded="true" />
@@ -38,8 +38,8 @@
       <file leaf-file-name="TestBase.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/lifeCart/business/locators/TestBase.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+            <state relative-caret-position="369">
+              <caret line="69" column="89" lean-forward="true" selection-start-line="69" selection-start-column="89" selection-end-line="69" selection-end-column="89" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#780#781#0" expanded="true" />
@@ -52,16 +52,18 @@
                 <element signature="e#1371#1372#0" expanded="true" />
                 <element signature="e#1598#1599#0" expanded="true" />
                 <element signature="e#1700#1701#0" expanded="true" />
+                <element signature="e#1845#1846#0" expanded="true" />
+                <element signature="e#1964#1965#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Appearance.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/lifeCart/admin/sidebar/Appearance.java">
+      <file leaf-file-name="CapabilitiesByArgumentsAndPair.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/capabilities/chrome/CapabilitiesByArgumentsAndPair.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" selection-start-line="14" selection-end-line="14" />
+            <state relative-caret-position="437">
+              <caret line="41" column="18" selection-start-line="41" selection-start-column="18" selection-end-line="41" selection-end-column="18" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -69,11 +71,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SaleStickerPresence.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/lifeCart/business/locators/SaleStickerPresence.java">
+      <file leaf-file-name="SaleSticker.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/lifeCart/business/locators/SaleSticker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="335">
-              <caret line="39" column="23" selection-start-line="39" selection-start-column="23" selection-end-line="39" selection-end-column="23" />
+            <state relative-caret-position="383">
+              <caret line="36" selection-start-line="34" selection-end-line="36" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -81,11 +83,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CapabilitiesByArguments.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/capabilities/chrome/CapabilitiesByArguments.java">
+      <file leaf-file-name="elementsPresenceTests.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/elementsPresence/elementsPresenceTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="188">
-              <caret line="21" selection-start-line="21" selection-end-line="23" selection-end-column="39" />
+            <state relative-caret-position="-209">
+              <caret line="19" column="3" lean-forward="true" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -93,11 +95,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DrillPartOne.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/lifeCart/business/locators/DrillPartOne.java">
+      <file leaf-file-name="TestBase.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/elementsPresence/TestBase.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="318">
-              <caret line="98" column="29" selection-start-line="98" selection-start-column="7" selection-end-line="98" selection-end-column="29" />
+            <state relative-caret-position="799">
+              <caret line="49" selection-start-line="49" selection-end-line="52" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -105,20 +107,38 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
+      <file leaf-file-name="CapabilitiesByPair.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/capabilities/chrome/CapabilitiesByPair.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+            <state relative-caret-position="518">
+              <caret line="32" column="117" selection-start-line="32" selection-start-column="117" selection-end-line="32" selection-end-column="117" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Customers.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/lifeCart/admin/sidebar/Customers.java">
+      <file leaf-file-name="Drill.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/lifeCart/business/locators/Drill.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-136">
-              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+            <state relative-caret-position="272">
+              <caret line="52" column="24" selection-start-line="52" selection-start-column="24" selection-end-line="52" selection-end-column="24" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Checkout.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/lifeCart/business/locators/Checkout.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -132,19 +152,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Catalog.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/lifeCart/admin/sidebar/Catalog.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -156,8 +171,10 @@
         <option value="$PROJECT_DIR$/src/test/java/lifeCart/business/locators/DrillPartTwo.java" />
         <option value="$PROJECT_DIR$/src/test/java/lifeCart/business/locators/DrillPartOne.java" />
         <option value="$PROJECT_DIR$/src/test/java/lifeCart/business/locators/SaleStickerPresence.java" />
-        <option value="$PROJECT_DIR$/src/test/java/lifeCart/business/locators/TestBase.java" />
+        <option value="$PROJECT_DIR$/src/test/java/lifeCart/business/locators/SaleSticker.java" />
         <option value="$PROJECT_DIR$/src/test/java/lifeCart/admin/sidebar/TestBase.java" />
+        <option value="$PROJECT_DIR$/src/test/java/lifeCart/business/locators/TestBase.java" />
+        <option value="$PROJECT_DIR$/src/test/java/lifeCart/business/locators/Checkout.java" />
       </list>
     </option>
   </component>
@@ -231,8 +248,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="capabilities" type="462c0819:PsiDirectoryNode" />
-              <item name="chrome" type="462c0819:PsiDirectoryNode" />
+              <item name="elementsPresence" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Se-Basis" type="b2602c69:ProjectViewProjectNode" />
@@ -306,7 +322,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.Customers">
+  <component name="RunManager" selected="TestNG.Checkout.TestTwo">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
@@ -326,94 +342,7 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="Appearance" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Basis" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="lifeCart.admin.sidebar.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" value="lifeCart.admin.sidebar" />
-      <option name="MAIN_CLASS_NAME" value="lifeCart.admin.sidebar.Appearance" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <properties />
-      <listeners />
-    </configuration>
-    <configuration name="Catalog" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Basis" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="lifeCart.admin.sidebar.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" value="lifeCart.admin.sidebar" />
-      <option name="MAIN_CLASS_NAME" value="lifeCart.admin.sidebar.Catalog" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <properties />
-      <listeners />
-    </configuration>
-    <configuration name="Customers" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Basis" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="lifeCart.admin.sidebar.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" value="lifeCart.admin.sidebar" />
-      <option name="MAIN_CLASS_NAME" value="lifeCart.admin.sidebar.Customers" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <properties />
-      <listeners />
-    </configuration>
-    <configuration name="DrillPartOne" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="Checkout" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Basis" />
       <extension name="coverage">
         <pattern>
@@ -425,10 +354,126 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="SUITE_NAME" />
       <option name="PACKAGE_NAME" value="lifeCart.business.locators" />
-      <option name="MAIN_CLASS_NAME" value="lifeCart.business.locators.DrillPartOne" />
+      <option name="MAIN_CLASS_NAME" value="lifeCart.business.locators.Checkout" />
       <option name="METHOD_NAME" />
       <option name="GROUP_NAME" />
       <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <properties />
+      <listeners />
+    </configuration>
+    <configuration name="Checkout.TestTwo" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Basis" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="lifeCart.business.locators.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" value="lifeCart.business.locators" />
+      <option name="MAIN_CLASS_NAME" value="lifeCart.business.locators.Checkout" />
+      <option name="METHOD_NAME" value="TestTwo" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <properties />
+      <listeners />
+    </configuration>
+    <configuration name="SaleSticker" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Basis" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="lifeCart.business.locators.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" value="lifeCart.business.locators" />
+      <option name="MAIN_CLASS_NAME" value="lifeCart.business.locators.SaleSticker" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <properties />
+      <listeners />
+    </configuration>
+    <configuration name="SaleSticker.checkSaleStickerAbsence" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Basis" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="lifeCart.business.locators.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" value="lifeCart.business.locators" />
+      <option name="MAIN_CLASS_NAME" value="lifeCart.business.locators.SaleSticker" />
+      <option name="METHOD_NAME" value="checkSaleStickerAbsence" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <properties />
+      <listeners />
+    </configuration>
+    <configuration name="SaleSticker.checkSaleStickerPresence" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Basis" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="lifeCart.business.locators.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" value="lifeCart.business.locators" />
+      <option name="MAIN_CLASS_NAME" value="lifeCart.business.locators.SaleSticker" />
+      <option name="METHOD_NAME" value="checkSaleStickerPresence" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -464,49 +509,20 @@
       <properties />
       <listeners />
     </configuration>
-    <configuration name="lifeCart.admin.sidebar" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Basis" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="lifeCart.admin.sidebar.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" value="lifeCart.admin.sidebar" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="PACKAGE" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <properties />
-      <listeners />
-    </configuration>
     <list>
-      <item itemvalue="TestNG.DrillPartOne" />
-      <item itemvalue="TestNG.Appearance" />
-      <item itemvalue="TestNG.lifeCart.admin.sidebar" />
-      <item itemvalue="TestNG.Catalog" />
-      <item itemvalue="TestNG.Customers" />
+      <item itemvalue="TestNG.SaleSticker.checkSaleStickerAbsence" />
+      <item itemvalue="TestNG.SaleSticker.checkSaleStickerPresence" />
+      <item itemvalue="TestNG.SaleSticker" />
+      <item itemvalue="TestNG.Checkout.TestTwo" />
+      <item itemvalue="TestNG.Checkout" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.Customers" />
-        <item itemvalue="TestNG.Catalog" />
-        <item itemvalue="TestNG.lifeCart.admin.sidebar" />
-        <item itemvalue="TestNG.Appearance" />
-        <item itemvalue="TestNG.DrillPartOne" />
+        <item itemvalue="TestNG.Checkout.TestTwo" />
+        <item itemvalue="TestNG.Checkout" />
+        <item itemvalue="TestNG.SaleSticker" />
+        <item itemvalue="TestNG.SaleSticker.checkSaleStickerAbsence" />
+        <item itemvalue="TestNG.SaleSticker.checkSaleStickerPresence" />
       </list>
     </recent_temporary>
   </component>
@@ -524,35 +540,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="SaleStickerPresence - 2018.06.21 at 13h 13m 25s.xml">
-      <configuration name="SaleStickerPresence" configurationId="TestNG" />
+    <history-entry file="Checkout_TestTwo - 2018.06.21 at 16h 22m 38s.xml">
+      <configuration name="Checkout.TestTwo" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="SaleStickerPresence - 2018.06.21 at 13h 13m 42s.xml">
-      <configuration name="SaleStickerPresence" configurationId="TestNG" />
+    <history-entry file="Checkout_TestTwo - 2018.06.21 at 16h 24m 58s.xml">
+      <configuration name="Checkout.TestTwo" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="SaleStickerPresence - 2018.06.21 at 13h 13m 56s.xml">
-      <configuration name="SaleStickerPresence" configurationId="TestNG" />
+    <history-entry file="Checkout_TestTwo - 2018.06.21 at 16h 31m 50s.xml">
+      <configuration name="Checkout.TestTwo" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="SaleStickerPresence - 2018.06.21 at 13h 14m 55s.xml">
-      <configuration name="SaleStickerPresence" configurationId="TestNG" />
+    <history-entry file="Checkout_TestTwo - 2018.06.21 at 16h 32m 48s.xml">
+      <configuration name="Checkout.TestTwo" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="SaleStickerPresence - 2018.06.21 at 13h 15m 13s.xml">
-      <configuration name="SaleStickerPresence" configurationId="TestNG" />
+    <history-entry file="Checkout_TestTwo - 2018.06.21 at 16h 33m 32s.xml">
+      <configuration name="Checkout.TestTwo" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="DrillPartOne - 2018.06.21 at 13h 15m 35s.xml">
-      <configuration name="DrillPartOne" configurationId="TestNG" />
+    <history-entry file="Checkout_TestTwo - 2018.06.21 at 16h 34m 20s.xml">
+      <configuration name="Checkout.TestTwo" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="Appearance - 2018.06.21 at 13h 16m 15s.xml">
-      <configuration name="Appearance" configurationId="TestNG" />
+    <history-entry file="Checkout - 2018.06.21 at 16h 39m 16s.xml">
+      <configuration name="Checkout" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="lifeCart_admin_sidebar - 2018.06.21 at 13h 16m 31s.xml">
-      <configuration name="lifeCart.admin.sidebar" configurationId="TestNG" />
+    <history-entry file="Checkout - 2018.06.21 at 16h 39m 43s.xml">
+      <configuration name="Checkout" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="Catalog - 2018.06.21 at 13h 16m 56s.xml">
-      <configuration name="Catalog" configurationId="TestNG" />
+    <history-entry file="Checkout_TestTwo - 2018.06.21 at 16h 57m 21s.xml">
+      <configuration name="Checkout.TestTwo" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="Customers - 2018.06.21 at 13h 17m 18s.xml">
-      <configuration name="Customers" configurationId="TestNG" />
+    <history-entry file="Checkout_TestTwo - 2018.06.21 at 16h 57m 58s.xml">
+      <configuration name="Checkout.TestTwo" configurationId="TestNG" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -591,14 +607,12 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/java/multithreading/SecondTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/xml/multithreading/multi.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -725,16 +739,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/capabilities/chrome/CapabilitiesByPair.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="467">
-          <caret line="32" column="117" selection-start-line="32" selection-start-column="117" selection-end-line="32" selection-end-column="117" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/capabilities/firefox/CapabilitiesForESR.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
@@ -746,16 +750,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
           <caret line="43" column="18" selection-start-line="43" selection-start-column="18" selection-end-line="43" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/capabilities/chrome/CapabilitiesByArgumentsAndPair.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="41" column="18" selection-start-line="41" selection-start-column="18" selection-end-line="41" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -788,28 +782,6 @@
           <caret line="33" column="130" lean-forward="true" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="130" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/elementsPresence/elementsPresenceTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" selection-start-line="9" selection-end-line="15" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/elementsPresence/TestBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="49" selection-start-line="49" selection-end-line="52" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1277#1278#0" expanded="true" />
-            <element signature="e#1335#1336#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -917,13 +889,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/lifeCart/admin/sidebar/SingleSections.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/lifeCart/admin/sidebar/Catalog.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -955,26 +920,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/lifeCart/business/locators/DrillPartOne.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="98" column="29" selection-start-line="98" selection-start-column="7" selection-end-line="98" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/lifeCart/business/locators/SaleStickerPresence.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="39" column="23" selection-start-line="39" selection-start-column="23" selection-end-line="39" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/capabilities/chrome/CapabilitiesByArguments.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="188">
@@ -995,10 +940,75 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/elementsPresence/elementsPresenceTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-209">
+          <caret line="19" column="3" lean-forward="true" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/elementsPresence/TestBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="799">
+          <caret line="49" selection-start-line="49" selection-end-line="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/capabilities/chrome/CapabilitiesByArgumentsAndPair.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="41" column="18" selection-start-line="41" selection-start-column="18" selection-end-line="41" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/capabilities/chrome/CapabilitiesByPair.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="518">
+          <caret line="32" column="117" selection-start-line="32" selection-start-column="117" selection-end-line="32" selection-end-column="117" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/lifeCart/admin/sidebar/SingleSections.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/lifeCart/admin/sidebar/TestBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-374">
+          <caret line="23" column="18" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#893#894#0" expanded="true" />
+            <element signature="e#1023#1024#0" expanded="true" />
+            <element signature="e#1062#1063#0" expanded="true" />
+            <element signature="e#1123#1124#0" expanded="true" />
+            <element signature="e#1658#1659#0" expanded="true" />
+            <element signature="e#1753#1754#0" expanded="true" />
+            <element signature="e#1941#1942#0" expanded="true" />
+            <element signature="e#2043#2044#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/lifeCart/business/locators/TestBase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="369">
+          <caret line="69" column="89" lean-forward="true" selection-start-line="69" selection-start-column="89" selection-end-line="69" selection-end-column="89" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#780#781#0" expanded="true" />
@@ -1011,24 +1021,38 @@
             <element signature="e#1371#1372#0" expanded="true" />
             <element signature="e#1598#1599#0" expanded="true" />
             <element signature="e#1700#1701#0" expanded="true" />
+            <element signature="e#1845#1846#0" expanded="true" />
+            <element signature="e#1964#1965#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/lifeCart/admin/sidebar/TestBase.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/lifeCart/business/locators/SaleSticker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="22" column="16" lean-forward="true" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
+        <state relative-caret-position="383">
+          <caret line="36" selection-start-line="34" selection-end-line="36" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#893#894#0" expanded="true" />
-            <element signature="e#1023#1024#0" expanded="true" />
-            <element signature="e#1062#1063#0" expanded="true" />
-            <element signature="e#1123#1124#0" expanded="true" />
-            <element signature="e#1658#1659#0" expanded="true" />
-            <element signature="e#1753#1754#0" expanded="true" />
-            <element signature="e#1941#1942#0" expanded="true" />
-            <element signature="e#2043#2044#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/lifeCart/business/locators/Drill.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="52" column="24" selection-start-line="52" selection-start-column="24" selection-end-line="52" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/lifeCart/business/locators/Checkout.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

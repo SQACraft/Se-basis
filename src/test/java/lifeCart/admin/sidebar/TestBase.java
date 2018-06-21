@@ -21,7 +21,7 @@ public class TestBase {
     private String password = "admin";
 
     @BeforeSuite
-    public void start() {
+    void start() {
 
         ChromeOptions options = new ChromeOptions();
         options.addArguments("start-fullscreen");
@@ -56,11 +56,11 @@ public class TestBase {
         Assert.assertTrue(areElementsPresent(By.cssSelector("[href*=admin]"))); // проверка, что логотип - со страницы админки
     }
 
-    public boolean areElementsPresent(By locator) {         // Проверка наличия элемента
+    boolean areElementsPresent(By locator) {         // Проверка наличия элемента
         return wd.findElements(locator).size() > 0;
     }
 
-    public void click(By locator) {                                    // клик по элементу
+    void click(By locator) {                                    // клик по элементу
         wd.findElement(locator).click();
     }
 

@@ -18,7 +18,7 @@ public class TestBase {
     public WebDriverWait wait;
 
     @BeforeSuite
-    public void start() {
+    void start() {
 
         ChromeOptions options = new ChromeOptions();
         options.addArguments("start-fullscreen");
@@ -30,7 +30,7 @@ public class TestBase {
     }
 
     @BeforeMethod
-    public void goToSquareOne() {                                 //  переход на главную
+    void goToSquareOne() {                                 //  переход на главную
         click(By.cssSelector("img[title='My Store']"));
     }
 
@@ -44,23 +44,32 @@ public class TestBase {
      * TODO: вынести в отдельный класс
      */
 
-    public boolean isOneElementPresent(By locator) {         // Проверка наличия одного элемента
+    boolean isOneElementPresent(By locator) {         // Проверка наличия одного элемента
         return wd.findElements(locator).size() == 1;
     }
 
-    public boolean areElementsPresent(By locator) {         // Проверка наличия   элементов
+    boolean areElementsPresent(By locator) {         // Проверка наличия   элементов
         return wd.findElements(locator).size() > 0;
     }
 
-    public int numberOfElementsFound(By locator) {
+    int numberOfElementsFound(By locator) {
 
         int size = wd.findElements(locator).size();
         System.out.println("Найдено элементов: " + size);
         return size;
     }
 
-    public void click(By locator) {                                    // клик по элементу
+    void click(By locator) {                                    // клик по элементу
         wd.findElement(locator).click();
+    }
+
+    void goToCheckout() {                                    // переход в чекаут
+        click(By.cssSelector(("a.link[href$=checkout")));
+    }
+
+    void addToCart() throws InterruptedException {                                    // добавление товара в корзину
+        click(By.cssSelector("button[name=add_cart_product]"));
+        Thread.sleep(1000);                                                           // таймаут для добавления
     }
 
 }
