@@ -7,11 +7,14 @@ import org.testng.annotations.Test;
 public class SaleStickerPresence extends TestBase {
 
     /**
-     * Проверка наличия стикера SALE на карточке товара
+     * Проверка :
+     *  1. наличия стикера SALE на карточке товара
+     *  2. цены со скидкой
+     *  3. зума изображения
      */
 
     @Test
-    public void checkSaleStickerPresence() {
+    public void checkSaleStickerPresence() throws InterruptedException {
 
         click(By.cssSelector("nav.content [href*='c-1/']"));                                                       // переход в  раздел
 
@@ -31,6 +34,11 @@ public class SaleStickerPresence extends TestBase {
 
         Assert.assertTrue(isOneElementPresent(By.xpath(
                 ".//*[@id='box-category']/div/ul/li[1]/a[1]/div[5]/strong[contains(text(), '$18')]")));    // проверка значения цены со скидкой
+
+        click(By.xpath(".//*[@id='box-category']/div/ul/li[1]/a[2]/i"));                                          // клик по значку линзы для зума
+
+        Thread.sleep(1000);                                                                                        // пауза для просмотра изображения в зуме
+
     }
 
 }

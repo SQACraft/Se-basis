@@ -3,6 +3,7 @@ package lifeCart.admin.sidebar;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterSuite;
@@ -21,7 +22,11 @@ public class TestBase {
 
     @BeforeSuite
     public void start() {
-        wd = new ChromeDriver();
+
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("start-fullscreen");
+        wd = new ChromeDriver(options);
+
         wait = new WebDriverWait(wd, 10);
         wd.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS); //  неявное (Implicit) ожидание
         login();  // авторизация администратором в системе и переход в админку
