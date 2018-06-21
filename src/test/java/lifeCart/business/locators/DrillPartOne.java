@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class Drill extends TestBase {
+public class DrillPartOne extends TestBase {
 
     /**
      * 1. Локатор для поиска  всех блоков (li) с информацией о товарах
@@ -19,7 +19,7 @@ public class Drill extends TestBase {
         // Блок Most Popular
         locator = (By.cssSelector(("div #box-most-popular li.product.column")));
         Assert.assertTrue(areElementsPresent(locator));
-        System.out.println("Test One Results: \n*****************");
+        System.out.println("Test One Results: \n*****************");    // вывод количества элементов
         numberOfElementsFound(locator);
 
         // Блок Campaigns
@@ -86,6 +86,7 @@ public class Drill extends TestBase {
     /**
      * 5. Локатор для поиска на странице /create_account
      * элемента с текстом United States из выпадающего списка стран
+     * 6. локатор списка выбора штата
      */
 
     @Test(priority = 5)
@@ -98,10 +99,25 @@ public class Drill extends TestBase {
         click(By.cssSelector("span.select2-selection__arrow"));          // раскрыли комбобокс
 
         wd.findElement(By.cssSelector("input.select2-search__field"))
-                .sendKeys("United States");                                                 // ввели наименование страны в комбобоксе
+                .sendKeys("United States");                                                 // вводнаименования страны в комбобоксе
 
         wd.findElement(By.cssSelector("span.select2-selection.select2-selection--single"))
-                .sendKeys("\n");                                                               // засабмитили выбор в комбобоксе по Enter
+                .sendKeys("\n");                                                               // выбор в комбобоксе по Enter
+
+        wd.findElement(By.cssSelector("select[name=zone_code]"));                                 // локатор списка штатов
+    }
+
+    /**
+     * 7. Локатор для поиска кнопки сортировки товаров по дате
+     */
+
+    @Test
+    public void TestSix() {
+
+        click(By.cssSelector("nav.content [href*='c-1/']"));                                                       // переход в  раздел
+        Assert.assertTrue(isOneElementPresent(By.xpath
+                ("//h1[contains(text(), 'Rubber Ducks')]")));                                                         // проверка заголовка раздела
+        click(By.cssSelector(("nav.filter [href$='sort=date']")));                                                 // кнопка сортировки по дате
     }
 
 
