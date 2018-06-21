@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class DrillPartOne extends TestBase {
+public class Drill extends TestBase {
 
     /**
      * 1. Локатор для поиска  всех блоков (li) с информацией о товарах
