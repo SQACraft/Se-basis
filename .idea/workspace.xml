@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="056db876-f153-4c16-b0c6-be8af49afc25" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/lifeCart/business/locators/Checkout.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/lifeCart/admin/sidebar/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/lifeCart/admin/sidebar/TestBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/lifeCart/business/locators/Checkout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/lifeCart/business/locators/Checkout.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/lifeCart/business/locators/Drill.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/lifeCart/business/locators/Drill.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/lifeCart/business/locators/SaleSticker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/lifeCart/business/locators/SaleSticker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/lifeCart/business/locators/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/lifeCart/business/locators/TestBase.java" afterDir="false" />
     </list>
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,7 +18,7 @@
       <file leaf-file-name="TestBase.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/lifeCart/admin/sidebar/TestBase.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-374">
+            <state relative-caret-position="90">
               <caret line="23" column="18" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -38,8 +38,8 @@
       <file leaf-file-name="TestBase.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/lifeCart/business/locators/TestBase.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="369">
-              <caret line="69" column="89" lean-forward="true" selection-start-line="69" selection-start-column="89" selection-end-line="69" selection-end-column="89" />
+            <state relative-caret-position="243">
+              <caret line="54" column="14" selection-start-line="54" selection-start-column="14" selection-end-line="54" selection-end-column="14" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#780#781#0" expanded="true" />
@@ -71,11 +71,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SaleSticker.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SaleSticker.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/lifeCart/business/locators/SaleSticker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="383">
-              <caret line="36" selection-start-line="34" selection-end-line="36" />
+            <state relative-caret-position="447">
+              <caret line="43" column="17" lean-forward="true" selection-start-line="43" selection-start-column="17" selection-end-line="43" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -122,8 +122,8 @@
       <file leaf-file-name="Drill.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/lifeCart/business/locators/Drill.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="52" column="24" selection-start-line="52" selection-start-column="24" selection-end-line="52" selection-end-column="24" />
+            <state relative-caret-position="447">
+              <caret line="124" selection-start-line="124" selection-end-line="124" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -131,11 +131,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Checkout.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Checkout.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/lifeCart/business/locators/Checkout.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+            <state relative-caret-position="357">
+              <caret line="21" column="24" lean-forward="true" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -167,14 +167,14 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/test/java/lifeCart/business/locators/Drill.java" />
         <option value="$PROJECT_DIR$/src/test/java/lifeCart/business/locators/DrillPartTwo.java" />
         <option value="$PROJECT_DIR$/src/test/java/lifeCart/business/locators/DrillPartOne.java" />
         <option value="$PROJECT_DIR$/src/test/java/lifeCart/business/locators/SaleStickerPresence.java" />
-        <option value="$PROJECT_DIR$/src/test/java/lifeCart/business/locators/SaleSticker.java" />
         <option value="$PROJECT_DIR$/src/test/java/lifeCart/admin/sidebar/TestBase.java" />
-        <option value="$PROJECT_DIR$/src/test/java/lifeCart/business/locators/TestBase.java" />
         <option value="$PROJECT_DIR$/src/test/java/lifeCart/business/locators/Checkout.java" />
+        <option value="$PROJECT_DIR$/src/test/java/lifeCart/business/locators/TestBase.java" />
+        <option value="$PROJECT_DIR$/src/test/java/lifeCart/business/locators/SaleSticker.java" />
+        <option value="$PROJECT_DIR$/src/test/java/lifeCart/business/locators/Drill.java" />
       </list>
     </option>
   </component>
@@ -322,7 +322,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.Checkout.TestTwo">
+  <component name="RunManager" selected="TestNG.Drill.TestSix">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
@@ -342,7 +342,7 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="Checkout" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="Drill" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Basis" />
       <extension name="coverage">
         <pattern>
@@ -354,7 +354,7 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="SUITE_NAME" />
       <option name="PACKAGE_NAME" value="lifeCart.business.locators" />
-      <option name="MAIN_CLASS_NAME" value="lifeCart.business.locators.Checkout" />
+      <option name="MAIN_CLASS_NAME" value="lifeCart.business.locators.Drill" />
       <option name="METHOD_NAME" />
       <option name="GROUP_NAME" />
       <option name="TEST_OBJECT" value="CLASS" />
@@ -371,7 +371,7 @@
       <properties />
       <listeners />
     </configuration>
-    <configuration name="Checkout.TestTwo" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="Drill.TestFour" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Basis" />
       <extension name="coverage">
         <pattern>
@@ -383,8 +383,8 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="SUITE_NAME" />
       <option name="PACKAGE_NAME" value="lifeCart.business.locators" />
-      <option name="MAIN_CLASS_NAME" value="lifeCart.business.locators.Checkout" />
-      <option name="METHOD_NAME" value="TestTwo" />
+      <option name="MAIN_CLASS_NAME" value="lifeCart.business.locators.Drill" />
+      <option name="METHOD_NAME" value="TestFour" />
       <option name="GROUP_NAME" />
       <option name="TEST_OBJECT" value="METHOD" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -400,7 +400,7 @@
       <properties />
       <listeners />
     </configuration>
-    <configuration name="SaleSticker" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="Drill.TestOne" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Basis" />
       <extension name="coverage">
         <pattern>
@@ -412,37 +412,8 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="SUITE_NAME" />
       <option name="PACKAGE_NAME" value="lifeCart.business.locators" />
-      <option name="MAIN_CLASS_NAME" value="lifeCart.business.locators.SaleSticker" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <properties />
-      <listeners />
-    </configuration>
-    <configuration name="SaleSticker.checkSaleStickerAbsence" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Basis" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="lifeCart.business.locators.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" value="lifeCart.business.locators" />
-      <option name="MAIN_CLASS_NAME" value="lifeCart.business.locators.SaleSticker" />
-      <option name="METHOD_NAME" value="checkSaleStickerAbsence" />
+      <option name="MAIN_CLASS_NAME" value="lifeCart.business.locators.Drill" />
+      <option name="METHOD_NAME" value="TestOne" />
       <option name="GROUP_NAME" />
       <option name="TEST_OBJECT" value="METHOD" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -458,7 +429,7 @@
       <properties />
       <listeners />
     </configuration>
-    <configuration name="SaleSticker.checkSaleStickerPresence" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="Drill.TestSix" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Basis" />
       <extension name="coverage">
         <pattern>
@@ -470,8 +441,37 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="SUITE_NAME" />
       <option name="PACKAGE_NAME" value="lifeCart.business.locators" />
-      <option name="MAIN_CLASS_NAME" value="lifeCart.business.locators.SaleSticker" />
-      <option name="METHOD_NAME" value="checkSaleStickerPresence" />
+      <option name="MAIN_CLASS_NAME" value="lifeCart.business.locators.Drill" />
+      <option name="METHOD_NAME" value="TestSix" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <properties />
+      <listeners />
+    </configuration>
+    <configuration name="Drill.TestThree" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Basis" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="lifeCart.business.locators.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" value="lifeCart.business.locators" />
+      <option name="MAIN_CLASS_NAME" value="lifeCart.business.locators.Drill" />
+      <option name="METHOD_NAME" value="TestThree" />
       <option name="GROUP_NAME" />
       <option name="TEST_OBJECT" value="METHOD" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -510,19 +510,19 @@
       <listeners />
     </configuration>
     <list>
-      <item itemvalue="TestNG.SaleSticker.checkSaleStickerAbsence" />
-      <item itemvalue="TestNG.SaleSticker.checkSaleStickerPresence" />
-      <item itemvalue="TestNG.SaleSticker" />
-      <item itemvalue="TestNG.Checkout.TestTwo" />
-      <item itemvalue="TestNG.Checkout" />
+      <item itemvalue="TestNG.Drill" />
+      <item itemvalue="TestNG.Drill.TestOne" />
+      <item itemvalue="TestNG.Drill.TestThree" />
+      <item itemvalue="TestNG.Drill.TestFour" />
+      <item itemvalue="TestNG.Drill.TestSix" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.Checkout.TestTwo" />
-        <item itemvalue="TestNG.Checkout" />
-        <item itemvalue="TestNG.SaleSticker" />
-        <item itemvalue="TestNG.SaleSticker.checkSaleStickerAbsence" />
-        <item itemvalue="TestNG.SaleSticker.checkSaleStickerPresence" />
+        <item itemvalue="TestNG.Drill.TestSix" />
+        <item itemvalue="TestNG.Drill.TestFour" />
+        <item itemvalue="TestNG.Drill.TestThree" />
+        <item itemvalue="TestNG.Drill.TestOne" />
+        <item itemvalue="TestNG.Drill" />
       </list>
     </recent_temporary>
   </component>
@@ -540,35 +540,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Checkout_TestTwo - 2018.06.21 at 16h 22m 38s.xml">
-      <configuration name="Checkout.TestTwo" configurationId="TestNG" />
+    <history-entry file="Drill - 2018.06.21 at 17h 10m 57s.xml">
+      <configuration name="Drill" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="Checkout_TestTwo - 2018.06.21 at 16h 24m 58s.xml">
-      <configuration name="Checkout.TestTwo" configurationId="TestNG" />
+    <history-entry file="Drill_TestOne - 2018.06.21 at 20h 11m 34s.xml">
+      <configuration name="Drill.TestOne" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="Checkout_TestTwo - 2018.06.21 at 16h 31m 50s.xml">
-      <configuration name="Checkout.TestTwo" configurationId="TestNG" />
+    <history-entry file="Drill_TestOne - 2018.06.21 at 20h 13m 43s.xml">
+      <configuration name="Drill.TestOne" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="Checkout_TestTwo - 2018.06.21 at 16h 32m 48s.xml">
-      <configuration name="Checkout.TestTwo" configurationId="TestNG" />
+    <history-entry file="Drill_TestOne - 2018.06.21 at 20h 14m 01s.xml">
+      <configuration name="Drill.TestOne" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="Checkout_TestTwo - 2018.06.21 at 16h 33m 32s.xml">
-      <configuration name="Checkout.TestTwo" configurationId="TestNG" />
+    <history-entry file="Drill_TestOne - 2018.06.21 at 20h 15m 22s.xml">
+      <configuration name="Drill.TestOne" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="Checkout_TestTwo - 2018.06.21 at 16h 34m 20s.xml">
-      <configuration name="Checkout.TestTwo" configurationId="TestNG" />
+    <history-entry file="Drill_TestThree - 2018.06.21 at 20h 26m 36s.xml">
+      <configuration name="Drill.TestThree" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="Checkout - 2018.06.21 at 16h 39m 16s.xml">
-      <configuration name="Checkout" configurationId="TestNG" />
+    <history-entry file="Drill_TestThree - 2018.06.21 at 20h 34m 03s.xml">
+      <configuration name="Drill.TestThree" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="Checkout - 2018.06.21 at 16h 39m 43s.xml">
-      <configuration name="Checkout" configurationId="TestNG" />
+    <history-entry file="Drill_TestFour - 2018.06.21 at 20h 40m 53s.xml">
+      <configuration name="Drill.TestFour" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="Checkout_TestTwo - 2018.06.21 at 16h 57m 21s.xml">
-      <configuration name="Checkout.TestTwo" configurationId="TestNG" />
+    <history-entry file="Drill_TestSix - 2018.06.21 at 21h 00m 18s.xml">
+      <configuration name="Drill.TestSix" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="Checkout_TestTwo - 2018.06.21 at 16h 57m 58s.xml">
-      <configuration name="Checkout.TestTwo" configurationId="TestNG" />
+    <history-entry file="Drill_TestSix - 2018.06.21 at 21h 00m 36s.xml">
+      <configuration name="Drill.TestSix" configurationId="TestNG" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -585,7 +585,7 @@
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50053304" side_tool="true" weight="0.4051724" />
       <window_info anchor="right" id="Maven Projects" order="3" weight="0.15565032" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3297414" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" visible="true" weight="0.4224138" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" visible="true" weight="0.35668105" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.3297414" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
@@ -987,28 +987,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/lifeCart/admin/sidebar/TestBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-374">
-          <caret line="23" column="18" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#893#894#0" expanded="true" />
-            <element signature="e#1023#1024#0" expanded="true" />
-            <element signature="e#1062#1063#0" expanded="true" />
-            <element signature="e#1123#1124#0" expanded="true" />
-            <element signature="e#1658#1659#0" expanded="true" />
-            <element signature="e#1753#1754#0" expanded="true" />
-            <element signature="e#1941#1942#0" expanded="true" />
-            <element signature="e#2043#2044#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/lifeCart/business/locators/TestBase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="69" column="89" lean-forward="true" selection-start-line="69" selection-start-column="89" selection-end-line="69" selection-end-column="89" />
+        <state relative-caret-position="243">
+          <caret line="54" column="14" selection-start-line="54" selection-start-column="14" selection-end-line="54" selection-end-column="14" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#780#781#0" expanded="true" />
@@ -1027,20 +1009,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/lifeCart/business/locators/SaleSticker.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/lifeCart/admin/sidebar/TestBase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="383">
-          <caret line="36" selection-start-line="34" selection-end-line="36" />
+        <state relative-caret-position="90">
+          <caret line="23" column="18" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#893#894#0" expanded="true" />
+            <element signature="e#1023#1024#0" expanded="true" />
+            <element signature="e#1062#1063#0" expanded="true" />
+            <element signature="e#1123#1124#0" expanded="true" />
+            <element signature="e#1658#1659#0" expanded="true" />
+            <element signature="e#1753#1754#0" expanded="true" />
+            <element signature="e#1941#1942#0" expanded="true" />
+            <element signature="e#2043#2044#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/lifeCart/business/locators/Drill.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="52" column="24" selection-start-line="52" selection-start-column="24" selection-end-line="52" selection-end-column="24" />
+        <state relative-caret-position="447">
+          <caret line="124" selection-start-line="124" selection-end-line="124" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1049,8 +1039,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/lifeCart/business/locators/Checkout.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        <state relative-caret-position="357">
+          <caret line="21" column="24" lean-forward="true" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/lifeCart/business/locators/SaleSticker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="447">
+          <caret line="43" column="17" lean-forward="true" selection-start-line="43" selection-start-column="17" selection-end-line="43" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

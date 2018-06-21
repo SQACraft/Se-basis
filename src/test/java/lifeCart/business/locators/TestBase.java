@@ -52,7 +52,7 @@ public class TestBase {
         return wd.findElements(locator).size() > 0;
     }
 
-    int numberOfElementsFound(By locator) {
+    int getNumOfElementsFound(By locator) {
 
         int size = wd.findElements(locator).size();
         System.out.println("Найдено элементов: " + size);

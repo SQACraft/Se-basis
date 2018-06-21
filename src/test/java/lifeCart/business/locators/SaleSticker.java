@@ -43,7 +43,7 @@ public class SaleSticker extends TestBase {
     /**
      * Проверка :
      * 1. наличия стикера SALE на карточке товара в разделе
-     * 2. отсутствия стикера на карточах остальых товаров
+     * 2. отсутствия стикера на карточке товара
      */
     @Test(priority = 2)
     public void checkSaleStickerAbsence() {
@@ -56,12 +56,6 @@ public class SaleSticker extends TestBase {
                 "a.link[href*=p-1] div.sticker.sale")));                                                                 // проверка наличия стикера SALE у товара Yellow Duck
         Assert.assertFalse(isOneElementPresent(By.cssSelector(
                 "a.link[href*=p-2] div.sticker.sale")));                                                                 // проверка отсутствия стикера SALE у товара Green Duck
-        Assert.assertFalse(isOneElementPresent(By.cssSelector(
-                "a.link[href*=p-3] div.sticker.sale")));                                                                 // проверка отсутствия стикера SALE у товара Red Duck
-        Assert.assertFalse(isOneElementPresent(By.cssSelector(
-                "a.link[href*=p-4] div.sticker.sale")));                                                                 // проверка отсутствия стикера SALE у товара Blue Duck
-        Assert.assertFalse(isOneElementPresent(By.cssSelector(
-                "a.link[href*=p-5] div.sticker.sale")));                                                                 // проверка отсутствия стикера SALE у товара Purple Duck
     }
 
 

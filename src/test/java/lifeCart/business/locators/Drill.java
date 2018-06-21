@@ -17,20 +17,21 @@ public class Drill extends TestBase {
         By locator;
 
         // Блок Most Popular
-        locator = (By.cssSelector(("div #box-most-popular li.product.column")));
+        // locator = (By.cssSelector(("div #box-most-popular li.product.column")));
+        locator = (By.cssSelector(("div #box-most-popular .product")));
         Assert.assertTrue(areElementsPresent(locator));
         System.out.println("Test One Results: \n*****************");    // вывод количества элементов
-        numberOfElementsFound(locator);
+        getNumOfElementsFound(locator);
 
         // Блок Campaigns
-        locator = (By.cssSelector(("div #box-campaigns li.product.column")));
+        locator = (By.cssSelector(("div #box-campaigns .product")));
         Assert.assertTrue(areElementsPresent(locator));
-        numberOfElementsFound(locator);
+        getNumOfElementsFound(locator);
 
         // Блок Latest Products
-        locator = (By.cssSelector(("div #box-latest-products li.product.column")));
+        locator = (By.cssSelector(("div #box-latest-products .product")));
         Assert.assertTrue(areElementsPresent(locator));
-        numberOfElementsFound(locator);
+        getNumOfElementsFound(locator);
     }
 
     /**
@@ -65,7 +66,7 @@ public class Drill extends TestBase {
     @Test(priority = 3)
     public void TestThree() {
 
-        click(By.cssSelector("td.information [href$='policy-i-3']"));    // клик по ссылке
+        click(By.cssSelector("#footer [href*='privacy-policy ']"));    // клик по ссылке
         Assert.assertTrue(isOneElementPresent(By.xpath(
                 "//h1[contains(text(), 'Privacy Policy')]")));               // проверка заголовка
     }
@@ -78,7 +79,7 @@ public class Drill extends TestBase {
     @Test(priority = 4)
     public void TestFour() {
 
-        click(By.cssSelector("li.category-1 [href$='ducks-c-1/']"));    // клик по ссылке
+        click(By.cssSelector("#site-menu [href$='ducks-c-1/']"));    // клик по ссылке
         Assert.assertTrue(isOneElementPresent(By.xpath(
                 "//h1[contains(text(), 'Rubber Ducks')]")));               // проверка заголовка
     }
@@ -99,7 +100,7 @@ public class Drill extends TestBase {
         click(By.cssSelector("span.select2-selection__arrow"));          // раскрыли комбобокс
 
         wd.findElement(By.cssSelector("input.select2-search__field"))
-                .sendKeys("United States");                                                 // вводнаименования страны в комбобоксе
+                .sendKeys("United States");                                                 // ввод наименования страны в комбобоксе
 
         wd.findElement(By.cssSelector("span.select2-selection.select2-selection--single"))
                 .sendKeys("\n");                                                               // выбор в комбобоксе по Enter
@@ -117,8 +118,8 @@ public class Drill extends TestBase {
         click(By.cssSelector("nav.content [href*='c-1/']"));                                                       // переход в  раздел
         Assert.assertTrue(isOneElementPresent(By.xpath
                 ("//h1[contains(text(), 'Rubber Ducks')]")));                                                         // проверка заголовка раздела
-        click(By.cssSelector(("nav.filter [href$='sort=date']")));                                                 // кнопка сортировки по дате
-    }
+        click(By.cssSelector(("a[href$='sort=date']")));                                                 // кнопка сортировки по дате
 
+    }
 
 }
