@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name ="OOPSuite" >
+
+    <suite-files>
+        <suite-file path="OOPDrill.xml"/>
+    </suite-files>
+
+        <packages>
+            <package name = "OOPDrill.suiteOne"/>
+            <package name = "OOPDrill.common"/>
+        </packages>
+
+</suite>

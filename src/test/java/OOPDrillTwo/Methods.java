@@ -1,15 +1,14 @@
-package OOPDrill.common;
+package OOPDrillTwo;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Methods  {
 
     WebDriver wd  ;
 
     public Methods (WebDriver wd) {
-       this.wd =  wd;
+        this.wd =  wd;
 
     }
 

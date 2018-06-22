@@ -1,0 +1,24 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name ="OOP Drill"     >
+<test name = "TestNG test">
+    <groups>
+        <run>
+            <include name ="testGroup"/>
+        </run>
+    </groups>
+
+    <packages>
+        <package name = "OOPDrill.suiteOne"/>
+        <package name = "OOPDrill.common"/>
+    </packages>
+
+    <classes>
+        <class name="OOPDrill.common.Methods"/>
+        <class name="OOPDrill.suiteOne.Checkout"/>
+        <class name="OOPDrill.suiteOne.TestBase"/>
+    </classes>
+
+
+
+</test>
+</suite>

@@ -1,13 +1,15 @@
-package OOPDrill.suiteOne;
+package OOPDrillTwo;
 
-import OOPDrill.common.Methods;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class Checkout extends TestBase   {
+public class Checkout extends TestBase {
 
-     @Test (groups = "testGroup")
+    Methods m = new Methods(wd);
+
+     @Test
+
     public void passCheckout() throws InterruptedException {
 
         m.click(By.cssSelector(("div #box-most-popular a.link[href*=p-3"))); // выбор  товара
