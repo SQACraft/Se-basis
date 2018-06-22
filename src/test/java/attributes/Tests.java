@@ -42,7 +42,7 @@ public class Tests extends TestBase {
 
         wd.findElement(By.cssSelector("#region [href*=regional]")).click();      //открытие  модального окна Regional Settings
         Assert.assertTrue(isOneElementPresent(By.xpath
-                ("//h1[contains(text(), 'Regional Settings')]")));
+                ("//h1[contains(text(), 'Regional Settings')]")));                       // валидация заголовка
 
         String property = wd.findElement(By.cssSelector("#box-regional-settings [value=USD]"))   //получаем свойство "выбран" для элемента в списке
                 .getAttribute("selected");
