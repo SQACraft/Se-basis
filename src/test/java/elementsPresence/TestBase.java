@@ -15,7 +15,7 @@ public class TestBase {
 
     @BeforeSuite
 
-    public void start() {
+    void start() {
         wd = new ChromeDriver();
 
         wd.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS); //  неявное (Implicit) ожидание
@@ -33,7 +33,7 @@ public class TestBase {
      * Методы для проверки наличия элемента
      */
 
-    public boolean isElementPresent(By locator) {
+    boolean isElementPresent(By locator) {
         try {
             wait.until((WebDriver d) -> d.findElement(locator)); // явное (Explicit) ожидание
             wd.findElement(locator);
@@ -47,7 +47,7 @@ public class TestBase {
         }
     }
 
-    public boolean areElementsPresent(By locator) {
+    boolean areElementsPresent(By locator) {
         return wd.findElements(locator).size() > 0;
     }
 
