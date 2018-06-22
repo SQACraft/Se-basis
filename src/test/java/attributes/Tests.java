@@ -49,7 +49,7 @@ public class Tests extends TestBase {
         System.out.println("selected: " + property);
 
         Thread.sleep(1000);                                                           // ожидание  отрисовки крестика
-        wd.findElement(By.cssSelector("a#fancybox-close")).click();              // закрываем модальное окно
+        wd.findElement(By.cssSelector("#fancybox-close")).click();              // закрываем модальное окно
         Thread.sleep(500);                                                          //  ожидание закрытия окна
     }
 
