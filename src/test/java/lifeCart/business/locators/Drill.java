@@ -1,6 +1,7 @@
 package lifeCart.business.locators;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -102,7 +103,7 @@ public class Drill extends TestBase {
                 .sendKeys("United States");                                                 // ввод наименования страны в комбобоксе
 
         wd.findElement(By.cssSelector("span.select2-selection.select2-selection--single"))
-                .sendKeys("\n");                                                               // выбор в комбобоксе по Enter
+                .sendKeys(Keys.ENTER);                                                               // выбор в комбобоксе по Enter
 
         wd.findElement(By.cssSelector("select[name=zone_code]"));                                 // локатор списка штатов
     }

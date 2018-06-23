@@ -30,6 +30,7 @@ public class Tests extends TestBase {
 
         String property = wd.findElement(By.cssSelector("#breadcrumbs [href$='litecart/']"))
                 .getAttribute("href");
+
         System.out.println("href: " + property);
     }
 
@@ -44,8 +45,10 @@ public class Tests extends TestBase {
         Assert.assertTrue(isOneElementPresent(By.xpath
                 ("//h1[contains(text(), 'Regional Settings')]")));                       // валидация заголовка
 
-        String property = wd.findElement(By.cssSelector("#box-regional-settings [value=USD]"))   //получаем свойство "выбран" для элемента в списке
+        String property = wd.findElement(By.cssSelector(
+                "#box-regional-settings [value=USD]"))                                 //получаем свойство "выбран" для элемента в списке
                 .getAttribute("selected");
+
         System.out.println("selected: " + property);
 
         Thread.sleep(1000);                                                           // ожидание  отрисовки крестика
