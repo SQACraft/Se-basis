@@ -14,7 +14,7 @@ public class SaleSticker extends TestBase {
      */
 
     @Test(priority = 1)
-    public void checkSaleStickerPresence() throws InterruptedException {
+    void checkSaleStickerPresence() throws InterruptedException {
 
         click(By.cssSelector("nav.content [href*='c-1/']"));                                                       // переход в  раздел Rubber Ducks
 
@@ -46,7 +46,7 @@ public class SaleSticker extends TestBase {
      * 2. отсутствия стикера на карточке товара
      */
     @Test(priority = 2)
-    public void checkSaleStickerAbsence() {
+     void checkSaleStickerAbsence() {
 
         click(By.cssSelector("nav.content [href*='c-1/']"));                                                       // переход в  раздел Rubber Ducks
         Assert.assertTrue(isOneElementPresent(By.xpath

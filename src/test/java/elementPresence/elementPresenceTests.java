@@ -8,7 +8,7 @@ public class elementPresenceTests extends TestBase {
 
 
     @Test
-    public void checkElementPresence() {
+    void checkElementPresence() {
 /**
  Проверка наличия элемента с использованием findElement()  + try-catch
  */
@@ -16,7 +16,7 @@ public class elementPresenceTests extends TestBase {
     }
 
     @Test
-    public void checkElementsPresence() {
+    void checkElementsPresence() {
 /**
  Проверка наличия элемента с использованием findElements()  +size() > 0
  */
@@ -24,7 +24,7 @@ public class elementPresenceTests extends TestBase {
     }
 
     @Test
-    public void checkElementAbsence() {
+    void checkElementAbsence() {
 /**
  Проверка отсутствия элемента с использованием findElement()  + try-catch
  */
@@ -32,7 +32,7 @@ public class elementPresenceTests extends TestBase {
     }
 
     @Test
-    public void checkElementsAbsence() {
+    void checkElementsAbsence() {
 
 /**
  Проверка отсутствия элемента с использованием findElements()  +size() > 0
@@ -41,7 +41,7 @@ public class elementPresenceTests extends TestBase {
     }
 
     @Test
-    public void checkWrongXPath() {
+    void checkWrongXPath() {
 
 /**
  Проверка выброса  InvalidSelectorException  как подкласса NoSuchElementException

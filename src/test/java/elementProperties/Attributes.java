@@ -1,18 +1,18 @@
-package attributes;
+package elementProperties;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class Tests extends TestBase {
+public class Attributes extends TestBase {
 
     /**
      * Value - получение текста, введённого  в строке поиска
      */
 
     @Test
-    public void checkValue() {
+    void checkValue() {
 
         wd.findElement(By.cssSelector(".search input"))
                 .sendKeys("I wanna find a duck");                       // ввод текста в строку поиска
@@ -27,7 +27,7 @@ public class Tests extends TestBase {
      */
 
     @Test
-    public void checkLink() {
+    void checkLink() {
 
         String property = wd.findElement(By.cssSelector("#breadcrumbs [href$='litecart/']"))
                 .getAttribute("href");
@@ -40,7 +40,7 @@ public class Tests extends TestBase {
      */
 
     @Test
-    public void checkSelected() throws InterruptedException {
+    void checkSelected() throws InterruptedException {
 
         wd.findElement(By.cssSelector("#region [href*=regional]")).click();      //открытие  модального окна Regional Settings
         Assert.assertTrue(isOneElementPresent(By.xpath

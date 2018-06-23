@@ -17,24 +17,24 @@ public class CapabilitiesByArguments {
     private WebDriverWait wait;
 
     @BeforeTest
-    public void start() {
+    void start() {
 
         ChromeOptions options = new ChromeOptions();
         options.addArguments("start-fullscreen");
         wd = new ChromeDriver(options);
         System.out.println(((HasCapabilities) wd).getCapabilities()); // вывод всех capabilities после запуска браузера
-        wait = new WebDriverWait (wd, 10);
+        wait = new WebDriverWait(wd, 10);
     }
 
     @Test
-    public void  search()  {
-        wd.get ("https://bash.im/");
+    void search() {
+        wd.get("https://bash.im/");
         wd.findElement(By.cssSelector("div #search #text")).sendKeys("Енот");        // ввод в строке поиска
         wd.findElement(By.cssSelector("div #search [type=submit]")).click();                                // сабмит
     }
 
     @AfterTest
-    public void stop() {
+    void stop() {
         wd.quit();
         wd = null;
     }

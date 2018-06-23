@@ -16,49 +16,49 @@ public class FactorySample {
     public WebDriverWait wait;
 
     @BeforeMethod
-    public void start() {
+    void start() {
 
         wd = WebDriverPool.DEFAULT.getDriver(DesiredCapabilities.chrome());
         wait = new WebDriverWait(wd, 10);
     }
 
     @AfterSuite
-    public void stop() {
+    void stop() {
         WebDriverPool.DEFAULT.dismissAll();
     }
 
     @Test
-    public void test1() {
+    void test1() {
         search("КОШКА");
     }
 
     @Test
-    public void test2() {
+    void test2() {
         search("CОБАКА");
     }
 
     @Test
-    public void test3() {
+    void test3() {
         search("ЕНОТ");
     }
 
     @Test
-    public void test4() {
+    void test4() {
         search("МЕДВЕДЬ");
     }
 
     @Test
-    public void test5() {
+    void test5() {
         search("КАБАН");
     }
 
     @Test
-    public void test6() {
+    void test6() {
         search("ЛЕМУР");
     }
 
     @Test
-    public void test7() {
+    void test7() {
         search("ПАНДА");
     }
 

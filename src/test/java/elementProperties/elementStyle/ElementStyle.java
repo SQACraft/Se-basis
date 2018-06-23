@@ -1,11 +1,10 @@
-package elementStyles;
+package elementProperties.elementStyle;
 
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class ElementStyleTests extends TestBase {
-
+public class ElementStyle extends TestBase {
 
     /**
      * Получение цвета текста, фона и границы  заголовка.
@@ -13,7 +12,7 @@ public class ElementStyleTests extends TestBase {
      */
 
     @Test
-    public void getColour() {
+    void getColour() {
 
         String colour = wd.findElement(By.cssSelector("div.page-header [itemprop=headline]"))
                 .getCssValue("color");
@@ -22,7 +21,7 @@ public class ElementStyleTests extends TestBase {
     }
 
     @Test
-    public void getBgColour() {
+    void getBgColour() {
 
         String bgColour = wd.findElement(By.cssSelector("div.page-header [itemprop=headline]"))
                 .getCssValue("background-color");
@@ -31,33 +30,23 @@ public class ElementStyleTests extends TestBase {
     }
 
     @Test
-    public void getBorderColour() {
+    void getBorderColour() {
 
         String borderColour = wd.findElement(By.cssSelector("div.page-header [itemprop=headline]"))
                 .getCssValue("border-color");
 
-     Assert.assertEquals(borderColour, "rgb(214, 70, 63)");          // валидация значения в формате RGB
+        Assert.assertEquals(borderColour, "rgb(214, 70, 63)");          // валидация значения в формате RGB
     }
 
     @Test
-    public void getBackground() {
+    void getBackground() {
 
         String bg = wd.findElement(By.cssSelector("div.page-header [itemprop=headline]"))
                 .getCssValue("background");
 
-
-
-    Assert.assertEquals(bg, "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box");  // комбинированные стили
+        Assert.assertEquals(bg, "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box");  // комбинированные стили
     }
 
 
-    @Test
-    public void getAttr() {
-
-        String bg = wd.findElement(By.cssSelector("div.page-header [itemprop=headline]"))
-                .getAttribute("id");
-        System.out.println(bg);
-    }
-
-    }
+}
 

@@ -11,34 +11,34 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class  CapabilitiesByArgumentsAndPair {
+public class CapabilitiesByArgumentsAndPair {
 
     private WebDriver wd;
     private WebDriverWait wait;
 
     @BeforeTest
-    public void start() {
+    void start() {
 
         ChromeOptions options = new ChromeOptions();
         options.addArguments("start-fullscreen"); // добавление аргументов для запуска браузера
         DesiredCapabilities caps = new DesiredCapabilities();
-        caps.setCapability ("unexpectedAlertBehaviour", "dismiss"); // добавление пары Capabilities
-        caps.setCapability (ChromeOptions.CAPABILITY, options);
+        caps.setCapability("unexpectedAlertBehaviour", "dismiss"); // добавление пары Capabilities
+        caps.setCapability(ChromeOptions.CAPABILITY, options);
 
         wd = new ChromeDriver(caps);
         System.out.println(((HasCapabilities) wd).getCapabilities()); // вывод всех capabilities после запуска браузера
-        wait = new WebDriverWait (wd, 10);
+        wait = new WebDriverWait(wd, 10);
     }
 
     @Test
-    public void  search()  {
-        wd.get ("https://bash.im/");
+    void search() {
+        wd.get("https://bash.im/");
         wd.findElement(By.cssSelector("div #search #text")).sendKeys("Енот");        // ввод в строке поиска
         wd.findElement(By.cssSelector("div #search [type=submit]")).click();                                // сабмит
     }
 
     @AfterTest
-    public void stop() {
+    void stop() {
         wd.quit();
         wd = null;
     }

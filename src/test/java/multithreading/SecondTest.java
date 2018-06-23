@@ -7,17 +7,17 @@ import org.testng.annotations.Test;
 public class SecondTest extends TestBase{
 
     @Test
-    public void  test21()  {
+     void  test21()  {
         search("ВОЛК");
     }
 
     @Test
-    public void  test22()  {
+    void  test22()  {
         search("МЕДВЕДЬ");
     }
 
     @Test
-    public void  test23()  {
+     void  test23()  {
         search("РЫСЬ");
     }
 

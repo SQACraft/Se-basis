@@ -14,13 +14,13 @@ public class SingleSections extends TestBase {
      */
 
     @Test(priority = 20)
-    public void openCountriesSection() {
+    void openCountriesSection() {
         click(By.cssSelector("[href$=countries]"));
         Assert.assertTrue(areElementsPresent(By.xpath("//h1[contains(text(), 'Countries')]")));
     }
 
     @Test(priority = 21)
-    public void openCurrenciesSection() {
+    void openCurrenciesSection() {
         click(By.cssSelector("[href$=currencies]"));
         Assert.assertTrue(areElementsPresent(By.xpath("//h1[contains(text(), 'Currencies')]")));
     }

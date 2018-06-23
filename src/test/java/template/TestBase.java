@@ -1,7 +1,6 @@
 package template;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -42,6 +41,20 @@ public class TestBase {
      * Методы
      * TODO: вынести в отдельный класс
      */
+
+    boolean isElementPresent(By locator) {
+        try {
+            wait.until((WebDriver d) -> d.findElement(locator)); // явное (Explicit) ожидание
+            wd.findElement(locator);
+            return true;
+        } catch (TimeoutException ex) {  // исключение при  явном ожидании, если не дождались
+            return false;
+        } catch (InvalidSelectorException ex) { //подкласс NoSuchElementException, здесь не должен подавляться
+            throw ex;
+        } catch (NoSuchElementException ex) {
+            return false;
+        }
+    }
 
     boolean isOneElementPresent(By locator) {         // Проверка наличия одного элемента
         return wd.findElements(locator).size() == 1;

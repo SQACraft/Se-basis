@@ -16,7 +16,7 @@ public class CapabilitiesByPair {
     private WebDriverWait wait;
 
     @BeforeTest
-    public void start() {
+    void start() {
 
         DesiredCapabilities caps = new DesiredCapabilities();
         caps.setCapability("unexpectedAlertBehaviour", "ignore"); // устанавливаем конкретные capabilities браузера при запуске
@@ -27,14 +27,14 @@ public class CapabilitiesByPair {
     }
 
     @Test
-    public void search() {
+    void search() {
         wd.get("https://bash.im/");
         wd.findElement(By.cssSelector("div #search #text")).sendKeys("Енот");        // ввод в строке поиска
         wd.findElement(By.cssSelector("div #search [type=submit]")).click();                                // сабмит
     }
 
     @AfterTest
-    public void stop() {
+    void stop() {
         wd.quit();
         wd = null;
     }

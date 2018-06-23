@@ -17,14 +17,14 @@ public class Cookies {
     private Set<Cookie> allCookies;
 
     @BeforeTest
-    public void start() {
+    void start() {
 
         wd = new ChromeDriver();
         wait = new WebDriverWait(wd, 10);
     }
 
     @Test
-    public void cookies() {
+    void cookies() {
 
         wd.get("https://bash.im/");
 
@@ -61,7 +61,7 @@ public class Cookies {
     }
 
     @AfterTest
-    public void stop() {
+    void stop() {
         wd.quit();
         wd = null;
     }

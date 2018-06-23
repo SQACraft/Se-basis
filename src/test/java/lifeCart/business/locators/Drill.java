@@ -64,7 +64,7 @@ public class Drill extends TestBase {
      */
 
     @Test(priority = 3)
-    public void privacyPolicyLink() {
+     void privacyPolicyLink() {
 
         click(By.cssSelector("#footer [href*='privacy-policy']"));    // клик по ссылке
         Assert.assertTrue(isOneElementPresent(By.xpath(
@@ -77,7 +77,7 @@ public class Drill extends TestBase {
      */
 
     @Test(priority = 4)
-    public void siteMenu() {
+     void siteMenu() {
 
         click(By.cssSelector("#site-menu [href$='ducks-c-1/']"));    // клик по ссылке
         Assert.assertTrue(isOneElementPresent(By.xpath(

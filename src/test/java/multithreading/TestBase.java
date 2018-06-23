@@ -14,7 +14,7 @@ public class TestBase {
     public WebDriverWait wait;
 
     @BeforeMethod
-    public void start() {
+     void start() {
 
         if (tlDriver.get() != null) {
             wd = tlDriver.get();

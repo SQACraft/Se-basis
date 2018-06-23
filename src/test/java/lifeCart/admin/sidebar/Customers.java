@@ -14,27 +14,27 @@ public class Customers extends TestBase {
      */
 
     @Test(priority = 16)
-    public void openCustomersSection() {
+    void openCustomersSection() {
         click(By.cssSelector("[href$=customers]"));
         Assert.assertTrue(areElementsPresent(By.xpath("//h1[contains(text(), 'Customers')]")));
     }
 
     @Test(priority = 17)
-    public void openCustomersSubSection() {
+    void openCustomersSubSection() {
         click(By.cssSelector("[href$=customers]"));
         click(By.cssSelector("#doc-customers a"));
         Assert.assertTrue(areElementsPresent(By.xpath("//h1[contains(text(), 'Customers')]")));
     }
 
     @Test(priority = 18)
-    public void openCSVSubSection() {
+    void openCSVSubSection() {
         click(By.cssSelector("[href$=customers]"));
         click(By.cssSelector("#doc-csv  a"));
         Assert.assertTrue(areElementsPresent(By.xpath("//h1[contains(text(), 'CSV Import/Export')]")));
     }
 
     @Test(priority = 19)
-    public void openNewsletterSubSection() {
+    void openNewsletterSubSection() {
         click(By.cssSelector("[href$=customers]"));
         click(By.cssSelector("#doc-newsletter  a"));
         Assert.assertTrue(areElementsPresent(By.xpath("//h1[contains(text(), 'Newsletter')]")));

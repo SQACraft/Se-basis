@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 public class Checkout extends TestBase {
 
     @Test
-    public void Checkout() throws InterruptedException {
+    void Checkout() throws InterruptedException {
 
         click(By.cssSelector(("div #box-most-popular a.link[href*=p-3"))); // выбор первого товара
         Assert.assertTrue(isOneElementPresent(By.xpath

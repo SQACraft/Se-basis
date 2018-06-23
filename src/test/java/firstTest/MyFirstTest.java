@@ -14,20 +14,20 @@ public class MyFirstTest {
     private WebDriverWait wait;
 
     @BeforeTest
-    public void start() {
+    void start() {
         wd = new ChromeDriver();
-        wait = new WebDriverWait (wd, 10);
+        wait = new WebDriverWait(wd, 10);
     }
 
     @Test
-    public void  myFirstTest()  {
-        wd.get ("https://bash.im/");
+    void myFirstTest() {
+        wd.get("https://bash.im/");
         wd.findElement(By.name("text")).sendKeys("котик");
         wd.findElement(By.xpath(".//*[@id='search']/button")).click();
     }
 
     @AfterTest
-    public void stop() {
+    void stop() {
         wd.quit();
         wd = null;
 
