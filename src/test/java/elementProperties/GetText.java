@@ -4,6 +4,8 @@ import org.openqa.selenium.*;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.util.List;
+
 public class GetText extends TestBase {
 
     @Test
@@ -34,4 +36,7 @@ public class GetText extends TestBase {
         System.out.println("\nПроверка не пройдена, тест завершён успешно");
 
     }
+
+
+
 }
