@@ -1,4 +1,4 @@
-package elementsPresence;
+package elementPresence;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;

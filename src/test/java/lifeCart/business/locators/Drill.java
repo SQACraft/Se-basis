@@ -20,7 +20,7 @@ public class Drill extends TestBase {
         // Блок Most Popular
         locator = (By.cssSelector(("div #box-most-popular .product")));
         Assert.assertTrue(areElementsPresent(locator));
-        System.out.println("Tests One Results: \n*****************");    // вывод количества элементов
+        System.out.println("Test One Results: \n*****************");    // вывод количества элементов
         getNumOfElementsFound(locator);
 
         // Блок Campaigns

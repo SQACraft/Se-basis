@@ -1,10 +1,10 @@
-package elementsPresence;
+package elementPresence;
 
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class elementsPresenceTests extends TestBase {
+public class elementPresenceTests extends TestBase {
 
 
     @Test
