@@ -1,6 +1,7 @@
 package attributes;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -17,7 +18,7 @@ public class Tests extends TestBase {
                 .sendKeys("I wanna find a duck");                       // ввод текста в строку поиска
         String property = wd.findElement(By.cssSelector(".search input"))
                 .getAttribute("value");                                                       // получение свойства
-                                                                                                         // (здесь - введённый в строке поиска текст)
+        // (здесь - введённый в строке поиска текст)
         System.out.println("value: " + property);
     }
 
@@ -51,8 +52,13 @@ public class Tests extends TestBase {
 
         System.out.println("selected: " + property);
 
-        Thread.sleep(1000);                                                           // ожидание  отрисовки крестика
-        wd.findElement(By.cssSelector("#fancybox-close")).click();              // закрываем модальное окно
+        Thread.sleep(1000);                                                              // ожидание  отрисовки крестика
+        WebElement cross = wd.findElement(By.cssSelector("#fancybox-close"));
+
+        if (cross.isDisplayed()) {                                                                  // тренировка применения isDisplayed()
+            cross.click();                                                                                // закрываем модальное окно
+        }
+
         Thread.sleep(500);                                                          //  ожидание закрытия окна
     }
 
