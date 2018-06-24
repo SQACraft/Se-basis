@@ -85,16 +85,4 @@ public class TestBase {
         Thread.sleep(1000);                                                           // таймаут для добавления
     }
 
-
-    String ArrayToString(ArrayList arrayName) {                                   // конвертация массиваа в строку
-
-        StringBuilder sb = new StringBuilder();
-        for (Object i :arrayName)
-        {
-            sb.append(i);
-            sb.append("\t");
-        }
-        String arrayString = sb.toString();
-        return  arrayString;
-    }
 }

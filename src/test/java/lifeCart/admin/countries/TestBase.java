@@ -103,8 +103,7 @@ public class TestBase {
         StringBuilder sb = new StringBuilder();
         for (Object i :arrayName)
         {
-            sb.append(i);
-            sb.append("\t");
+            sb.append( i + "\t");
         }
         String arrayString = sb.toString();
         return  arrayString;
