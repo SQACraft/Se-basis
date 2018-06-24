@@ -1,4 +1,4 @@
-package lifeCart.business.locators.styles;
+package lifeCart.business.styles;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -97,7 +97,7 @@ public class TestBase {
         return  arrayString;
     }
 
-    void validateText(By locator, String expectedText) {
+    void validateByTextContent(By locator, String expectedText) {
 
         WebElement element = wd.findElement(locator);                           // находим элемент
         String actualText  = element.getAttribute("textContent");             // получаем атрибут textContent
