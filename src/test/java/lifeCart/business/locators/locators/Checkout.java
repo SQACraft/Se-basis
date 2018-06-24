@@ -1,4 +1,4 @@
-package lifeCart.business.locators;
+package lifeCart.business.locators.locators;
 
 import org.openqa.selenium.By;
 import org.testng.Assert;

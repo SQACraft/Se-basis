@@ -1,18 +1,18 @@
-package lifeCart.business.locators;
+package lifeCart.business.locators.styles;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 
+import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
 public class TestBase {
-
 
     public WebDriver wd;
     public WebDriverWait wait;
@@ -44,6 +44,20 @@ public class TestBase {
      * TODO: вынести в отдельный класс
      */
 
+    boolean isElementPresent(By locator) {
+        try {
+            wait.until((WebDriver d) -> d.findElement(locator)); // явное (Explicit) ожидание
+            wd.findElement(locator);
+            return true;
+        } catch (TimeoutException ex) {  // исключение при  явном ожидании, если не дождались
+            return false;
+        } catch (InvalidSelectorException ex) { //подкласс NoSuchElementException, здесь не должен подавляться
+            throw ex;
+        } catch (NoSuchElementException ex) {
+            return false;
+        }
+    }
+
     boolean isOneElementPresent(By locator) {         // Проверка наличия одного элемента
         return wd.findElements(locator).size() == 1;
     }
@@ -70,6 +84,24 @@ public class TestBase {
     void addToCart() throws InterruptedException {                                    // добавление товара в корзину
         click(By.cssSelector("button[name=add_cart_product]"));
         Thread.sleep(1000);                                                           // таймаут для добавления
+    }
+
+    String ArrayToString(ArrayList arrayName) {                                   // конвертация массиваа в строку
+
+        StringBuilder sb = new StringBuilder();
+        for (Object i :arrayName)
+        {
+            sb.append( i + "\t");
+        }
+        String arrayString = sb.toString();
+        return  arrayString;
+    }
+
+    void validateText(By locator, String expectedText) {
+
+        WebElement element = wd.findElement(locator);                           // находим элемент
+        String actualText  = element.getAttribute("textContent");             // получаем атрибут textContent
+        Assert.assertEquals(actualText, expectedText);                                  // валидация заголовка на карточке товара
     }
 
 }
