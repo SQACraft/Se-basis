@@ -2,9 +2,11 @@ package textInput;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
@@ -71,4 +73,17 @@ public class TestBase {
         Thread.sleep(1000);                                                           // таймаут для добавления
     }
 
+    void validateByTextContent(By locator, String expectedText) {           // проверка текста на странице
+
+        WebElement element = wd.findElement(locator);                           // находим элемент
+        String actualText  = element.getAttribute("textContent");             // получаем атрибут textContent
+        Assert.assertEquals(actualText, expectedText);                                  // валидация заголовка на карточке товара
+    }
+
+    void validateByOuterText(By locator, String expectedText) {           // проверка текста на странице
+
+        WebElement element = wd.findElement(locator);                           // находим элемент
+        String actualText  = element.getAttribute("outerText");             // получаем атрибут outerText
+        Assert.assertEquals(actualText, expectedText);                                  // валидация заголовка на карточке товара
+    }
 }

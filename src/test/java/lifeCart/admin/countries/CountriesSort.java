@@ -14,7 +14,8 @@ public class CountriesSort extends TestBase {
     void countriesListSort() {
 
         click(By.cssSelector("[href$=countries]"));
-        Assert.assertTrue(areElementsPresent(By.xpath("//h1[contains(text(), 'Countries')]")));
+        validateByOuterText(By.cssSelector("#content h1")," Countries");
+
         By locator = (By.cssSelector("td#content a:not([title=Edit])"));
 
         List<WebElement> countryLinks = wd.findElements(locator);  //  список всех ссылок со странами на сайте

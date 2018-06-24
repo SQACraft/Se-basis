@@ -4,6 +4,7 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
@@ -88,11 +89,24 @@ public class TestBase {
     String ArrayToString(ArrayList arrayName) {                                   // конвертация массиваа в строку
 
         StringBuilder sb = new StringBuilder();
-        for (Object i :arrayName)
-        {
-            sb.append( i + "\t");
+        for (Object i : arrayName) {
+            sb.append(i + "\t");
         }
         String arrayString = sb.toString();
-        return  arrayString;
+        return arrayString;
+    }
+
+    void validateByTextContent(By locator, String expectedText) {           // проверка текста на странице
+
+        WebElement element = wd.findElement(locator);                           // находим элемент
+        String actualText = element.getAttribute("textContent");             // получаем атрибут textContent
+        Assert.assertEquals(actualText, expectedText);                                  // валидация заголовка на карточке товара
+    }
+
+    void validateByOuterText(By locator, String expectedText) {           // проверка текста на странице
+
+        WebElement element = wd.findElement(locator);                           // находим элемент
+        String actualText = element.getAttribute("outerText");             // получаем атрибут outerText
+        Assert.assertEquals(actualText, expectedText);                                  // валидация заголовка на карточке товара
     }
 }

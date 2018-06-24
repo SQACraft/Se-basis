@@ -108,4 +108,18 @@ public class TestBase {
         String arrayString = sb.toString();
         return  arrayString;
     }
+
+    void validateByTextContent(By locator, String expectedText) {           // проверка текста на странице
+
+        WebElement element = wd.findElement(locator);                           // находим элемент
+        String actualText  = element.getAttribute("textContent");             // получаем атрибут textContent
+        Assert.assertEquals(actualText, expectedText);                                  // валидация заголовка на карточке товара
+    }
+
+    void validateByOuterText(By locator, String expectedText) {           // проверка текста на странице
+
+        WebElement element = wd.findElement(locator);                           // находим элемент
+        String actualText  = element.getAttribute("outerText");             // получаем атрибут outerText
+        Assert.assertEquals(actualText, expectedText);                                  // валидация заголовка на карточке товара
+    }
 }
