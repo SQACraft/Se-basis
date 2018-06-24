@@ -8,6 +8,7 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 
+import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
 public class TestBase {
@@ -84,4 +85,16 @@ public class TestBase {
         Thread.sleep(1000);                                                           // таймаут для добавления
     }
 
+
+    String ArrayToString(ArrayList arrayName) {                                   // конвертация массиваа в строку
+
+        StringBuilder sb = new StringBuilder();
+        for (Object i :arrayName)
+        {
+            sb.append(i);
+            sb.append("\t");
+        }
+        String arrayString = sb.toString();
+        return  arrayString;
+    }
 }
