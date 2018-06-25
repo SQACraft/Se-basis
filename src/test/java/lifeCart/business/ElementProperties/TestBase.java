@@ -1,14 +1,14 @@
-package elementProperties;
+package lifeCart.business.ElementProperties;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 
-import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
 public class TestBase {
@@ -83,6 +83,13 @@ public class TestBase {
     void addToCart() throws InterruptedException {                                    // добавление товара в корзину
         click(By.cssSelector("button[name=add_cart_product]"));
         Thread.sleep(1000);                                                           // таймаут для добавления
+    }
+
+    void validateByTextContent(By locator, String expectedText) {
+
+        WebElement element = wd.findElement(locator);                           // находим элемент
+        String actualText  = element.getAttribute("textContent");             // получаем атрибут textContent
+        Assert.assertEquals(actualText, expectedText);                                  // валидация заголовка на карточке товара
     }
 
 }

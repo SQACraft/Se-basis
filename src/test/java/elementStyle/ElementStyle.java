@@ -1,4 +1,4 @@
-package elementProperties.elementStyle;
+package elementStyle;
 
 import org.openqa.selenium.By;
 import org.testng.Assert;

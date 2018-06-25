@@ -1,4 +1,4 @@
-package lifeCart.business.styles;
+package lifeCart.business.ElementStyles;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;

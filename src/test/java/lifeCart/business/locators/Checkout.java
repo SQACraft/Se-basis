@@ -10,8 +10,10 @@ public class Checkout extends TestBase {
     void Checkout() throws InterruptedException {
 
         click(By.cssSelector(("div #box-most-popular a.link[href*=p-3"))); // выбор первого товара
-        Assert.assertTrue(isOneElementPresent(By.xpath
-                ("//h1[contains(text(), 'Red Duck')]")));                      // проверка заголовка на карточке товара
+
+        validateByTextContent(By.cssSelector("#box-product .title"),
+                "Red Duck");                                                    // проверка заголовка на странице товара
+
         addToCart();                                                                       // добавление товара в корзину
         goToSquareOne();
 

@@ -1,8 +1,7 @@
-package elementProperties;
+package lifeCart.business.ElementProperties;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class Attributes extends TestBase {
@@ -42,10 +41,9 @@ public class Attributes extends TestBase {
     @Test
     void checkSelected() throws InterruptedException {
 
-        wd.findElement(By.cssSelector("#region [href*=regional]")).click();      //открытие  модального окна Regional Settings
-        Assert.assertTrue(isOneElementPresent(By.xpath
-                ("//h1[contains(text(), 'Regional Settings')]")));                       // валидация заголовка
-
+        wd.findElement(By.cssSelector("#region [href*=regional]")).click();      //открытие  модального окна Regional Settings (линк Change в хедере)
+        validateByTextContent(By.cssSelector("#fancybox-content h1"),
+                "Regional Settings");                                                    // проверка заголовка
         String property = wd.findElement(By.cssSelector(
                 "#box-regional-settings [value=USD]"))                                 //получаем свойство "выбран" для элемента в списке
                 .getAttribute("selected");

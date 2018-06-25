@@ -18,13 +18,10 @@ public class SaleSticker extends TestBase {
 
         click(By.cssSelector("nav.content [href*='c-1/']"));                                                       // переход в  раздел Rubber Ducks
 
-        Assert.assertTrue(isOneElementPresent(By.xpath
-                ("//h1[contains(text(), 'Rubber Ducks')]")));                                                         // проверка заголовка раздела
-
         click(By.cssSelector("nav.content [href*='c-2/']"));                                                       // переход в подраздел Subcategory
 
-        Assert.assertTrue(isOneElementPresent(By.xpath(
-                "//h1[contains(text(), 'Subcategory')]")));                                                           // проверка заголовка подраздела
+        validateByTextContent(By.cssSelector(".content h1"),
+                "Subcategory");                                                    // проверка заголовка
 
         Assert.assertTrue(isOneElementPresent(By.cssSelector(
                 "a.link[href*=p-1] div.sticker.sale")));                                                                 // проверка наличия стикера SALE у товара Yellow Duck

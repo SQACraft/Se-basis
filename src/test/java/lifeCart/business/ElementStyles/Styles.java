@@ -1,11 +1,11 @@
-package lifeCart.business.styles;
+package lifeCart.business.ElementStyles;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class Tests extends TestBase {
+public class Styles extends TestBase {
 
     @Test(priority = 1)
 

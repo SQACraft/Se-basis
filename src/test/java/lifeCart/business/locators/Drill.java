@@ -80,8 +80,8 @@ public class Drill extends TestBase {
      void siteMenu() {
 
         click(By.cssSelector("#site-menu [href$='ducks-c-1/']"));    // клик по ссылке
-        Assert.assertTrue(isOneElementPresent(By.xpath(
-                "//h1[contains(text(), 'Rubber Ducks')]")));               // проверка заголовка
+        validateByTextContent(By.cssSelector(".content h1"),
+                "Rubber Ducks");                                                    // проверка заголовка
     }
 
     /**
@@ -94,8 +94,8 @@ public class Drill extends TestBase {
     public void countriesList() {
 
         click(By.cssSelector("td.account [href$='create_account']"));   // клик по ссылке
-        Assert.assertTrue(isOneElementPresent(By.xpath(
-                "//h1[contains(text(), 'Create Account')]")));                // проверка заголовка
+        validateByTextContent(By.cssSelector(".content h1"),
+                "Create Account");                                                    // проверка заголовка
 
         click(By.cssSelector("span.select2-selection__arrow"));          // раскрыли комбобокс
 
@@ -115,9 +115,10 @@ public class Drill extends TestBase {
     @Test
     public void sortButton() {
 
-        click(By.cssSelector("nav.content [href*='c-1/']"));                                                       // переход в  раздел
-        Assert.assertTrue(isOneElementPresent(By.xpath
-                ("//h1[contains(text(), 'Rubber Ducks')]")));                                                         // проверка заголовка раздела
+        click(By.cssSelector("nav.content [href*='c-1/']"));                                                       // переход в  раздел Rubber Ducks
+        validateByTextContent(By.cssSelector(".content h1"),
+                "Rubber Ducks");                                                    // проверка заголовка
+
         click(By.cssSelector(("a[href$='sort=date']")));                                                 // кнопка сортировки по дате
     }
 
