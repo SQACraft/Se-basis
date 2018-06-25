@@ -10,7 +10,6 @@ import org.testng.Assert;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
-
 import java.util.concurrent.TimeUnit;
 
 public class TestBase {
@@ -75,7 +74,6 @@ public class TestBase {
     }
 
     void validateByTextContent(By locator, String expectedText) {           // проверка текста на странице
-
         WebElement element = wd.findElement(locator);                           // находим элемент
         String actualText = element.getAttribute("textContent");             // получаем атрибут textContent
         Assert.assertEquals(actualText, expectedText);                                  // валидация заголовка на карточке товара

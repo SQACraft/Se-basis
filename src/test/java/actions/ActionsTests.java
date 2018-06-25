@@ -13,8 +13,7 @@ public class ActionsTests extends TestBase {
     void testTemplate() {
 
         List <WebElement> leftList = wd.findElements(By.cssSelector("#sortable1 li"));    // список элементов - левой колонки ячеек   с кнопками
-
-        ArrayList<String> leftArray = new ArrayList<>();
+        ArrayList<String> leftArray = new ArrayList<>();                                            // пустой ArrayList
 
         for (WebElement i : leftList) {                                                       // перебор списка
             String caption = i.getAttribute("textContent");                          // считываем текст с кнопки
