@@ -16,21 +16,21 @@ public class Appearance extends TestBase {
     @Test(priority = 1)
     void openAppearanceSection() {
         click(By.cssSelector("[href$=template]"));
-        Assert.assertTrue(areElementsPresent(By.xpath("//h1[contains(text(), 'Template')]")));
+        validateByOuterText(By.cssSelector("#content h1")," Template");              // Валидация заголовка
     }
 
     @Test(priority = 2)
     void openTemplateSubSection() {
         click(By.cssSelector("[href$=template]"));
         click(By.cssSelector("#doc-template a"));
-        Assert.assertTrue(areElementsPresent(By.xpath("//h1[contains(text(), 'Template')]")));
+        validateByOuterText(By.cssSelector("#content h1")," Template");
     }
 
     @Test(priority = 3)
     void openLogotypeSubSection() {
         click(By.cssSelector("[href$=template]"));
         click(By.cssSelector("#doc-logotype  a"));
-        Assert.assertTrue(areElementsPresent(By.xpath("//h1[contains(text(), 'Logotype')]")));
+        validateByOuterText(By.cssSelector("#content h1")," Logotype");
     }
 
 }

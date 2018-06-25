@@ -14,7 +14,7 @@ public class CountriesSort extends TestBase {
     void countriesListSort() {
 
         click(By.cssSelector("[href$=countries]"));
-        validateByOuterText(By.cssSelector("#content h1")," Countries");
+        validateByOuterText(By.cssSelector("#content h1")," Countries");     // Валидация заголовка
 
         By locator = (By.cssSelector("td#content a:not([title=Edit])"));
 

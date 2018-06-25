@@ -16,7 +16,8 @@ public class GeoZonesSort extends TestBase {
 
         click(By.cssSelector("[href$=geo_zones]"));
         click(By.cssSelector("[name=geo_zones_form] [href$='id=1']"));                                         // Страница геозон Канады
-        Assert.assertTrue(areElementsPresent(By.xpath("//h1[contains(text(), 'Edit Geo Zone')]")));  // Валидация заголовка
+        validateByOuterText(By.cssSelector("#content h1")," Edit Geo Zone");              // Валидация заголовка
+
         By locator = (By.cssSelector("table#table-zones [name*=zone_code]  [selected=selected]"));
 
         List<WebElement> geozoneLinks = wd.findElements(locator);  //  список всех ссылок со странами на сайте
@@ -49,8 +50,7 @@ public class GeoZonesSort extends TestBase {
 
         click(By.cssSelector("[href$=countries]"));
         click(By.cssSelector("[name=countries_form] [href$='code=CA']"));                                         // Список стран
-
-        Assert.assertTrue(areElementsPresent(By.xpath("//h1[contains(text(), 'Edit Country')]")));  // Валидация заголовка
+        validateByOuterText(By.cssSelector("#content h1")," Edit Country");         // Валидация заголовка
 
         By locator = (By.cssSelector("table#table-zones input:not([type=text])[name*=name]")); // локатор ищет все зоны, кроме шаблона для добавления
 

@@ -2,6 +2,7 @@ package lifeCart.admin.sidebar;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -64,5 +65,11 @@ public class TestBase {
         wd.findElement(locator).click();
     }
 
+    void validateByOuterText(By locator, String expectedText) {           // проверка текста на странице
+
+        WebElement element = wd.findElement(locator);                           // находим элемент
+        String actualText  = element.getAttribute("outerText");             // получаем атрибут outerText
+        Assert.assertEquals(actualText, expectedText);                                  // валидация заголовка на карточке товара
+    }
 
 }

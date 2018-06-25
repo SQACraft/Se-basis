@@ -16,13 +16,13 @@ public class SingleSections extends TestBase {
     @Test(priority = 20)
     void openCountriesSection() {
         click(By.cssSelector("[href$=countries]"));
-        Assert.assertTrue(areElementsPresent(By.xpath("//h1[contains(text(), 'Countries')]")));
+        validateByOuterText(By.cssSelector("#content h1")," Countries"); // Валидация заголовка
     }
 
     @Test(priority = 21)
     void openCurrenciesSection() {
         click(By.cssSelector("[href$=currencies]"));
-        Assert.assertTrue(areElementsPresent(By.xpath("//h1[contains(text(), 'Currencies')]")));
+        validateByOuterText(By.cssSelector("#content h1")," Currencies");
     }
 
 

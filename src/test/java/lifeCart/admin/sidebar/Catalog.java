@@ -16,82 +16,82 @@ public class Catalog extends TestBase {
     @Test(priority = 4)
     void openCatalogSection() {
         click(By.cssSelector("[href$=catalog]"));
-        Assert.assertTrue(areElementsPresent(By.xpath("//h1[contains(text(), 'Catalog')]")));
+        validateByOuterText(By.cssSelector("#content h1")," Catalog");  // Валидация заголовка
     }
 
     @Test(priority = 5)
     void openCatalogSubSection() {
         click(By.cssSelector("[href$=catalog]"));
         click(By.cssSelector("#doc-catalog  a"));
-        Assert.assertTrue(areElementsPresent(By.xpath("//h1[contains(text(), 'Catalog')]")));
+        validateByOuterText(By.cssSelector("#content h1")," Catalog");
     }
 
     @Test(priority = 6)
     void openProductGroupsSubSection() {
         click(By.cssSelector("[href$=catalog]"));
         click(By.cssSelector("#doc-product_groups  a"));
-        Assert.assertTrue(areElementsPresent(By.xpath("//h1[contains(text(), 'Product Groups')]")));
+        validateByOuterText(By.cssSelector("#content h1")," Product Groups");
     }
 
     @Test(priority = 7)
     void openOptionGroupsSubSection() {
         click(By.cssSelector("[href$=catalog]"));
         click(By.cssSelector("#doc-option_groups a"));
-        Assert.assertTrue(areElementsPresent(By.xpath("//h1[contains(text(), 'Option Groups')]")));
+        validateByOuterText(By.cssSelector("#content h1")," Option Groups");
     }
 
     @Test(priority = 8)
     void openManufacturersSubSection() {
         click(By.cssSelector("[href$=catalog]"));
         click(By.cssSelector("#doc-manufacturers  a"));
-        Assert.assertTrue(areElementsPresent(By.xpath("//h1[contains(text(), 'Manufacturers')]")));
+        validateByOuterText(By.cssSelector("#content h1")," Manufacturers");
     }
 
     @Test(priority = 9)
     void openSuppliersSubSection() {
         click(By.cssSelector("[href$=catalog]"));
         click(By.cssSelector("#doc-suppliers  a"));
-        Assert.assertTrue(areElementsPresent(By.xpath("//h1[contains(text(), 'Suppliers')]")));
+        validateByOuterText(By.cssSelector("#content h1")," Suppliers");
     }
 
     @Test(priority = 10)
     void openDeliveryStatusesSubSection() {
         click(By.cssSelector("[href$=catalog]"));
         click(By.cssSelector("#doc-delivery_statuses  a"));
-        Assert.assertTrue(areElementsPresent(By.xpath("//h1[contains(text(), 'Delivery Statuses')]")));
+        validateByOuterText(By.cssSelector("#content h1")," Delivery Statuses");
     }
 
     @Test(priority = 11)
     void openSoldOutStatusesSubSection() {
         click(By.cssSelector("[href$=catalog]"));
         click(By.cssSelector("#doc-sold_out_statuses  a"));
-        Assert.assertTrue(areElementsPresent(By.xpath("//h1[contains(text(), 'Sold Out Statuses')]")));
+        validateByOuterText(By.cssSelector("#content h1")," Sold Out Statuses");
     }
 
     @Test(priority = 12)
     void openQuantityUnitsSubSection() {
         click(By.cssSelector("[href$=catalog]"));
         click(By.cssSelector("#doc-quantity_units  a"));
-        Assert.assertTrue(areElementsPresent(By.xpath("//h1[contains(text(), 'Quantity Units')]")));
+        validateByOuterText(By.cssSelector("#content h1")," Quantity Units");
     }
 
     @Test(priority = 13)
     void openCSVSubSection() {
         click(By.cssSelector("[href$=catalog]"));
         click(By.cssSelector("#doc-csv  a"));
-        Assert.assertTrue(areElementsPresent(By.xpath("//h1[contains(text(), 'CSV Import/Export')]")));
+        validateByOuterText(By.cssSelector("#content h1")," CSV Import/Export");
     }
 
     @Test(priority = 14)
     void openCountriesSection() {
         click(By.cssSelector("[href$=countries]"));
-        Assert.assertTrue(areElementsPresent(By.xpath("//h1[contains(text(), 'Countries')]")));
+        validateByOuterText(By.cssSelector("#content h1")," Countries");
     }
 
     @Test(priority = 15)
     void openCurrenciesSection() {
         click(By.cssSelector("[href$=currencies]"));
-        Assert.assertTrue(areElementsPresent(By.xpath("//h1[contains(text(), 'Currencies')]")));
+        validateByOuterText(By.cssSelector("#content h1")," Currencies");
     }
 
 

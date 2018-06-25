@@ -16,27 +16,31 @@ public class Customers extends TestBase {
     @Test(priority = 16)
     void openCustomersSection() {
         click(By.cssSelector("[href$=customers]"));
-        Assert.assertTrue(areElementsPresent(By.xpath("//h1[contains(text(), 'Customers')]")));
+        validateByOuterText(By.cssSelector("#content h1")," Customers"); // Валидация заголовка
+
     }
 
     @Test(priority = 17)
     void openCustomersSubSection() {
         click(By.cssSelector("[href$=customers]"));
         click(By.cssSelector("#doc-customers a"));
-        Assert.assertTrue(areElementsPresent(By.xpath("//h1[contains(text(), 'Customers')]")));
+        validateByOuterText(By.cssSelector("#content h1")," Customers");
+
     }
 
     @Test(priority = 18)
     void openCSVSubSection() {
         click(By.cssSelector("[href$=customers]"));
         click(By.cssSelector("#doc-csv  a"));
-        Assert.assertTrue(areElementsPresent(By.xpath("//h1[contains(text(), 'CSV Import/Export')]")));
+        validateByOuterText(By.cssSelector("#content h1")," CSV Import/Export");
+
     }
 
     @Test(priority = 19)
     void openNewsletterSubSection() {
         click(By.cssSelector("[href$=customers]"));
         click(By.cssSelector("#doc-newsletter  a"));
-        Assert.assertTrue(areElementsPresent(By.xpath("//h1[contains(text(), 'Newsletter')]")));
+        validateByOuterText(By.cssSelector("#content h1")," Newsletter");
+
     }
 }
