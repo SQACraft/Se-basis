@@ -34,10 +34,10 @@ public class CountriesSort extends TestBase {
 
         Collections.sort(forSort);                                                             // сортируем массив
 
-        String stringAUT = ArrayToString(AUT);
+        String stringAUT = arrayListToString(AUT);
         System.out.println("\nМассив на сайте :           " + stringAUT);  // вывод в консоль строкового значения массива AUT
 
-        String stringForSort = ArrayToString(forSort);
+        String stringForSort = arrayListToString(forSort);
         System.out.println("Отсортированный массив :" + stringForSort); // вывод в консоль строкового значения массива forSort
 
         Assert.assertEquals(stringAUT, stringForSort);              // сравниваем строковые значения массивов. Если true, то сортировка на сайте правильная.
