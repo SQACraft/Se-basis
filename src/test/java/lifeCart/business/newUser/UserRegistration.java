@@ -6,15 +6,15 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 
-public class Tests extends TestBase {
+public class UserRegistration extends TestBase {
 
     private String eMail;  //  для сгенерированного E-Mail
-    private String password = "12345678";
+    private String password = getUniqueNumber("", "");  // генерация пароля
     private String name = "Peter";
     private String lastname = "Hawkins";
 
-    @Test ( priority = 1,
-                description = "Регистрация нового пользователя" )
+    @Test(priority = 1,
+            description = "Регистрация нового пользователя")
 
     void createUser() {
 
@@ -22,7 +22,7 @@ public class Tests extends TestBase {
         validateByTextContent(By.cssSelector(".content h1"), "Create Account");  // валидация заголовка
 
         wd.findElement(By.cssSelector("[name=tax_id]"))
-                .sendKeys("7773337" + Keys.TAB);                       // ввод текста + TAB
+                .sendKeys(getUniqueNumber("", "") + Keys.TAB);                       // генерация номера  + TAB
 
         wd.findElement(By.cssSelector("[name=company]"))
                 .sendKeys("Kewl Features" + Keys.TAB);
@@ -43,7 +43,7 @@ public class Tests extends TestBase {
                 .sendKeys("K0C 0A4" + Keys.TAB);     // валидный индекс для Канады
 
         wd.findElement(By.cssSelector("[name=city]"))
-                .sendKeys("London" + Keys.TAB);
+                .sendKeys("Monterrey" + Keys.TAB);
 
         WebElement selectElement = wd.findElement(By.cssSelector("select[name=country_code]"));    // cписок выбора страны
         Select select = new Select(selectElement);
@@ -53,12 +53,12 @@ public class Tests extends TestBase {
 
         selectElement.sendKeys(Keys.TAB);
 
-        eMail = getUniqueNumber("");              // уникальный E-mail формата nnnnnnnnnn@1.1
+        eMail = getUniqueNumber("", "@1.1");              // уникальный E-mail формата nnnnnnnnnn@1.1
         wd.findElement(By.cssSelector("[name=email]"))
                 .sendKeys(eMail + Keys.TAB);
 
         wd.findElement(By.cssSelector("[name=phone]"))
-                .sendKeys("11111" + Keys.TAB);
+                .sendKeys(getUniqueNumber("", "") + Keys.TAB);     // генерация номера
 
         setCheckboxState(By.cssSelector("[name=newsletter]"), "toClear");  // cнимаем чекбокс для рассылки
         wd.findElement(By.cssSelector("[name=newsletter]")).sendKeys(Keys.TAB);
@@ -93,9 +93,9 @@ public class Tests extends TestBase {
         validateByTextContent(By.cssSelector(".notice.success"), " You are now logged out."); //валидация сообщения
     }
 
-    @Test ( priority = 2,
-                description = "Вход в систему пользователем, созданным в предыдущем тесте  ")
-
+    @Test(priority = 2,
+            description = "Вход в систему пользователем, созданным в предыдущем тесте  ")
+    
     void login() {
 
         wd.findElement(By.cssSelector("[name=email]"))

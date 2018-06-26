@@ -101,7 +101,7 @@ public class TestBase {
 
         WebElement element = wd.findElement(locator);                           // находим элемент
         String actualText = element.getAttribute("textContent");             // получаем атрибут textContent
-        Assert.assertEquals(actualText, expectedText);                                  // валидация заголовка на карточке товара
+        Assert.assertEquals(actualText, expectedText);                                  // валидация текста
     }
 
     void validateByOuterText(By locator, String expectedText) {           // проверка текста на странице
@@ -138,12 +138,12 @@ public class TestBase {
         }
     }
 
-    String getUniqueNumber(String prefix) {        // генератор уникального номера с префиксом
+    String getUniqueNumber(String prefix, String postfix) {        // генератор уникального номера
 
         // Инициализация объекта date
         Date date = new Date();
         //  Вывод текущей даты и времени с использованием toString()
-        String uniqueNumber = String.format("" + prefix + "%ts@1.1", date);
+        String uniqueNumber = String.format("" + prefix + "%ts" + postfix , date);
         return (uniqueNumber);
     }
 }

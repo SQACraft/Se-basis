@@ -138,14 +138,12 @@ public class TestBase {
         }
     }
 
-    String getUniqueNumber(String prefix) {        // генератор уникального номера с префиксом
-                                                                //  пример для E-mail : String.format("" + prefix + "%ts@1.1", date);
+    String getUniqueNumber(String prefix, String postfix) {        // генератор уникального номера с префиксом и постфиксом
+
         // Инициализация объекта date
         Date date = new Date();
-
         //  Вывод текущей даты и времени с использованием toString()
-        String uniqueNumber = String.format("" + prefix + "%ts ", date);
-
+        String uniqueNumber = String.format("" + prefix + "%ts" + postfix , date);
         return (uniqueNumber);
     }
 }
