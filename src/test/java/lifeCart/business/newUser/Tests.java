@@ -57,14 +57,14 @@ public class Tests extends TestBase {
 
     }
 
-    void getCheckboxState(By locator, String action) {    // Action:  "toSelect / toClear
+    void setCheckboxState(By locator, String action) {    // Action:  "toSelect / toClear
 
         switch (action) {
 
             case "toSelect":
                 if (!wd.findElement(locator).isSelected())  // если чекбокс пустой
                 {
-                    wd.findElement(By.id("idOfTheElement")).click();  // выбрать чекбокс
+                    wd.findElement(locator).click();  // выбрать чекбокс
                     break;
                 } else {                                   // если чекбокс непустой
                     break;                                            // ничего не делать
@@ -73,12 +73,12 @@ public class Tests extends TestBase {
             case "toСlear":
                 if (wd.findElement(locator).isSelected())  // если чекбокс выбран
                 {
-                    wd.findElement(By.id("idOfTheElement")).clear();  // очистить чекбокс
+                    wd.findElement(locator).clear();  // очистить чекбокс
                     break;
                 } else {                                   // если чекбокс не выбран
                     break;                                            // ничего не делать
                 }
-                
+
             default:
                 System.out.println("Некорректный параметр action  (toSelect | toClear ");
         }
