@@ -10,6 +10,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
 public class TestBase {
@@ -108,5 +109,41 @@ public class TestBase {
         WebElement element = wd.findElement(locator);                           // находим элемент
         String actualText = element.getAttribute("outerText");             // получаем атрибут outerText
         Assert.assertEquals(actualText, expectedText);                                  // валидация заголовка на карточке товара
+    }
+
+    void setCheckboxState(By locator, String action) {    // action:  "toSelect / toClear
+
+        switch (action) {
+
+            case "toSelect":
+                if (!wd.findElement(locator).isSelected())  // если чекбокс не выбран-
+                {
+                    wd.findElement(locator).click();          // выбрать чекбокс
+                    break;
+                } else {                                             // если чекбокс выбран -
+                    break;                                           // ничего не делать
+                }
+
+            case "toClear":
+                if (wd.findElement(locator).isSelected())  // если чекбокс выбран-
+                {
+                    wd.findElement(locator).click();         // очистить чекбокс
+                    break;
+                } else {                                            // если чекбокс не выбран-
+                    break;                                          // ничего не делать
+                }
+
+            default:
+                System.out.println("Некорректный параметр action (toSelect | toClear");
+        }
+    }
+
+    String getUniqueNumber(String prefix) {        // генератор уникального номера с префиксом
+
+        // Инициализация объекта date
+        Date date = new Date();
+        //  Вывод текущей даты и времени с использованием toString()
+        String uniqueNumber = String.format("" + prefix + "%ts@1.1", date);
+        return (uniqueNumber);
     }
 }
