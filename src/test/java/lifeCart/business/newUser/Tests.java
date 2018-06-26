@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 public class Tests extends TestBase {
 
     @Test
-    void createuser() {
+    void createuser() throws InterruptedException {
 
         click(By.cssSelector("[name=login_form] [href$=create_account]"));   // Переход в раздел Create Account
         validateByTextContent(By.cssSelector(".content h1"), "Create Account");  // валидация заголовка
@@ -53,6 +53,19 @@ public class Tests extends TestBase {
         wd.findElement(By.cssSelector("[name=phone]"))
                 .sendKeys("11111" + Keys.TAB);
 
+       // By locator = By.cssSelector("[name=newsletter]");
+        setCheckboxState(By.cssSelector("[name=newsletter]"), "toClear");  // cнимаем чекбокс для рассылки
+
+        wd.findElement(By.cssSelector("[name=newsletter]")).sendKeys(Keys.TAB);
+
+        wd.findElement(By.cssSelector("[name=password]"))
+                .sendKeys("12345678" + Keys.TAB);
+
+        wd.findElement(By.cssSelector("[name=confirmed_password]"))
+                .sendKeys("12345678" + Keys.TAB);
+
+        wd.findElement(By.cssSelector(" button[name=create_account]")).click();
+
 
 
     }
@@ -70,10 +83,10 @@ public class Tests extends TestBase {
                     break;                                            // ничего не делать
                 }
 
-            case "toСlear":
+            case "toClear":
                 if (wd.findElement(locator).isSelected())  // если чекбокс выбран
                 {
-                    wd.findElement(locator).clear();  // очистить чекбокс
+                    wd.findElement(locator).click();  // очистить чекбокс
                     break;
                 } else {                                   // если чекбокс не выбран
                     break;                                            // ничего не делать
