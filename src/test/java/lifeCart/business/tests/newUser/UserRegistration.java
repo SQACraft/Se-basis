@@ -14,8 +14,7 @@ public class UserRegistration extends ToolBox {
     private String name = "Peter";
     private String lastname = "Hawkins";
 
-    @Test(priority = 1,
-            description = "Регистрация нового пользователя")
+    @Test ( groups = "UserRegistration", priority = 1, description = "Регистрация нового пользователя")
 
     void createUser() {
 
@@ -96,7 +95,7 @@ public class UserRegistration extends ToolBox {
         validateByTextContent(By.cssSelector(".notice.success"), " You are now logged out."); //валидация сообщения
     }
 
-    @Test(priority = 2,
+    @Test ( groups = "UserRegistration", priority = 2,
             description = "Вход в систему пользователем, созданным в предыдущем тесте  ")
 
     void login() {

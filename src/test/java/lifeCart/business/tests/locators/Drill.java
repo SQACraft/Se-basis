@@ -13,8 +13,8 @@ public class Drill extends ToolBox {
      * (каждому товару соответствует свой блок)
      */
 
-    @Test(priority = 1)
-    public void productBlocks() {
+    @Test (groups = "Drill")
+      void productBlocks() {
 
         goToSquareOne();
         By locator;
@@ -41,8 +41,8 @@ public class Drill extends ToolBox {
      * в основной части страницы  (не считая боковых блоков)
      */
 
-    @Test(priority = 2)
-    public void goodsLinks() {
+    @Test (groups = "Drill")
+    void goodsLinks() {
 
         goToSquareOne();
 
@@ -67,8 +67,8 @@ public class Drill extends ToolBox {
      * 3. Локатор для поиска  ссылки на Privacy Policy в нижней части страницы
      */
 
-    @Test(priority = 3)
-     void privacyPolicyLink() {
+    @Test (groups = "Drill")
+    void privacyPolicyLink() {
 
         goToSquareOne();
         click(By.cssSelector("#footer [href*='privacy-policy']"));    // клик по ссылке
@@ -81,8 +81,8 @@ public class Drill extends ToolBox {
      * находящихся на верхнем уровне (без элементов вложенных выпадающих меню)
      */
 
-    @Test(priority = 4)
-     void siteMenu() {
+    @Test (groups = "Drill")
+    void siteMenu() {
 
         goToSquareOne();
         click(By.cssSelector("#site-menu [href$='ducks-c-1/']"));    // клик по ссылке
@@ -96,8 +96,8 @@ public class Drill extends ToolBox {
      * 6. локатор списка выбора штата
      */
 
-    @Test(priority = 5)
-    public void countriesList() {
+    @Test (groups = "Drill")
+    void countriesList() {
 
         goToSquareOne();
         click(By.cssSelector("td.account [href$='create_account']"));   // клик по ссылке
@@ -119,8 +119,9 @@ public class Drill extends ToolBox {
      * 7. Локатор для поиска кнопки сортировки товаров по дате
      */
 
-    @Test
-    public void sortButton() {
+    @Test (groups = "Drill")
+
+    void sortButton() {
 
         goToSquareOne();
         click(By.cssSelector("nav.content [href*='c-1/']"));                                                       // переход в  раздел Rubber Ducks

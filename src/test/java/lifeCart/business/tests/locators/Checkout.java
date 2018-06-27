@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 public class Checkout extends ToolBox {
 
-    @Test
+    @Test (groups = "Locators")
     void Checkout() throws InterruptedException {
 
         goToSquareOne();

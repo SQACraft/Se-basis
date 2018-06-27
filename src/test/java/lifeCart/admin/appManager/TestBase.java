@@ -7,8 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.*;
 
 import java.util.concurrent.TimeUnit;
 
@@ -20,7 +19,7 @@ public class TestBase {
     private String login = "admin";
     private String password = "admin";
 
-    @BeforeSuite
+    @BeforeClass
     public void start() {
 
         ChromeOptions options = new ChromeOptions();
@@ -32,15 +31,10 @@ public class TestBase {
         login();  // авторизация администратором в системе и переход в админку
     }
 
-    @AfterSuite
+    @AfterClass
     public void stop() {        // закрываем сессию браузера
         wd.quit();
     }
-
-    /**
-     * Методы
-     * TODO: вынести в отдельный класс
-     */
 
     void login() {
 

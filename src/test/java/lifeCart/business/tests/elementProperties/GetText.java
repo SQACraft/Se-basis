@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 
 public class GetText extends ToolBox {
 
-    @Test
+    @Test (groups = "GetText")
     void getText()  {
 
         goToSquareOne();
@@ -19,7 +19,7 @@ public class GetText extends ToolBox {
         System.out.println(btnText);
     }
 
-    @Test
+    @Test (groups = "GetText")
     void  getNormalizedText() {
 
         goToSquareOne();

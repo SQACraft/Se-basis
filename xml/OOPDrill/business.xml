@@ -1,0 +1,30 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name ="OOP Drill"     >
+<test name = "TestNG test">
+
+    <!--  TODO : must be completed after TestNG course -->
+
+    <groups>
+        <run>
+            <include name ="Drill"/>
+        </run>
+    </groups>
+
+    <packages>
+        <package name = "lifeCart.business.tests.elementProperties"/>
+        <package name= "lifeCart.business.tests.elementStyles"/>
+        <package name= "lifeCart.business.tests.locators"/>
+        <package name= "lifeCart.business.tests.newUser"/>
+
+    </packages>
+
+ <classes>
+
+            <class name="lifeCart.business.tests.locators.Checkout"/>
+            <class name="lifeCart.business.tests.locators.Drill"/>
+            <class name="lifeCart.business.tests.locators.SaleSticker"/>
+
+</classes>
+
+</test>
+</suite>

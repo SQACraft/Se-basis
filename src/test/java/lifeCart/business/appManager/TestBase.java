@@ -4,9 +4,7 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.*;
 
 import java.util.concurrent.TimeUnit;
 
@@ -15,7 +13,7 @@ public class TestBase {
     public WebDriver wd;
     public WebDriverWait wait;
 
-    @BeforeSuite
+    @BeforeClass
     public void start() {
 
         ChromeOptions options = new ChromeOptions();
@@ -27,7 +25,7 @@ public class TestBase {
         wd.get("http://localhost/litecart");
     }
 
-    @AfterSuite
+    @AfterClass
     public void stop() {        // закрываем сессию браузера
         wd.quit();
     }

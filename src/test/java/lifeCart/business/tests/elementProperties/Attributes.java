@@ -11,7 +11,7 @@ public class Attributes extends ToolBox {
      * Value - получение текста, введённого  в строке поиска
      */
 
-    @Test
+    @Test (groups = "Attributes")
     void checkValue() {
 
         goToSquareOne();
@@ -27,7 +27,7 @@ public class Attributes extends ToolBox {
      * href -  проверка полной ссылки, так как в html- относительная
      */
 
-    @Test
+    @Test(groups = "Attributes")
     void checkLink() {
 
         goToSquareOne();
@@ -41,7 +41,7 @@ public class Attributes extends ToolBox {
      * True  - проверка выбранного значения в списке Currency на форме Regional Settings
      */
 
-    @Test
+    @Test(groups = "Attributes")
     void checkSelected() throws InterruptedException {
 
         goToSquareOne();

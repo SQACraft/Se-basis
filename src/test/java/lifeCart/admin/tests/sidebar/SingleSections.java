@@ -1,11 +1,10 @@
 package lifeCart.admin.tests.sidebar;
 
 import lifeCart.admin.appManager.ToolBox;
-import lifeCart.admin.sidebar.TestBase;
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
-public class SingleSections extends ToolBox {
+ public class SingleSections extends ToolBox {
 
     /**
      * Проверки открытия разделов сайдбара:
@@ -25,6 +24,5 @@ public class SingleSections extends ToolBox {
         click(By.cssSelector("[href$=currencies]"));
         validateByOuterText(By.cssSelector("#content h1")," Currencies");
     }
-
 
 }

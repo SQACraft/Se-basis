@@ -1,7 +1,6 @@
 package lifeCart.admin.tests.sidebar;
 
 import lifeCart.admin.appManager.ToolBox;
-import lifeCart.admin.sidebar.TestBase;
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 

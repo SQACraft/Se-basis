@@ -14,7 +14,7 @@ public class SaleSticker extends ToolBox {
      * 3. зума изображения
      */
 
-    @Test(priority = 1)
+    @Test (groups = "SaleSticker", priority = 1)
     void checkSaleStickerPresence() throws InterruptedException {
 
        goToSquareOne();
@@ -35,7 +35,9 @@ public class SaleSticker extends ToolBox {
 
         click(By.xpath(".//*[@id='box-category']/div/ul/li[1]/a[2]/i"));                                          // клик по значку линзы для зума
 
-        Thread.sleep(1000);                                                                                        // пауза для просмотра изображения в зуме
+        Thread.sleep(500);                                                                                        // пауза для отрисовки
+        click(By.cssSelector("#fancybox-close"));                                                                   // закрываем pop-up
+        Thread.sleep(500);                                                                                        // пауза для закрытия окна
     }
 
     /**
@@ -43,10 +45,10 @@ public class SaleSticker extends ToolBox {
      * 1. наличия стикера SALE на карточке товара в разделе
      * 2. отсутствия стикера на карточке товара
      */
-    @Test(priority = 2)
+    @Test(groups = "SaleSticker", priority = 2)
      void checkSaleStickerAbsence() {
 
-        goToSquareOne();
+       goToSquareOne();
         click(By.cssSelector("nav.content [href*='c-1/']"));                                                       // переход в  раздел Rubber Ducks
         Assert.assertTrue(isOneElementPresent(By.xpath
                 ("//h1[contains(text(), 'Rubber Ducks')]")));                                                         // проверка заголовка раздела

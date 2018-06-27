@@ -1,12 +1,10 @@
 package lifeCart.admin.tests.countries;
 
 import lifeCart.admin.appManager.ToolBox;
-import lifeCart.admin.countries.TestBase;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;

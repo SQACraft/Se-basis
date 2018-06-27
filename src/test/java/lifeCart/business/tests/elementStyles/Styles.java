@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 
 public class Styles extends ToolBox {
 
-    @Test(priority = 1)
+    @Test  (groups = "Styles")
 
     void checkTitle() {
 
@@ -19,7 +19,7 @@ public class Styles extends ToolBox {
                 "Yellow Duck");                                                    // проверка заголовка на странице товара
     }
 
-    @Test(priority = 2)
+    @Test (groups = "Styles")
 
     void checkRegularPrice() {
 

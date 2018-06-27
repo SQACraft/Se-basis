@@ -2,7 +2,7 @@
 <suite name ="OOPSuite" >
 
     <suite-files>
-        <suite-file path="OOPDrill.xml"/>
+        <suite-file path="business.xml"/>
     </suite-files>
 
         <packages>

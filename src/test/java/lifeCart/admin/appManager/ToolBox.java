@@ -1,6 +1,5 @@
 package lifeCart.admin.appManager;
 
-import lifeCart.admin.appManager.TestBase;
 import org.openqa.selenium.*;
 import org.testng.Assert;
 
