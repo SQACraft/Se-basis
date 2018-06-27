@@ -1,12 +1,13 @@
-package lifeCart.business.newUser;
+package lifeCart.business.tests.newUser;
 
+import lifeCart.business.appManager.ToolBox;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 
-public class UserRegistration extends TestBase {
+public class UserRegistration extends ToolBox {
 
     private String eMail;  //  для сгенерированного E-Mail
     private String password = getUniqueNumber("", "");  // генерация пароля
@@ -97,6 +98,8 @@ public class UserRegistration extends TestBase {
             description = "Вход в систему пользователем, созданным в предыдущем тесте  ")
 
     void login() {
+
+        goToSquareOne();
 
         wd.findElement(By.cssSelector("[name=email]"))
                 .sendKeys(eMail + Keys.TAB);

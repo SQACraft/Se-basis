@@ -12,11 +12,13 @@
         <package name = "OOPDrill.common"/>
     </packages>
 
+<!--
     <classes>
-        <class name="OOPDrill.common.Methods"/>
+        <class name="OOPDrill.appmanager.Methods"/>
         <class name="OOPDrill.suiteOne.Checkout"/>
         <class name="OOPDrill.suiteOne.TestBase"/>
     </classes>
+-->
 
 
 

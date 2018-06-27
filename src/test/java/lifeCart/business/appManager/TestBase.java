@@ -1,7 +1,6 @@
-package OOPDrillTwo;
+package lifeCart.business.appManager;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -11,14 +10,13 @@ import org.testng.annotations.BeforeSuite;
 
 import java.util.concurrent.TimeUnit;
 
-public  class TestBase {
-
+public class TestBase {
 
     public WebDriver wd;
     public WebDriverWait wait;
 
     @BeforeSuite
-    void start() {
+    public void start() {
 
         ChromeOptions options = new ChromeOptions();
         options.addArguments("start-fullscreen");
@@ -28,17 +26,9 @@ public  class TestBase {
         wd.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS); //  неявное (Implicit) ожидание
         wd.get("http://localhost/litecart");
     }
-     //Methods m = new Methods(wd);
-
-
-    @BeforeMethod
-    void goToSquareOne() {                                 //  переход на главную
-        wd.findElement(By.cssSelector("img[title='My Store']")).click();
-    }
-
 
     @AfterSuite
-    void stop() {        // закрываем сессию браузера
+    public void stop() {        // закрываем сессию браузера
         wd.quit();
     }
 
