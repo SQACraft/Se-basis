@@ -1,13 +1,13 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name ="OOPSuite" >
+<suite name ="SuiteTest" >
 
     <suite-files>
         <suite-file path="business.xml"/>
     </suite-files>
 
         <packages>
-            <package name = "OOPDrill.suiteOne"/>
-            <package name = "OOPDrill.common"/>
+            <package name = "..."/>
+            <package name = "..."/>
         </packages>
 
 </suite>

@@ -17,7 +17,6 @@ public class Customers extends ToolBox {
     void openCustomersSection() {
         click(By.cssSelector("[href$=customers]"));
         validateByOuterText(By.cssSelector("#content h1")," Customers"); // Валидация заголовка
-
     }
 
     @Test(priority = 17)
@@ -25,7 +24,6 @@ public class Customers extends ToolBox {
         click(By.cssSelector("[href$=customers]"));
         click(By.cssSelector("#doc-customers a"));
         validateByOuterText(By.cssSelector("#content h1")," Customers");
-
     }
 
     @Test(priority = 18)
@@ -33,7 +31,6 @@ public class Customers extends ToolBox {
         click(By.cssSelector("[href$=customers]"));
         click(By.cssSelector("#doc-csv  a"));
         validateByOuterText(By.cssSelector("#content h1")," CSV Import/Export");
-
     }
 
     @Test(priority = 19)
@@ -41,6 +38,5 @@ public class Customers extends ToolBox {
         click(By.cssSelector("[href$=customers]"));
         click(By.cssSelector("#doc-newsletter  a"));
         validateByOuterText(By.cssSelector("#content h1")," Newsletter");
-
     }
 }

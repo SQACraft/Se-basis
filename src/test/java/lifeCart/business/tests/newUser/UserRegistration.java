@@ -114,8 +114,6 @@ public class UserRegistration extends ToolBox {
 
         validateByTextContent(By.cssSelector(".notice.success"),
                 " You are now logged in as " + name + " " + lastname + ".");       //валидация сообщения
-
-
     }
 
 }
