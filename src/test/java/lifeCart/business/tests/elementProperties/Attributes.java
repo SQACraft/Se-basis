@@ -1,10 +1,11 @@
-package lifeCart.business.ElementProperties;
+package lifeCart.business.tests.elementProperties;
 
+import lifeCart.business.appManager.ToolBox;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
-public class Attributes extends TestBase {
+public class Attributes extends ToolBox {
 
     /**
      * Value - получение текста, введённого  в строке поиска
@@ -13,6 +14,7 @@ public class Attributes extends TestBase {
     @Test
     void checkValue() {
 
+        goToSquareOne();
         wd.findElement(By.cssSelector(".search input"))
                 .sendKeys("I wanna find a duck");                       // ввод текста в строку поиска
         String property = wd.findElement(By.cssSelector(".search input"))
@@ -28,6 +30,7 @@ public class Attributes extends TestBase {
     @Test
     void checkLink() {
 
+        goToSquareOne();
         String property = wd.findElement(By.cssSelector("#breadcrumbs [href$='litecart/']"))
                 .getAttribute("href");
 
@@ -41,6 +44,7 @@ public class Attributes extends TestBase {
     @Test
     void checkSelected() throws InterruptedException {
 
+        goToSquareOne();
         wd.findElement(By.cssSelector("#region [href*=regional]")).click();      //открытие  модального окна Regional Settings (линк Change в хедере)
         validateByTextContent(By.cssSelector("#fancybox-content h1"),
                 "Regional Settings");                                                    // проверка заголовка

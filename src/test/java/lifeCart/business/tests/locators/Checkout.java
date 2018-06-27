@@ -1,13 +1,16 @@
-package lifeCart.business.locators;
+package lifeCart.business.tests.locators;
 
+import lifeCart.business.appManager.ToolBox;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class Checkout extends TestBase {
+public class Checkout extends ToolBox {
 
     @Test
     void Checkout() throws InterruptedException {
+
+        goToSquareOne();
 
         click(By.cssSelector(("div #box-most-popular a.link[href*=p-3"))); // выбор первого товара
 

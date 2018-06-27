@@ -1,11 +1,12 @@
-package lifeCart.business.locators;
+package lifeCart.business.tests.locators;
 
+import lifeCart.business.appManager.ToolBox;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class Drill extends TestBase {
+public class Drill extends ToolBox {
 
     /**
      * 1. Локатор для поиска  всех блоков (li) с информацией о товарах
@@ -15,6 +16,7 @@ public class Drill extends TestBase {
     @Test(priority = 1)
     public void productBlocks() {
 
+        goToSquareOne();
         By locator;
 
         // Блок Most Popular
@@ -42,6 +44,8 @@ public class Drill extends TestBase {
     @Test(priority = 2)
     public void goodsLinks() {
 
+        goToSquareOne();
+
         // Блок Most Popular
         Assert.assertTrue(isOneElementPresent(By.cssSelector(("div #box-most-popular a.link[href*=p-3"))));
         Assert.assertTrue(isOneElementPresent(By.cssSelector(("div #box-most-popular a.link[href*=p-1"))));
@@ -66,6 +70,7 @@ public class Drill extends TestBase {
     @Test(priority = 3)
      void privacyPolicyLink() {
 
+        goToSquareOne();
         click(By.cssSelector("#footer [href*='privacy-policy']"));    // клик по ссылке
         Assert.assertTrue(isOneElementPresent(By.xpath(
                 "//h1[contains(text(), 'Privacy Policy')]")));               // проверка заголовка
@@ -79,6 +84,7 @@ public class Drill extends TestBase {
     @Test(priority = 4)
      void siteMenu() {
 
+        goToSquareOne();
         click(By.cssSelector("#site-menu [href$='ducks-c-1/']"));    // клик по ссылке
         validateByTextContent(By.cssSelector(".content h1"),
                 "Rubber Ducks");                                                    // проверка заголовка
@@ -93,6 +99,7 @@ public class Drill extends TestBase {
     @Test(priority = 5)
     public void countriesList() {
 
+        goToSquareOne();
         click(By.cssSelector("td.account [href$='create_account']"));   // клик по ссылке
         validateByTextContent(By.cssSelector(".content h1"),
                 "Create Account");                                                    // проверка заголовка
@@ -115,6 +122,7 @@ public class Drill extends TestBase {
     @Test
     public void sortButton() {
 
+        goToSquareOne();
         click(By.cssSelector("nav.content [href*='c-1/']"));                                                       // переход в  раздел Rubber Ducks
         validateByTextContent(By.cssSelector(".content h1"),
                 "Rubber Ducks");                                                    // проверка заголовка

@@ -1,16 +1,18 @@
-package lifeCart.business.ElementStyles;
+package lifeCart.business.tests.elementStyles;
 
+import lifeCart.business.appManager.ToolBox;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class Styles extends TestBase {
+public class Styles extends ToolBox {
 
     @Test(priority = 1)
 
     void checkTitle() {
 
+        goToSquareOne();
         click(By.cssSelector(("div #box-most-popular a.link[href*=p-1")));          // выбор   товара в блоке Campaigns
 
         validateByTextContent(By.cssSelector("#box-product .title"),
@@ -21,6 +23,7 @@ public class Styles extends TestBase {
 
     void checkRegularPrice() {
 
+        goToSquareOne();
         By locator = By.cssSelector(".price-wrapper .regular-price");
         WebElement element = wd.findElement(locator);
 

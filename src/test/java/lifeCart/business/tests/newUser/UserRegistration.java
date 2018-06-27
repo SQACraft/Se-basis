@@ -19,6 +19,8 @@ public class UserRegistration extends ToolBox {
 
     void createUser() {
 
+        goToSquareOne();
+
         click(By.cssSelector("[name=login_form] [href$=create_account]"));   // Переход в раздел Create Account
         validateByTextContent(By.cssSelector(".content h1"), "Create Account");  // валидация заголовка
 

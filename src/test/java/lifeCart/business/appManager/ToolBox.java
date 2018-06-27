@@ -10,7 +10,6 @@ public class ToolBox extends TestBase {
 
     /**
      * Методы
-     * TODO: вынести в отдельный класс
      */
 
     public boolean isElementPresent(By locator) {
