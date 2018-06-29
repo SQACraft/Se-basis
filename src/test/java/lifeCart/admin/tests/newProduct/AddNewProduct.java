@@ -33,11 +33,31 @@ public class AddNewProduct extends ToolBox {
         WebElement selectElement = wd.findElement(By.cssSelector("select[name=default_category_id]"));    // cписок выбора дефолтной категории
         Select select = new Select(selectElement);
         select.selectByVisibleText("Rubber Ducks");        // выбираем категорию
+
+        setCheckboxState(By.cssSelector("[type=checkbox][value='1-1'"), "toSelect") ; //выбираем чекбокс Product Groups - Gender - Male
+
+        wd.findElement(By.cssSelector("[type=number][name=quantity]"))    // Name
+                .sendKeys("777.00" + Keys.TAB) ;
+
+         selectElement = wd.findElement(By.cssSelector("select[name=quantity_unit_id]"));    // cписок выбора меры количества
+        select = new Select(selectElement);
+        select.selectByVisibleText("pcs");
         selectElement.sendKeys(Keys.TAB);
 
+        selectElement = wd.findElement(By.cssSelector("select[name=sold_out_status_id]"));    // cписок выбора статуса товара
+        select = new Select(selectElement);
+        select.selectByVisibleText("Sold out");
+        selectElement.sendKeys(Keys.TAB);
+
+//        wd.findElement(By.cssSelector("[type=file][name='new_images[]']"))    // загрузка изображения
+//               .sendKeys("src\\test\\java\\lifeCart\\resources\\Comma.png") ;
+
+//        wd.findElement(By.cssSelector("[type=file][name='new_images[]']"))    // загрузка изображения
+//          .sendKeys("C:/tmp/Comma.png") ;
+
+          wd.findElement(By.cssSelector("[type=file][name='new_images[]']"))    // загрузка изображения
+          .sendKeys("Attachments/Comma.png") ;
 
 
-
-        
-        }
+    }
         }
