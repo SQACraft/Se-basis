@@ -7,8 +7,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 
-import java.io.File;
-
 public class AddNewProduct extends ToolBox {
 
     @Test
@@ -39,7 +37,7 @@ public class AddNewProduct extends ToolBox {
         setCheckboxState(By.cssSelector("[type=checkbox][value='1-1'"), "toSelect") ; //выбираем чекбокс Product Groups - Gender - Male
 
         wd.findElement(By.cssSelector("[type=number][name=quantity]"))    // Name
-                .sendKeys("777.00" + Keys.TAB) ;
+                .sendKeys("777,00" + Keys.TAB) ;
 
          selectElement = wd.findElement(By.cssSelector("select[name=quantity_unit_id]"));    // cписок выбора меры количества
         select = new Select(selectElement);
@@ -51,8 +49,22 @@ public class AddNewProduct extends ToolBox {
         select.selectByVisibleText("Sold out");
         selectElement.sendKeys(Keys.TAB);
 
-        fileUpload(By.cssSelector("[type=file][name='new_images[]']"),
+        fileUpload(By.cssSelector("[type=file][name='new_images[]']"),     // загрузка файла
                 "src/test/resources/сomma.png");
+
+        wd.findElement(By.cssSelector("input[name=date_valid_from]"))           // Code
+                .sendKeys("19681213" + Keys.TAB) ;
+
+        wd.findElement(By.cssSelector("input[name=date_valid_to]"))           // Code
+                .sendKeys("20180630" ) ;
+
+        click(By.cssSelector("button[name=save]")); // кнопка добавления продукта
+
+        validateByOuterText(By.cssSelector("#content h1")," Catalog");  // Валидация заголовка
+        validateByTextContent(By.cssSelector(".notice.success"),
+                " Changes saved");       //валидация сообщения
+
+
 
     }
         }
