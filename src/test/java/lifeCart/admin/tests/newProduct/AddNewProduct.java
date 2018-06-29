@@ -7,6 +7,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 
+import java.io.File;
+
 public class AddNewProduct extends ToolBox {
 
     @Test
@@ -49,15 +51,8 @@ public class AddNewProduct extends ToolBox {
         select.selectByVisibleText("Sold out");
         selectElement.sendKeys(Keys.TAB);
 
-//        wd.findElement(By.cssSelector("[type=file][name='new_images[]']"))    // загрузка изображения
-//               .sendKeys("src\\test\\java\\lifeCart\\resources\\Comma.png") ;
-
-//        wd.findElement(By.cssSelector("[type=file][name='new_images[]']"))    // загрузка изображения
-//          .sendKeys("C:/tmp/Comma.png") ;
-
-          wd.findElement(By.cssSelector("[type=file][name='new_images[]']"))    // загрузка изображения
-          .sendKeys("Attachments/Comma.png") ;
-
+        fileUpload(By.cssSelector("[type=file][name='new_images[]']"),
+                "src/test/resources/сomma.png");
 
     }
         }

@@ -9,6 +9,7 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
@@ -145,5 +146,13 @@ public class TestBase {
         //  Вывод текущей даты и времени с использованием toString()
         String uniqueNumber = String.format("" + prefix + "%ts" + postfix , date);
         return (uniqueNumber);
+    }
+
+    public void fileUpload(By locator, String path) {   //загрузка файла в контрол  по абсолютному пути . Path - путь в проекте
+
+        File file = new File(path);
+        String absPath = file.getAbsolutePath();
+
+        wd.findElement(locator) .sendKeys(absPath);     // загрузка изображения
     }
 }

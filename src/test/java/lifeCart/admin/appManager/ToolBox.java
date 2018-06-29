@@ -3,6 +3,7 @@ package lifeCart.admin.appManager;
 import org.openqa.selenium.*;
 import org.testng.Assert;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -117,4 +118,13 @@ public class ToolBox extends TestBase {
     public void goToSquareOne() {                                 //  переход на главную
         click(By.cssSelector("img[title='My Store']"));
     }
+
+    public void fileUpload(By locator, String path) {   //загрузка файла в контрол  по абсолютному пути . Path - путь в проекте
+
+        File file = new File(path);
+        String absPath = file.getAbsolutePath();            // получаем абсолютный путь из пути внутри проекта
+
+        wd.findElement(locator) .sendKeys(absPath);     // загрузка изображения
+    }
+
 }
