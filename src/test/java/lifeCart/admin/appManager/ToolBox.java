@@ -128,7 +128,8 @@ public class ToolBox extends TestBase {
     }
 
 
-    public void fileUploadTwo(WebElement  filelink, String path) {   //загрузка файла в контрол  по абсолютному пути . Path - путь в проекте
+    public void fileUploadFromList(WebElement  filelink, String path) {
+        //загрузка файла в контрол из списка контролов  по абсолютному пути . Path - путь в проекте WebElement должен идти с индексом (.get(i) )
 
         File file = new File(path);
         String absPath = file.getAbsolutePath();            // получаем абсолютный путь из пути внутри проекта

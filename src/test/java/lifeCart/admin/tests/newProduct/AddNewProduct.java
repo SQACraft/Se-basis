@@ -62,7 +62,7 @@ public class AddNewProduct extends ToolBox {
         wd.findElement(By.cssSelector("a#add-new-image")).click();                         // добавляем ещё одну загрузку
 
         List<WebElement> uploadControls = wd.findElements(locator);  // формируем список ссылок на загрузку файлов
-        fileUploadTwo(uploadControls.get(1), "src/test/resources/сomma.png");   // загрузка второго файла  по индексу элемента в списке
+        fileUploadFromList(uploadControls.get(1), "src/test/resources/github.png");   // загрузка второго файла  по индексу элемента в списке
 
                 locator = (By.cssSelector("input[name=date_valid_from]"));
                 wd.findElement(locator).click();

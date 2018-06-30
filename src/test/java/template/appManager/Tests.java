@@ -1,4 +1,4 @@
-package template;
+package template.appManager;
 
 import lifeCart.admin.appManager.ToolBox;
 import org.testng.annotations.Test;
