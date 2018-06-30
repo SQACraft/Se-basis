@@ -127,4 +127,12 @@ public class ToolBox extends TestBase {
         wd.findElement(locator) .sendKeys(absPath);     // загрузка изображения
     }
 
+
+    public void fileUploadTwo(WebElement  filelink, String path) {   //загрузка файла в контрол  по абсолютному пути . Path - путь в проекте
+
+        File file = new File(path);
+        String absPath = file.getAbsolutePath();            // получаем абсолютный путь из пути внутри проекта
+
+        filelink.sendKeys(absPath);     // загрузка изображения
+    }
 }
