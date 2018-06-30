@@ -36,8 +36,9 @@ public class AddNewProduct extends ToolBox {
 
         setCheckboxState(By.cssSelector("[type=checkbox][value='1-1'"), "toSelect") ; //выбираем чекбокс Product Groups - Gender - Male
 
-        wd.findElement(By.cssSelector("[type=number][name=quantity]"))    // Name
-                .sendKeys("777,00" + Keys.TAB) ;
+        locator = By.cssSelector("[type=number][name=quantity]");
+        wd.findElement(locator).clear() ;    // Name
+        wd.findElement(locator).sendKeys("777,00" + Keys.TAB) ;    // Name
 
          selectElement = wd.findElement(By.cssSelector("select[name=quantity_unit_id]"));    // cписок выбора меры количества
         select = new Select(selectElement);
@@ -52,19 +53,18 @@ public class AddNewProduct extends ToolBox {
         fileUpload(By.cssSelector("[type=file][name='new_images[]']"),     // загрузка файла
                 "src/test/resources/сomma.png");
 
-        wd.findElement(By.cssSelector("input[name=date_valid_from]"))           // Code
-                .sendKeys("19681213" + Keys.TAB) ;
+        locator = (By.cssSelector("input[name=date_valid_from]"));
+        wd.findElement(locator).click();
+         wd.findElement(locator).sendKeys("13121968" + Keys.TAB) ;   // Code
 
-        wd.findElement(By.cssSelector("input[name=date_valid_to]"))           // Code
-                .sendKeys("20180630" ) ;
+        locator = (By.cssSelector("input[name=date_valid_to]"));
+        wd.findElement(locator).click();
+        wd.findElement(locator).sendKeys("30062018" ) ;
 
         click(By.cssSelector("button[name=save]")); // кнопка добавления продукта
 
         validateByOuterText(By.cssSelector("#content h1")," Catalog");  // Валидация заголовка
         validateByTextContent(By.cssSelector(".notice.success"),
                 " Changes saved");       //валидация сообщения
-
-
-
     }
         }
