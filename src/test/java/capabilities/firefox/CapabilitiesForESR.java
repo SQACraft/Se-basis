@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.HasCapabilities;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterTest;
@@ -20,6 +21,9 @@ public class CapabilitiesForESR {
 
         DesiredCapabilities caps = new DesiredCapabilities();
         caps.setCapability(FirefoxDriver.MARIONETTE, false); // старая схема работы с FF
+        caps.setCapability(CapabilityType.PAGE_LOAD_STRATEGY, "eager"); // устанавливаем конкретные capabilities браузера при запускею Здесь - ожидание
+                                                                                                            // статса загрузки страницы ready state = interactive
+
 
         wd = new FirefoxDriver(caps);
         System.out.println(((HasCapabilities) wd).getCapabilities());
