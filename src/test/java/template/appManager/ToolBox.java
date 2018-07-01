@@ -1,11 +1,14 @@
 package template.appManager;
 
 import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Date;
+
+import static org.openqa.selenium.support.ui.ExpectedConditions.textToBePresentInElement;
 
 public class ToolBox extends TestBase {
 
@@ -50,9 +53,18 @@ public class ToolBox extends TestBase {
         click(By.cssSelector(("a.link[href$=checkout")));
     }
 
-    public void addToCart() throws InterruptedException {                                    // добавление товара в корзину
-        click(By.cssSelector("button[name=add_cart_product]"));
-        Thread.sleep(1000);                                                           // таймаут для добавления
+    public void addToCart() {                                          // добавление товара в корзину c явным ожиданием увеличения счётчика
+
+        String quantityParam = wd.findElement(By.cssSelector("[href$=checkout] .quantity"))
+                .getAttribute("textContent");                                 // значение счётчика товаров в корзине до добавления
+        int quantity = Integer.parseInt(quantityParam);
+
+        click(By.cssSelector("button[name=add_cart_product]"));                        // добавление товара в корзину
+
+        WebDriverWait expWait = new WebDriverWait(wd, 5);                     //  явное ожидание в 5 с (при старте браузера установлено  10)
+        WebElement counter = wd.findElement(By.cssSelector("[href$=checkout].content"));
+        expWait.until(textToBePresentInElement
+                (counter, quantity + 1 + " item(s)"));                                          //явное ожидание инкремента счётчика товаров в корзине
     }
 
     public String arrayListToString(ArrayList arrayName) {                                   // конвертация массиваа в строку

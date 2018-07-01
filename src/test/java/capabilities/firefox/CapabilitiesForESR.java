@@ -22,7 +22,7 @@ public class CapabilitiesForESR {
         DesiredCapabilities caps = new DesiredCapabilities();
         caps.setCapability(FirefoxDriver.MARIONETTE, false); // старая схема работы с FF
         caps.setCapability(CapabilityType.PAGE_LOAD_STRATEGY, "eager"); // устанавливаем конкретные capabilities браузера при запускею Здесь - ожидание
-                                                                                                            // статса загрузки страницы ready state = interactive
+                                                                                                            // статуса загрузки страницы ready state = interactive
 
 
         wd = new FirefoxDriver(caps);
