@@ -9,8 +9,8 @@ import static org.openqa.selenium.support.ui.ExpectedConditions.textToBePresentI
 
 public class AddToCheckout extends ToolBox {
 
-    @Test
-    void checkExplicitWait() throws InterruptedException {
+    @Test (description = "Использование явных ожиданий при работе с корзиной")
+    void checkExplicitWait() {
 
         goToSquareOne();
         click(By.cssSelector(("div #box-latest-products a.link[href*=p-2"))); // выбор первого товара
