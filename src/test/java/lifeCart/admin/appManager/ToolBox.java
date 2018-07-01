@@ -47,7 +47,7 @@ public class ToolBox extends TestBase {
     }
 
     public void goToCheckout() {                                    // переход в чекаут
-        click(By.cssSelector(("a.link[href$=checkout")));
+        click(By.cssSelector("a.link[href$=checkout"));
     }
 
     public void addToCart() throws InterruptedException {                                    // добавление товара в корзину

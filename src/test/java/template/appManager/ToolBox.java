@@ -50,7 +50,7 @@ public class ToolBox extends TestBase {
     }
 
     public void goToCheckout() {                                    // переход в чекаут
-        click(By.cssSelector(("a.link[href$=checkout")));
+        click(By.cssSelector("a.link[href$=checkout"));
     }
 
     public void addToCart() {                                          // добавление товара в корзину c явным ожиданием увеличения счётчика

@@ -49,7 +49,7 @@ public class ToolBox extends TestBase {
     }
 
     public void goToCheckout() {                                    // переход в чекаут
-        click(By.cssSelector(("a.link[href$=checkout")));
+        click(By.cssSelector("a.link[href$=checkout"));
     }
 
     public void addToCart() {                                          // добавление товара в корзину c явным ожиданием увеличения счётчика
@@ -64,6 +64,10 @@ public class ToolBox extends TestBase {
         WebElement counter = wd.findElement(By.cssSelector("[href$=checkout].content"));
         expWait.until(textToBePresentInElement
                 (counter, quantity + 1 + " item(s)"));                                          //явное ожидание инкремента счётчика товаров в корзине
+    }
+
+    public void removeFromCart()  {                                             // удаление товара из корзины
+    click(By.cssSelector("button[name=remove_cart_item]"));
     }
 
     public String arrayListToString(ArrayList arrayName) {                                   // конвертация массиваа в строку
