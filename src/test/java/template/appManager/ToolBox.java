@@ -18,6 +18,10 @@ public class ToolBox extends TestBase {
      * Методы
      */
 
+    /**
+     *    Проверка наличия элемента с исключениями
+     */
+
     public boolean isElementPresent(By locator) {
         try {
             wait.until((WebDriver d) -> d.findElement(locator)); // явное (Explicit) ожидание
@@ -32,13 +36,25 @@ public class ToolBox extends TestBase {
         }
     }
 
+    /**
+     *    Проверка наличия только ОДНОГО элемента в списке
+     */
+
     public boolean isOneElementPresent(By locator) {         // Проверка наличия одного элемента
         return wd.findElements(locator).size() == 1;
     }
 
+    /**
+     *    Проверка наличия  элементов в списке
+     */
+
     public boolean areElementsPresent(By locator) {         // Проверка наличия   элементов
         return wd.findElements(locator).size() > 0;
     }
+
+    /**
+     *    Количество  элементов в списке
+     */
 
     public int getNumOfElementsFound(By locator) {
 
@@ -47,13 +63,24 @@ public class ToolBox extends TestBase {
         return size;
     }
 
+    /**
+     *    Клик по элементу
+     */
     public void click(By locator) {                                    // клик по элементу
         wd.findElement(locator).click();
     }
 
+    /**
+     *   Переход в чекаут ( lifeCart)
+     */
+
     public void goToCheckout() {                                    // переход в чекаут
         click(By.cssSelector("a.link[href$=checkout"));
     }
+
+    /**
+     *   Добавление в корзину с явным ожиданием ( lifeCart)
+     */
 
     public void addToCart() {                                          // добавление товара в корзину c явным ожиданием увеличения счётчика
 
@@ -69,6 +96,10 @@ public class ToolBox extends TestBase {
                 (counter, quantity + 1 + " item(s)"));                                          //явное ожидание инкремента счётчика товаров в корзине
     }
 
+    /**
+     *   Конвертация ArrayList в строку
+     */
+
     public String arrayListToString(ArrayList arrayName) {                                   // конвертация массиваа в строку
 
         StringBuilder sb = new StringBuilder();
@@ -79,19 +110,29 @@ public class ToolBox extends TestBase {
         return arrayString;
     }
 
-    public void validateByTextContent(By locator, String expectedText) {           // проверка текста на странице
+    /**
+     *   Валидация текста на странице по атрибуту textContent
+     */
+    public void validateByTextContent(By locator, String expectedText) {           // валидация текста на странице
 
         WebElement element = wd.findElement(locator);                           // находим элемент
         String actualText = element.getAttribute("textContent");             // получаем атрибут textContent
         Assert.assertEquals(actualText, expectedText);                                  // валидация текста
     }
 
+    /**
+     *   Валидация текста на странице по атрибуту outerText
+     */
     public void validateByOuterText(By locator, String expectedText) {           // проверка текста на странице
 
         WebElement element = wd.findElement(locator);                           // находим элемент
         String actualText = element.getAttribute("outerText");             // получаем атрибут outerText
         Assert.assertEquals(actualText, expectedText);                                  // валидация заголовка на карточке товара
     }
+
+    /**
+     *   Выбор/снятие чекбокса в зависимости от его состояния
+     */
 
     public void setCheckboxState(By locator, String action) {    // action:  "toSelect / toClear
 
@@ -114,12 +155,14 @@ public class ToolBox extends TestBase {
                 } else {                                            // если чекбокс не выбран-
                     break;                                          // ничего не делать
                 }
-
             default:
                 System.out.println("Некорректный параметр action (toSelect | toClear");
         }
     }
 
+    /**
+     *    Генератор уникального номера с префиксом и постфиксом
+     */
     public String getUniqueNumber(String prefix, String postfix) {        // генератор уникального номера
 
         // Инициализация объекта date
@@ -129,11 +172,19 @@ public class ToolBox extends TestBase {
         return (uniqueNumber);
     }
 
+    /**
+     *    Возврат на главную (liteCart)
+     */
+
     public void goToSquareOne() {                                 //  переход на главную
         click(By.cssSelector("img[title='My Store']"));
     }
 
-    public void fileUpload(By locator, String path) {   //загрузка файла в контрол  по абсолютному пути . Path - путь в проекте
+    /**
+     *    Загрузка файла в контрол  по абсолютному пути
+     */
+
+    public void fileUpload(By locator, String path) {   //загрузка файла в контрол  по абсолютному пути . Path - путь к файлу в проекте
 
         File file = new File(path);
         String absPath = file.getAbsolutePath();            // получаем абсолютный путь из пути внутри проекта
@@ -141,15 +192,25 @@ public class ToolBox extends TestBase {
         wd.findElement(locator) .sendKeys(absPath);     // загрузка изображения
     }
 
+    /**
+     *    Загрузка файла в контрол из списка контролов  по абсолютному пути
+     */
 
     public void fileUploadFromList(WebElement  filelink, String path) {
-        //загрузка файла в контрол из списка контролов  по абсолютному пути . Path - путь в проекте WebElement должен идти с индексом (.get(i) )
+        //загрузка файла в контрол из списка контролов  по абсолютному пути .
+        // Пример использования:
+        //   List<WebElement> uploadControls = wd.findElements(locator);  // формируем список ссылок на загрузку файлов
+       //     fileUploadFromList(uploadControls.get(1), "src/test/resources/github.png");   // загрузка второго файла  по индексу элемента в списке
 
         File file = new File(path);
         String absPath = file.getAbsolutePath();            // получаем абсолютный путь из пути внутри проекта
 
         filelink.sendKeys(absPath);     // загрузка изображения
     }
+
+    /**
+     *    Ожидание открытия нового  окна + получение его дескриптора
+     */
 
     String getNewWindowHandler(Set<String> oldWindowsSet) {    // ожидание открытия нового  окна + получение его дескриптора. Параметр -
         // набор дескрипторов уже открытых окон:   Set<String> oldWindowsSet = wd.getWindowHandles();
@@ -168,4 +229,5 @@ public class ToolBox extends TestBase {
                 );
         return newWindowHandler;
     }
+    
 }
