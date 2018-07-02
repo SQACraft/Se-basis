@@ -1,5 +1,6 @@
 package windowSwitch;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedCondition;
@@ -10,9 +11,9 @@ import java.util.Set;
 public class Tests extends ToolBox {
 
     @Test
-    void windowSwitch() throws InterruptedException {
+    void windowSwitch()   {
 
-        String windowHandler = wd.getWindowHandle();   //дескриптор текущего открытого окна, уникально идентифицирующий окно для этого экземпляра драйвера.
+       String initWindowHandler = wd.getWindowHandle();   //дескриптор текущего открытого окна, уникально идентифицирующий окно для этого экземпляра драйвера.
                                                                           //  формат:   CDwindow-6498D1E2412A03630E4D0A63EC96CF82 )
 
         Set<String> oldWindowsSet = wd.getWindowHandles();  //набор дескрипторов окон. Сейчас в нём 1 дескриптор
@@ -21,38 +22,28 @@ public class Tests extends ToolBox {
         JavascriptExecutor js = (JavascriptExecutor) wd;
         js.executeScript("window.open()");                         // открываем второе окно
 
-        String newWindowHandler = wait.until
-                (new ExpectedCondition<String>() {          // искомый дескриптор второго окна после ожидания
+        String newWindowHandler = wait.until                // искомый дескриптор второго окна
+                (new ExpectedCondition<String>() {          // конструируем ожидание открытия окна с получением его  дескриптора
 
-             public String apply(WebDriver wd) {
+                    public String apply(WebDriver wd) {
 
-                 Set<String> newWindowsSet = wd.getWindowHandles();   //набор дескрипторов окон после открытия второго окна
-                 newWindowsSet.removeAll(oldWindowsSet);
+                      Set<String> newWindowsSet = wd.getWindowHandles();   //новый набор дескрипторов окон после открытия второго окна
+                      newWindowsSet.removeAll(oldWindowsSet);                   // убираем дескрипторы открытых ранее окон
+                      return newWindowsSet.size() > 0 ?
+                      newWindowsSet.iterator().next() : null;
+                    }
+                }
+        );
 
-                 return newWindowsSet.size() > 0 ?
-                         newWindowsSet.iterator().next() : null;
-             }
-        }   );
+        wd.switchTo().window(newWindowHandler);  // переключаемся в новое окно
+        search("ЛИСА");
 
+        wd.switchTo(). window(initWindowHandler);  // переключаемся в первое окно
+        click(By.cssSelector("[href$='software-testing.ru/'] .no_thumbnail"));
+        System.out.println(" ");
 
-        System.out.println(newWindowHandler);
-
-/*
-
-        Set<String> oldWindowsSet = wd.getWindowHandles();  //набор дескрипторов окон, для перебора всех открытых окон для данного экземпляра wd
-        System.out.println(oldWindowsSet);                             // 2 окна:     [CDwindow-3C23FA39040CC89365E9BC1582F74491, CDwindow-F886659C2375F340B5FAC3393B7E5C2F]
-
-        js.executeScript("window.open()");                           // открываем третье окно
-
-        Set<String> newWindowsSet = wd.getWindowHandles();  // новый набор дескрипторов, включающий уже и новое окно
-        System.out.println(newWindowsSet);
-
-        newWindowsSet.removeAll(oldWindowsSet);
-        String newWindowHandler = newWindowsSet.iterator().next();   // дескриптор нового (последнего) окна - исключены дескрипторы первых двух окон
-
-
-        System.out.println(newWindowHandler);
-*/
+        wd.switchTo().window(newWindowHandler);  // переключаемся в новое окно
+        wd.close();                                              // закрваем новое окно
 
     }
 

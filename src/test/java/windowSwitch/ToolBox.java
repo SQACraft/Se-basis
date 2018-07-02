@@ -16,5 +16,17 @@ public class ToolBox extends TestBase {
      * Методы
      */
 
+    void search(String animal) {
+
+        wd.get("https://bash.im/");
+        // wd.findElement(By.name("text")).sendKeys(animal);
+        //wd.findElement(By.xpath(".//*[@id='search']/button")).click();
+        wd.findElement(By.cssSelector("div #search #text")).sendKeys(animal);
+        wd.findElement(By.cssSelector("div #search [type=submit]")).click();
+    }
+
+    public void click(By locator) {                                    // клик по элементу
+        wd.findElement(locator).click();
+    }
 
 }
