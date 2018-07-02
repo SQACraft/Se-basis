@@ -1,12 +1,14 @@
 package template.appManager;
 
 import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Set;
 
 import static org.openqa.selenium.support.ui.ExpectedConditions.textToBePresentInElement;
 
@@ -147,5 +149,23 @@ public class ToolBox extends TestBase {
         String absPath = file.getAbsolutePath();            // получаем абсолютный путь из пути внутри проекта
 
         filelink.sendKeys(absPath);     // загрузка изображения
+    }
+
+    String getNewWindowHandler(Set<String> oldWindowsSet) {    // ожидание открытия нового  окна + получение его дескриптора. Параметр -
+        // набор дескрипторов уже открытых окон:   Set<String> oldWindowsSet = wd.getWindowHandles();
+
+        String newWindowHandler = wait.until                // искомый дескриптор второго окна
+                (new ExpectedCondition<String>() {          // конструируем ожидание открытия окна с получением его  дескриптора
+
+                     public String apply(WebDriver wd) {
+
+                         Set<String> newWindowsSet = wd.getWindowHandles();   //новый набор дескрипторов окон после открытия второго окна
+                         newWindowsSet.removeAll(oldWindowsSet);                   // убираем дескрипторы открытых ранее окон
+                         return newWindowsSet.size() > 0 ?
+                                 newWindowsSet.iterator().next() : null;
+                     }
+                 }
+                );
+        return newWindowHandler;
     }
 }

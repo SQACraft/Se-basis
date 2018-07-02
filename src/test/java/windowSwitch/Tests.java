@@ -2,8 +2,6 @@ package windowSwitch;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.testng.annotations.Test;
 
 import java.util.Set;
@@ -22,18 +20,7 @@ public class Tests extends ToolBox {
         JavascriptExecutor js = (JavascriptExecutor) wd;
         js.executeScript("window.open()");                         // открываем второе окно
 
-        String newWindowHandler = wait.until                // искомый дескриптор второго окна
-                (new ExpectedCondition<String>() {          // конструируем ожидание открытия окна с получением его  дескриптора
-
-                    public String apply(WebDriver wd) {
-
-                      Set<String> newWindowsSet = wd.getWindowHandles();   //новый набор дескрипторов окон после открытия второго окна
-                      newWindowsSet.removeAll(oldWindowsSet);                   // убираем дескрипторы открытых ранее окон
-                      return newWindowsSet.size() > 0 ?
-                      newWindowsSet.iterator().next() : null;
-                    }
-                }
-        );
+        String newWindowHandler = getNewWindowHandler(oldWindowsSet);  // ожидание открытия второго окна + получение его дескриптора
 
         wd.switchTo().window(newWindowHandler);  // переключаемся в новое окно
         search("ЛИСА");
