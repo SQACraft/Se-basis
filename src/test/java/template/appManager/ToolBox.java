@@ -66,6 +66,7 @@ public class ToolBox extends TestBase {
     /**
      *    Клик по элементу
      */
+
     public void click(By locator) {                                    // клик по элементу
         wd.findElement(locator).click();
     }
@@ -229,5 +230,5 @@ public class ToolBox extends TestBase {
                 );
         return newWindowHandler;
     }
-    
+
 }

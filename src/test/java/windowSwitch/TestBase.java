@@ -18,7 +18,7 @@ public class TestBase {
     public void start() {
 
         ChromeOptions options = new ChromeOptions();
-        //options.addArguments("start-fullscreen");
+       // options.addArguments("start-fullscreen"); // отключено для наблюдения переключения между вкладками
         wd = new ChromeDriver(options);
 
         wait = new WebDriverWait(wd, 10);
