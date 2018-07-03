@@ -15,8 +15,6 @@ public class ExternalLinks extends ToolBox {
         validateByOuterText(By.cssSelector("#content h1"), " Countries"); // Валидация заголовка
 
         click(By.cssSelector("a:not([title=Edit])[href$='code=DZ']"));   // использовали :not() в локаторе сылки для редактирования страны Algeria
-
-        String initWindowHandler = wd.getWindowHandle();   //дескриптор текущего открытого окна
         Set<String> oldWindowsSet = wd.getWindowHandles();  //набор дескрипторов окон. Сейчас в нём 1 дескриптор
 
         click(By.cssSelector("[href$='ISO_3166-1_alpha-2']")); // клик по внешней ссылке для открытия второго окна
