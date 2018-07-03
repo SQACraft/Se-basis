@@ -98,6 +98,14 @@ public class ToolBox extends TestBase {
     }
 
     /**
+     *   Удаление товара из корзины (liteCart)
+     */
+
+    public void removeFromCart()  {                                             // удаление товара из корзины
+        click(By.cssSelector("button[name=remove_cart_item]"));
+    }
+    
+    /**
      *   Конвертация ArrayList в строку
      */
 
