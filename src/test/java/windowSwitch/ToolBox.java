@@ -2,15 +2,8 @@ package windowSwitch;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedCondition;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
 
-import java.io.File;
-import java.util.ArrayList;
-import java.util.Date;
 import java.util.Set;
-
-import static org.openqa.selenium.support.ui.ExpectedConditions.textToBePresentInElement;
 
 public class ToolBox extends TestBase {
 
@@ -18,6 +11,9 @@ public class ToolBox extends TestBase {
      * Методы
      */
 
+    /**
+     *    Поиск на Башорге
+     */
     void search(String animal) {
 
         wd.get("https://bash.im/");
@@ -27,13 +23,20 @@ public class ToolBox extends TestBase {
         wd.findElement(By.cssSelector("div #search [type=submit]")).click();
     }
 
+    /**
+     *    Клик по элементу
+     */
+
     public void click(By locator) {                                    // клик по элементу
         wd.findElement(locator).click();
     }
 
+    /**
+     *    Ожидание открытия нового  окна + получение его дескриптора
+     */
 
     String getNewWindowHandler(Set<String> oldWindowsSet) {    // ожидание открытия нового  окна + получение его дескриптора. Параметр -
-                                                                                         // набор дескрипторов уже открытых окон:   Set<String> oldWindowsSet = wd.getWindowHandles();
+        // набор дескрипторов уже открытых окон:   Set<String> oldWindowsSet = wd.getWindowHandles();
 
         String newWindowHandler = wait.until                // искомый дескриптор второго окна
                 (new ExpectedCondition<String>() {          // конструируем ожидание открытия окна с получением его  дескриптора
@@ -46,10 +49,9 @@ public class ToolBox extends TestBase {
                                  newWindowsSet.iterator().next() : null;
                      }
                  }
-        );
-return newWindowHandler;
+                );
+        return newWindowHandler;
     }
-
 
 }
 
