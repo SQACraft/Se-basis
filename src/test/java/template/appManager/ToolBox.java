@@ -213,7 +213,7 @@ public class ToolBox extends TestBase {
      *    Ожидание открытия нового  окна + получение его дескриптора
      */
 
-    String getNewWindowHandler(Set<String> oldWindowsSet) {    // ожидание открытия нового  окна + получение его дескриптора. Параметр -
+    public String getNewWindowHandler(Set<String> oldWindowsSet) {    // ожидание открытия нового  окна + получение его дескриптора. Параметр -
         // набор дескрипторов уже открытых окон:   Set<String> oldWindowsSet = wd.getWindowHandles();
 
         String newWindowHandler = wait.until                // искомый дескриптор второго окна
