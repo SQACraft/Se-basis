@@ -1,4 +1,4 @@
-package windowSwitch;
+package windowSwitchAndResize;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedCondition;
