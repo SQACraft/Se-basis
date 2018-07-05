@@ -1,4 +1,4 @@
-package template.appManager;
+package seleniumServer;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedCondition;
