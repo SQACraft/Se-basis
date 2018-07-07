@@ -22,18 +22,22 @@ public class TestBase {
     public void start() throws MalformedURLException {
 
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("start-fullscreen");
-        wd = new RemoteWebDriver(new URL("http://192.168.56.107:4444/wd/hub"), DesiredCapabilities.chrome());
+        options.addArguments("start-maximized"); // open Browser in maximized mode
+        options.addArguments("disable-infobars"); // disabling infobars
+        options.addArguments("--disable-extensions"); // disabling extensions
+        options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
+        options.addArguments("--no-sandbox"); // Bypass OS security model
+        DesiredCapabilities capabilities = DesiredCapabilities.chrome();
+        capabilities.setCapability(ChromeOptions.CAPABILITY, options);
+        wd = new RemoteWebDriver(new URL("http://192.168.56.107:4444/wd/hub"), capabilities);
 
         wait = new WebDriverWait(wd, 10);
-        wd.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS); //  неявное (Implicit) ожидание
-        wd.get("http://localhost/litecart");
+        wd.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); //  неявное (Implicit) ожидание
     }
 
     @AfterClass
     public void stop() {        // закрываем сессию браузера
         wd.quit();
     }
-
 
 }

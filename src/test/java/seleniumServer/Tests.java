@@ -8,12 +8,9 @@ public class Tests extends ToolBox {
     @Test
     void testTemplate() {
 
-
-
-            wd.get("https://bash.im/");
-            wd.findElement(By.name("text")).sendKeys("котик");
-            wd.findElement(By.xpath(".//*[@id='search']/button")).click();
-
+        wd.get("https://bash.im/");
+        wd.findElement(By.name("text")).sendKeys("котик");
+        wd.findElement(By.xpath(".//*[@id='search']/button")).click();
 
     }
 
