@@ -1,4 +1,4 @@
-package eventFiringWD;
+package takeScreenshots;
 
 
 import org.openqa.selenium.By;
@@ -7,9 +7,10 @@ import org.testng.annotations.Test;
 
 public class Tests extends ToolBox {
 
+
     /**
-     Логирование EventFiringWD. Код - в TestBase
-     */
+    Снятие скриншота при выбросе исключения + логирование EventFiringWD. Код - в TestBase
+   */
 
 
     @Test (groups = "Locators")
