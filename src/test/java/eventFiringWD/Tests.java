@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 public class Tests extends ToolBox {
 
     /**
-     Логирование EventFiringWD. Код - в TestBase
+     Логирование EventFiringWD. Код - в browserLogs.TestBase
      */
 
 

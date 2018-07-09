@@ -9,7 +9,7 @@ public class Tests extends ToolBox {
 
 
     /**
-    Снятие скриншота при выбросе исключения + логирование EventFiringWD. Код - в TestBase
+    Снятие скриншота при выбросе исключения + логирование EventFiringWD. Код - в browserLogs.TestBase
    */
 
 
