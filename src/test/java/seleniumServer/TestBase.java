@@ -1,7 +1,6 @@
 package seleniumServer;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -20,6 +19,8 @@ public class TestBase {
 
     @BeforeClass
     public void start() throws MalformedURLException {
+
+        // Selenium Server - на виртуальной машине с Ubuntu. Запускаем тест в Chrome
 
         ChromeOptions options = new ChromeOptions();
         options.addArguments("start-maximized"); // open Browser in maximized mode

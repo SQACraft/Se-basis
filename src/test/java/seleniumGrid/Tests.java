@@ -3,7 +3,7 @@ package seleniumGrid;
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
-public class Tests extends ToolBox {
+public class  Tests extends ToolBox {
 
     @Test
     void testTemplate() {

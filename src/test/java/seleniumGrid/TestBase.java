@@ -21,6 +21,9 @@ public class TestBase {
     @BeforeClass
     public void start() throws MalformedURLException {
 
+        //Selenium Grid (Win10) with 2 nodes (Win10 and Ubuntu )
+        // Running Chrome test under Ubuntu
+
         ChromeOptions options = new ChromeOptions();
         options.addArguments("start-maximized"); // open Browser in maximized mode
         options.addArguments("disable-infobars"); // disabling infobars
@@ -30,6 +33,7 @@ public class TestBase {
         DesiredCapabilities capabilities = DesiredCapabilities.chrome() ;
         capabilities.setCapability(ChromeOptions.CAPABILITY, options);
         capabilities.setPlatform(Platform.LINUX);
+        //capabilities.setPlatform(Platform.WIN10); // на выбор
         wd = new RemoteWebDriver(new URL("http://192.168.1.36:4444/wd/hub"), capabilities);
 
         wait = new WebDriverWait(wd, 10);
