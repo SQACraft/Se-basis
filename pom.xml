@@ -35,9 +35,18 @@
     </dependency>
 
         <dependency>
+            <!--https://github.com/lightbody/browsermob-proxy-->
             <groupId>ru.stqa.selenium</groupId>
             <artifactId>webdriver-factory</artifactId>
             <version>4.3</version>
+        </dependency>
+
+        <dependency>
+
+            <groupId>net.lightbody.bmp</groupId>
+            <artifactId>browsermob-core</artifactId>
+            <version>2.1.5</version>
+            <scope>test</scope>
         </dependency>
 
 </dependencies>
