@@ -22,9 +22,9 @@ public class CapabilitiesByArgumentsAndPair {
 
         ChromeOptions options = new ChromeOptions();
         options.addArguments("start-fullscreen"); // добавление аргументов для запуска браузера
+        
         DesiredCapabilities caps = new DesiredCapabilities();
         caps.setCapability(CapabilityType.ForSeleniumServer.ENSURING_CLEAN_SESSION, true);
-
         caps.setCapability("unexpectedAlertBehaviour", "dismiss"); // добавление пары Capabilities
         caps.setCapability(ChromeOptions.CAPABILITY, options);
 
