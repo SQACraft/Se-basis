@@ -5,6 +5,7 @@ import org.openqa.selenium.HasCapabilities;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterTest;
@@ -22,6 +23,8 @@ public class CapabilitiesByArgumentsAndPair {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("start-fullscreen"); // добавление аргументов для запуска браузера
         DesiredCapabilities caps = new DesiredCapabilities();
+        caps.setCapability(CapabilityType.ForSeleniumServer.ENSURING_CLEAN_SESSION, true);
+
         caps.setCapability("unexpectedAlertBehaviour", "dismiss"); // добавление пары Capabilities
         caps.setCapability(ChromeOptions.CAPABILITY, options);
 
