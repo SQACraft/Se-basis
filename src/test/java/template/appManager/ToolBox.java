@@ -19,7 +19,7 @@ public class ToolBox extends TestBase {
      */
 
     /**
-     *    Проверка наличия элемента с исключениями
+     * Проверка наличия элемента с исключениями
      */
 
     public boolean isElementPresent(By locator) {
@@ -37,7 +37,7 @@ public class ToolBox extends TestBase {
     }
 
     /**
-     *    Проверка наличия только ОДНОГО элемента в списке
+     * Проверка наличия только ОДНОГО элемента в списке
      */
 
     public boolean isOneElementPresent(By locator) {         // Проверка наличия одного элемента
@@ -45,7 +45,7 @@ public class ToolBox extends TestBase {
     }
 
     /**
-     *    Проверка наличия  элементов в списке
+     * Проверка наличия  элементов в списке
      */
 
     public boolean areElementsPresent(By locator) {         // Проверка наличия   элементов
@@ -53,7 +53,7 @@ public class ToolBox extends TestBase {
     }
 
     /**
-     *    Количество  элементов в списке
+     * Количество  элементов в списке
      */
 
     public int getNumOfElementsFound(By locator) {
@@ -64,7 +64,7 @@ public class ToolBox extends TestBase {
     }
 
     /**
-     *    Клик по элементу
+     * Клик по элементу
      */
 
     public void click(By locator) {                                    // клик по элементу
@@ -72,7 +72,7 @@ public class ToolBox extends TestBase {
     }
 
     /**
-     *   Переход в чекаут ( lifeCart)
+     * Переход в чекаут ( lifeCart)
      */
 
     public void goToCheckout() {                                    // переход в чекаут
@@ -80,7 +80,7 @@ public class ToolBox extends TestBase {
     }
 
     /**
-     *   Добавление в корзину с явным ожиданием ( lifeCart)
+     * Добавление в корзину с явным ожиданием ( lifeCart)
      */
 
     public void addToCart() {                                          // добавление товара в корзину c явным ожиданием увеличения счётчика
@@ -98,15 +98,15 @@ public class ToolBox extends TestBase {
     }
 
     /**
-     *   Удаление товара из корзины (liteCart)
+     * Удаление товара из корзины (liteCart)
      */
 
-    public void removeFromCart()  {                                             // удаление товара из корзины
+    public void removeFromCart() {                                             // удаление товара из корзины
         click(By.cssSelector("button[name=remove_cart_item]"));
     }
 
     /**
-     *   Конвертация ArrayList в строку
+     * Конвертация ArrayList в строку
      */
 
     public String arrayListToString(ArrayList arrayName) {                                   // конвертация массиваа в строку
@@ -120,7 +120,7 @@ public class ToolBox extends TestBase {
     }
 
     /**
-     *   Валидация текста на странице по атрибуту textContent
+     * Валидация текста на странице по атрибуту textContent
      */
     public void validateByTextContent(By locator, String expectedText) {           // валидация текста на странице
 
@@ -130,7 +130,7 @@ public class ToolBox extends TestBase {
     }
 
     /**
-     *   Валидация текста на странице по атрибуту outerText
+     * Валидация текста на странице по атрибуту outerText
      */
     public void validateByOuterText(By locator, String expectedText) {           // проверка текста на странице
 
@@ -140,7 +140,7 @@ public class ToolBox extends TestBase {
     }
 
     /**
-     *   Выбор/снятие чекбокса в зависимости от его состояния
+     * Выбор/снятие чекбокса в зависимости от его состояния
      */
 
     public void setCheckboxState(By locator, String action) {    // action:  "toSelect / toClear
@@ -170,19 +170,19 @@ public class ToolBox extends TestBase {
     }
 
     /**
-     *    Генератор уникального номера с префиксом и постфиксом
+     * Генератор уникального номера с префиксом и постфиксом
      */
     public String getUniqueNumber(String prefix, String postfix) {        // генератор уникального номера
 
         // Инициализация объекта date
         Date date = new Date();
         //  Вывод текущей даты и времени с использованием toString()
-        String uniqueNumber = String.format("" + prefix + "%ts" + postfix , date);
+        String uniqueNumber = String.format("" + prefix + "%ts" + postfix, date);
         return (uniqueNumber);
     }
 
     /**
-     *    Возврат на главную (liteCart)
+     * Возврат на главную (liteCart)
      */
 
     public void goToSquareOne() {                                 //  переход на главную
@@ -190,7 +190,7 @@ public class ToolBox extends TestBase {
     }
 
     /**
-     *    Загрузка файла в контрол  по абсолютному пути
+     * Загрузка файла в контрол  по абсолютному пути
      */
 
     public void fileUpload(By locator, String path) {   //загрузка файла в контрол  по абсолютному пути . Path - путь к файлу в проекте
@@ -198,18 +198,18 @@ public class ToolBox extends TestBase {
         File file = new File(path);
         String absPath = file.getAbsolutePath();            // получаем абсолютный путь из пути внутри проекта
 
-        wd.findElement(locator) .sendKeys(absPath);     // загрузка изображения
+        wd.findElement(locator).sendKeys(absPath);     // загрузка изображения
     }
 
     /**
-     *    Загрузка файла в контрол из списка контролов  по абсолютному пути
+     * Загрузка файла в контрол из списка контролов  по абсолютному пути
      */
 
-    public void fileUploadFromList(WebElement  filelink, String path) {
+    public void fileUploadFromList(WebElement filelink, String path) {
         //загрузка файла в контрол из списка контролов  по абсолютному пути .
         // Пример использования:
         //   List<WebElement> uploadControls = wd.findElements(locator);  // формируем список ссылок на загрузку файлов
-       //     fileUploadFromList(uploadControls.get(1), "src/test/resources/github.png");   // загрузка второго файла  по индексу элемента в списке
+        //     fileUploadFromList(uploadControls.get(1), "src/test/resources/github.png");   // загрузка второго файла  по индексу элемента в списке
 
         File file = new File(path);
         String absPath = file.getAbsolutePath();            // получаем абсолютный путь из пути внутри проекта
@@ -218,7 +218,7 @@ public class ToolBox extends TestBase {
     }
 
     /**
-     *    Ожидание открытия нового  окна + получение его дескриптора
+     * Ожидание открытия нового  окна + получение его дескриптора
      */
 
     public String getNewWindowHandler(Set<String> oldWindowsSet) {    // ожидание открытия нового  окна + получение его дескриптора. Параметр -
@@ -239,4 +239,15 @@ public class ToolBox extends TestBase {
         return newWindowHandler;
     }
 
+    /**
+     * Округление числа в большую сторону (параметры: число разрядов после точки, само число (Double)
+     */
+
+    public double roundingHalfUp(double number, int digits) {    // метод для округления
+
+        BigDecimal bigDec = new BigDecimal(number);
+        return bigDec.setScale(digits, RoundingMode.HALF_UP).doubleValue();
+    }
 }
+
+    }
