@@ -6,6 +6,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import java.io.File;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Set;
@@ -242,12 +244,10 @@ public class ToolBox extends TestBase {
     /**
      * Округление числа в большую сторону (параметры: число разрядов после точки, само число (Double)
      */
-
     public double roundingHalfUp(double number, int digits) {    // метод для округления
 
-        BigDecimal bigDec = new BigDecimal(number);
-        return bigDec.setScale(digits, RoundingMode.HALF_UP).doubleValue();
+        return new BigDecimal(number).setScale(digits, RoundingMode.HALF_UP).doubleValue();
     }
+
 }
 
-    }
