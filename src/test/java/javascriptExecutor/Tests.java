@@ -1,9 +1,13 @@
 package javascriptExecutor;
 
+import com.codeborne.selenide.Selenide;
+import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
+
+import static com.codeborne.selenide.Selenide.$$;
 
 public class Tests extends javascriptExecutor.ToolBox {
 
@@ -32,6 +36,20 @@ public class Tests extends javascriptExecutor.ToolBox {
 
         WebElement firstName = wd.findElement(By.cssSelector("#firstname"));  //2
         js.executeScript("arguments[0].click();", firstName);
+    }
+
+    /** Клик по невидимому элементу со свойством displayed:false в DOM)
+     * @param element
+     */
+        @Test
+    public void clickElementWithJS(SelenideElement element ) {
+        String jsClickCode = "arguments[0].scrollIntoView(true); arguments[0].click();";
+        try {
+            SelenideElement elementToClick =  $$(".tag__icon--delete").get(0);
+            Selenide.executeJavaScript(jsClickCode, elementToClick);
+        } catch(Exception e) {
+            System.out.println("Element could not be clicked.. "  + e.getMessage());
+        }
     }
 
 }
